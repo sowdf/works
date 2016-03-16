@@ -31,6 +31,9 @@ a{-webkit-user-select:none;-webkit-user-drag:none;-webkit-tap-highlight-color:rg
 .k_skin_2 .k_banner { background:#ffce19 url(../images/banner.png) no-repeat; background-size:16rem 9.95rem; }
 .k_skin_3 .k_skin { background:url(../images/skin_3.png) no-repeat; background-size:16rem auto; }
 .k_skin_3 .k_banner { background:#ffce19 url(../images/banner.png) no-repeat; background-size:16rem 9.95rem; }
+.k_skin_4 .k_skin { background:url(../images/skin_4.png) no-repeat; background-size:16rem auto; }
+.k_skin_4 .k_banner { background:#7241c9 url(../images/banner_2.png) no-repeat; background-size:16rem 9.95rem; }
+
 
 
 
@@ -46,20 +49,23 @@ a{-webkit-user-select:none;-webkit-user-drag:none;-webkit-tap-highlight-color:rg
 .m_user .view { position:relative; width:9.125rem; }
 .m_user .watch {}
 .m_user .name { line-height:1.1rem; font-size:0.7rem; }
-.m_user .name i { display:inline-block; width:0.55rem; height:0.6rem; margin-left:0.3rem; background:url(../images/sprites.png) no-repeat; background-position:0 -2.1rem;  background-size:7rem 28rem; }
+.m_user .name i { display:inline-block; width:0.55rem; height:0.6rem; margin-left:0.3rem; background:url(../images/sprites.png) no-repeat; background-position:0 -2.325rem;  background-size:7rem 28rem; }
 .m_user .name a { font-size:0.5rem; text-decoration:underline; margin-right:0.5rem; color:#fff; }
 .m_user .tipc { line-height:1.4rem; font-size:0.5rem; }
 .m_user .num { font-size:0.5rem; }
+.m_enbtn { text-align:center; padding-top:0.4rem; }
+.m_enbtn .btn { display:inline-block; width:6.65rem; height:2.35rem; background:url(../images/sprites.png) no-repeat; background-position:-0.325rem 0;  background-size:7rem 28rem; }
+.m_enbtn .link { color:#eb493d; text-decoration:underline; line-height:1.45rem; }
 
 
 
 .m_user .watch { position:absolute; right:0.5rem; bottom:0rem; width:2.05rem; height:0.825rem; line-height:0.825rem; font-size:0.5rem; color:#fff; text-align:center; border-radius:0.1rem; }
-.m_btn { padding-top:0.5rem; }
+.m_btn { padding:0.5rem 0 1.3rem; }
 .m_btn a { width:6.65rem; height:2.35rem; background:url(../images/sprites.png) no-repeat;  background-size:7rem 28rem;  }
 .m_btn a:nth-of-type(1) { background-position:0 -14.55rem; }
 .m_btn a:nth-of-type(2) { background-position:0 -17.56rem; }
-.m_main  h2 { margin-top:1.3rem; height:2.6rem; line-height:2.6rem; text-align:center; font-size:1rem; color:#eb493d; }
-.m_main { position:relative; z-index:3; /* 底部有间隙，原因不明，向下偏移消除白边*/ }
+.m_main  h2 { height:2.6rem; line-height:2.6rem; text-align:center; font-size:1rem; color:#eb493d; }
+.m_main { position:relative; z-index:3;  }
 .m_box { padding:9.95rem 0.6rem 0; }
 
 
@@ -136,22 +142,28 @@ a{-webkit-user-select:none;-webkit-user-drag:none;-webkit-tap-highlight-color:rg
 .s_ercbox p a { color:#e89d23; font-weight:bold; }
 .e_tipsNum { font-size:0.55rem; color:#fff; line-height:2.95rem; text-align:center; }
 .e_tipsNum strong { font-size:0.9rem; color:#eb493d; vertical-align:middle; }
-.e_enrollBtn { display:block; margin:0 auto; width:14.175rem; height:2.35rem; background:url(../images/sprites_3.png) no-repeat; background-size:14.5rem 7.5rem; background-position:0 0; }
+.e_enrollBtn { display:block; margin:0 auto; width:14.175rem; height:2.35rem; background:url(../images/sprites_3.png) no-repeat; background-size:14.5rem 10rem; background-position:0 0; }
 .e_getdrz { height:1.2rem; line-height:1.2rem; font-size:0.5rem; text-align:center; }
 .e_getdrz a { color:#eb493d; text-decoration:underline; }
 .e_rank { height:6.15rem; background:rgba(252,179,37,0.6); border-radius:0.5rem; }
-.e_ranktitle { position:relative; top:0.5rem; display:block; margin:0.9rem auto 0; width:10.575rem; height:2.15rem; background:url(../images/sprites_3.png) no-repeat; background-size:14.5rem 7.5rem; background-position:0 -2.6rem; }
+.e_ranktitle { position:relative; top:0.5rem; display:block; margin:0.9rem auto 0; width:10.575rem; height:2.15rem; background:url(../images/sprites_3.png) no-repeat; background-size:14.5rem 10rem; background-position:0 -2.6rem; }
 .e_rank .null { text-align:center; }
-.e_rank i { display:inline-block; margin-top:1rem; width:1.925rem; height:2.1rem; background:url(../images/sprites_3.png) no-repeat; background-size:14.5rem 7.5rem; background-position:0 -5rem; }
+.e_rank i { display:inline-block; margin-top:1rem; width:1.925rem; height:2.1rem; background:url(../images/sprites_3.png) no-repeat; background-size:14.5rem 10rem; background-position:0 -5rem; }
 .e_rank p { line-height:1.65rem; text-align:center; font-size:0.55rem; color:#fff; }
-.r_join dt,.r_attestation dt {}
-.r_join dl,.r_attestation dl {}
-.r_join { }
+.r_join dt,.r_attestation dt { line-height:0.9rem; font-size:0.65rem; color:#fff; text-align:center; font-weight:bold; margin-bottom:0.4rem; }
+.r_join dt:after,.r_attestation dt:after { display:inline-block; vertical-align:middle; margin:0 0.4rem; content:""; width:1.4rem; height:0.1rem; background:#fff; }
+.r_join dt:before,.r_attestation dt:before { display:inline-block; vertical-align:middle; margin:0 0.4rem; content:""; width:1.4rem; height:0.1rem; background:#fff; }
+.r_join dd,.r_attestation dd { font-size:0.5rem; color:#ba93ff; line-height:0.8rem; text-align:center; }
+.r_join dd span,.r_attestation dd span { color:#f74b80; }
+.r_join { margin-bottom:1.05rem;  }
 .r_attestation {}
-.r_table {}
-.r_table h3 {}
-.r_table table {}
-
+.r_table { margin-top:0.5rem; }
+.r_table h3 { line-height:1.9rem; font-size:0.6rem; color:#fff; text-align:center; }
+.r_table table { width:100%; background:#5f30b8; }
+.r_table th { font-size:0.55rem; color:#9f6ef5; border:solid 0.05rem #7241c9; line-height:1.225rem; height:1.225rem; margin-bottom:0.15rem; }
+.r_table td { line-height:0.8rem; text-align:center; color:#fff; font-size:0.5rem; border:solid 0.05rem #7241c9; border-bottom:none; border-top:none; }
+.r_btnbox { padding:1.6rem 0 1.5rem; text-align:center; }
+.r_btnbox a { display:inline-block; width:14.175rem; height:2.35rem; background:url(../images/sprites_3.png) no-repeat; background-size:14.5rem 10rem; background-position:0 -7.5rem; }
 
 
 .m_backtop { position:fixed; right:0; bottom:8rem; width:2.875rem; height:3.025rem; background:url(../images/sprites.png) no-repeat;  background-size:7rem 28rem; background-position:0 -21.8rem; }
