@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        ! function(a) {
+            function b() {
+                a.rem = f.getBoundingClientRect().width / 16, f.style.fontSize = a.rem + "px"
+            }
+            var c, d = a.navigator.appVersion.match(/iphone/gi) ? a.devicePixelRatio : 1,
+                    e = 1 / d,
+                    f = document.documentElement,
+                    g = document.createElement("meta");
+            if (a.dpr = d, a.addEventListener("resize", function() {
+                        clearTimeout(c), c = setTimeout(b, 300)
+                    }, !1), a.addEventListener("pageshow", function(a) {
+                        a.persisted && (clearTimeout(c), c = setTimeout(b, 300))
+                    }, !1), f.setAttribute("data-dpr", d), g.setAttribute("name", "viewport"), g.setAttribute("content", "initial-scale=" + e + ", maximum-scale=" + e + ", minimum-scale=" + e + ", user-scalable=no"), f.firstElementChild) f.firstElementChild.appendChild(g);
+            else {
+                var h = document.createElement("div");
+                h.appendChild(g), document.write(h.innerHTML)
+            }
+            b()
+        }(window);
+    </script>
+</head>
+<body>
+<section id="banner">
+    <img src="images/banner.png" alt="">
+</section>
+<section id="content">
+    <section class="i_main">
+        <div class="i_tab">
+            <ul>
+                <li class="active new">
+                    <i></i>
+                    <p>最新</p>
+                </li>
+                <li class="amuse">
+                    <i></i>
+                    <p>奇葩搞笑</p>
+                </li>
+                <li class="test">
+                    <i></i>
+                    <p>星座测试</p>
+                </li>
+                <li class="gout">
+                    <i></i>
+                    <p>趣味科普</p>
+                </li>
+                <li class="horse">
+                    <i></i>
+                    <p>天马行空</p>
+                </li>
+            </ul>
+        </div>
+        <div class="i_con">
+            <ul class="i_nav">
+                <li><img src="images/nav_1.png" alt=""></li>
+                <li><i> </i><img src="images/nav_2.png" alt=""></li>
+                <li><i> </i><img src="images/nav_3.png" alt=""></li>
+                <li><i> </i><img src="images/nav_4.png" alt=""></li>
+                <li><i> </i><img src="images/nav_5.png" alt=""></li>
+            </ul>
+            <p class="i_tips">
+                <span>今天已有 <strong>12345678</strong> 人参加</span>
+                <span>您已赚 <i>235</i>盒币</span><i class="update"></i>
+            </p>
+            <ul class="i_list">
+
+            </ul>
+        </div>
+    </section>
+
+</section>
+</body>
+</html>

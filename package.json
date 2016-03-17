@@ -1,0 +1,24 @@
+{
+  "name": "works",
+  "version": "1.0.0",
+  "description": "works",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sowdf/works.git"
+  },
+  "author": "czh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sowdf/works/issues"
+  },
+  "homepage": "https://github.com/sowdf/works#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-sass": "^2.2.0"
+  }
+}
