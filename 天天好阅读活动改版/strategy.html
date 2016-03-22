@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        ! function(a) {
+            function b() {
+                a.rem = f.getBoundingClientRect().width / 16, f.style.fontSize = a.rem + "px"
+            }
+            var c, d = a.navigator.appVersion.match(/iphone/gi) ? a.devicePixelRatio : 1,
+                    e = 1 / d,
+                    f = document.documentElement,
+                    g = document.createElement("meta");
+            if (a.dpr = d, a.addEventListener("resize", function() {
+                        clearTimeout(c), c = setTimeout(b, 300)
+                    }, !1), a.addEventListener("pageshow", function(a) {
+                        a.persisted && (clearTimeout(c), c = setTimeout(b, 300))
+                    }, !1), f.setAttribute("data-dpr", d), g.setAttribute("name", "viewport"), g.setAttribute("content", "initial-scale=" + e + ", maximum-scale=" + e + ", minimum-scale=" + e + ", user-scalable=no"), f.firstElementChild) f.firstElementChild.appendChild(g);
+            else {
+                var h = document.createElement("div");
+                h.appendChild(g), document.write(h.innerHTML)
+            }
+            b()
+        }(window);
+    </script>
+</head>
+<body>
+    <section class="s_content">
+        <dl class="s_d1">
+            <dt>·&nbsp;&nbsp;赚盒币攻略&nbsp;&nbsp;·</dt>
+            <dd>◆ 每日将于12：00、18：00准时更新内容</dd>
+            <dd>◆ 每日只有首次分享的首篇文章才可获得1盒币</dd>
+            <dd>◆ 当分享的文章，在手机上被查看1次以上即可获得
+                1~6盒币（电脑查看无效）</dd>
+        </dl>
+        <ul class="s_ul">
+            <li>①被不同手机查看1次或以上，可获得1盒币</li>
+            <li> ②被不同手机查看7次或以上，可再获得2盒币</li>
+            <li>③被不同手机查看15次或以上，可再获得3盒币</li>
+        </ul>
+        <dl class="s_d2">
+            <dt>注意事项</dt>
+            <dd>◆  分享文章之后，同一部手机查看无效</dd>
+            <dd>◆  同一好友，查看你分享多次的同一条文章，或查
+                看你分享的不同文章，均只有首次查看有效</dd>
+            <dd>◆  每日每个用户最多只可获得10盒币</dd>
+            <dd>◆  当无剩余盒币时，以上操作均无效</dd>
+            <dd>◆  所有盒币奖励均实时发放</dd>
+        </dl>
+        <p class="i_kf">如有问题欢迎联系客服 <span>QQ：2853317998</span></p>
+    </section>
+    <footer>
+        <dl>
+            <dt>玩手机游戏　还上4399</dt>
+            <dd>本活动最终解释权归4399官方所有</dd>
+            <dd>@2004-2015四三九九网络股份有限公司</dd>
+        </dl>
+    </footer>
+</body>
+</html>
