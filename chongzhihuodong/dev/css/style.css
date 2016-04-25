@@ -92,6 +92,11 @@ body {
   background: #4b56b5;
 }
 
+.m_wrapper {
+  width: 16rem;
+  margin: 0 auto;
+}
+
 .m_banner {
   width: 16rem;
   height: 3.55rem;
