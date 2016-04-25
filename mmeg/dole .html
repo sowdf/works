@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="dev/css/style.css">
+    <script>
+        ! function(a) {
+            function b() {
+                a.rem = f.getBoundingClientRect().width / 16, f.style.fontSize = a.rem + "px"
+            }
+            var c, d = a.navigator.appVersion.match(/iphone/gi) ? a.devicePixelRatio : 1,
+                    e = 1 / d,
+                    f = document.documentElement,
+                    g = document.createElement("meta");
+            if (a.dpr = d, a.addEventListener("resize", function() {
+                        clearTimeout(c), c = setTimeout(b, 300)
+                    }, !1), a.addEventListener("pageshow", function(a) {
+                        a.persisted && (clearTimeout(c), c = setTimeout(b, 300))
+                    }, !1), f.setAttribute("data-dpr", d), g.setAttribute("name", "viewport"), g.setAttribute("content", "initial-scale=" + e + ", maximum-scale=" + e + ", minimum-scale=" + e + ", user-scalable=no"), f.firstElementChild) f.firstElementChild.appendChild(g);
+            else {
+                var h = document.createElement("div");
+                h.appendChild(g), document.write(h.innerHTML)
+            }
+            b()
+        }(window);
+    </script>
+</head>
+<body>
+    <div class="m_dole">
+        <h4>
+            1.第一步
+        </h4>
+        <p>
+            点击复制喵喵儿歌上的盒币领取码
+        </p>
+        <div class="m_copy">
+            <span>ap3k68u2</span>
+            <a href="">点击复制</a>
+        </div>
+        <h4>
+            2.第一步
+        </h4>
+        <p>
+            点击复制喵喵儿歌上的盒币领取码
+        </p>
+        <a href="#" class="m_btn f_btn">点击领取</a>
+        <i></i>
+    </div>
+    <footer>
+        <dl>
+            <dd>本活动最终解释权归4399官方所有 <br>
+                ©2004-2016四三九九网络股份有限公司</dd>
+        </dl>
+    </footer>
+</body>
+</html>

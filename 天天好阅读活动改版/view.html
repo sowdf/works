@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!--ios-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <!--qq-->
+
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
     <script>
         ! function(a) {
             function b() {
@@ -26,11 +38,14 @@
         }(window);
     </script>
 </head>
-<body>
+<body style="position:relative; width:100%; height:100%;">
 <section class="v_content">
-    <h3 class="v_title">
-        【D站科普】疯狂动物城 各国宣传海报
-    </h3>
+    <div>
+        <h3>
+            【D站科普】疯狂动物城 各国宣传海报
+        </h3>
+    </div>
+
     <div class="v_author">
         <img src="images/mao.png" alt="">
         <span>烈日炎炎</span>
@@ -39,8 +54,7 @@
     </div>
     <div class="v_view">
         <p>
-            兔子和狐狸的激情岁月.....((/- -)/  其实影片上
-            映之前就有不少同人图来着
+            兔子和狐狸的激情岁月.....((/- -)/  其实影片上映之前就有不少同人图来着
         </p>
         <p>
             疯狂动物城是一座独一无二的现代动物都市。每种动
@@ -60,50 +74,29 @@
         </p>
         <img src="images/v1.jpg" alt="">
     </div>
-    <div class="v_ad">
-        <ul class="clearfix">
-            <li>
-                <img src="images/ad1.png" alt="">
-                <p>
-                    巧克力大促销
-                </p>
-            </li>
-            <li>
-                <img src="images/ad2.png" alt="">
-                <p>
-                    马卡龙派送 速来
-                </p>
-            </li>
-            <li>
-                <img src="images/ad3.png" alt="">
-                <p>
-                    巧克力大促销
-                </p>
-            </li>
-        </ul>
-    </div>
+
 </section>
 <section class="v_share">
     <dl>
         <dt><i></i>分享/被查看 奖励1~7盒币 <i></i></dt>
         <dd class="fl">
-            <a href="" class="pyq"></a>
+            <a href="" class="qq j-share-qq"></a>
         </dd>
         <dd class="fl">
-            <a href="" class="wxq"></a>
+            <a href="" class="zfb j-share-qzone"></a>
         </dd>
         <dd class="fr">
-            <a href="" class="zfb"></a>
+            <a href="" class="pyq j-share-wx"></a>
         </dd>
         <dd class="fr">
-            <a href="" class="qq"></a>
+            <a href="" class="wxq j-share-moments"></a>
         </dd>
     </dl>
-    <a href="" class="v_sharebtn">
+    <a class="v_sharebtn j-shareBtn">
         分享规则
     </a>
 </section>
-<section class="g_popup">
+<section class="g_popup j-popup">
     <h3><i></i>分享攻略<i></i></h3>
     <p class="tips">
         每日分享出去首篇文章，即送 <span>1</span> 盒币
@@ -135,9 +128,91 @@
             （电脑查看无效）
         </p>
     </div>
-    <i class="close">
+    <i class="close j-close">
 
     </i>
 </section>
 </body>
 </html>
+<script src="js/zepto.min.js"></script>
+<script>
+    (function(){
+        var $pop = $('.j-popup');
+        var $shareBtn = $('.j-shareBtn');
+        var $close = $('.j-close');
+        $shareBtn.on('touchend',fnTouchShow);
+        $close.on('touchend',fnTouchClose);
+        function fnTouchShow(){
+            $pop.show();
+            var iLeft = ($(window).width() - $pop.width())/2;
+            var iTop = ($(window).height() - $pop.height())/2;
+            $pop.css({
+                left : iLeft,
+                top : iTop
+            });
+        }
+        function fnTouchClose(){
+            $pop.hide();
+        }
+
+    })()
+    (function(){
+        /*qq 分享*/
+        $('body').delegate('.j-share-qq', 'click', function () {
+            Ajax.get(_url.shareBefore, {}, function (result) {
+                if (result.code == 100) {
+                    window.android.onJsShareConfig('{"param":"' + result.result.param + '"}');
+                    window.android.onJsShareForType("qq");
+                    window.android.bindEvent('share', 'shareCallback');
+                    imgLog.run(_config.tjHost + "/o.jpg?type=" + _config.tjType + "&action=qq");
+                }else{
+                }
+            });
+        });
+        /*qq空间 分享*/
+        $('body').delegate('.j-share-qzone', 'click', function () {
+            Ajax.get(_url.shareBefore, {}, function (result) {
+                if (result.code == 100) {
+                    window.android.onJsShareConfig('{"param":"' + result.result.param + '"}');
+                    window.android.onJsShareForType("qzone");
+                    window.android.bindEvent('share', 'shareCallback');
+                    imgLog.run(_config.tjHost + "/o.jpg?type=" + _config.tjType + "&action=qzone");
+                }else{
+                }
+            });
+        });
+        /*微信 分享*/
+        $('body').delegate('.j-share-wx', 'click', function () {
+            Ajax.get(_url.shareBefore, {}, function (result) {
+                if (result.code == 100) {
+                    window.android.onJsShareConfig('{"param":"' + result.result.param + '"}');
+                    window.android.onJsShareForType("wx");
+                    window.android.bindEvent('share', 'shareCallback');
+                    imgLog.run(_config.tjHost + "/o.jpg?type=" + _config.tjType + "&action=wx");
+                }else{
+                }
+            });
+        });
+        /*微信朋友圈 分享*/
+        $('body').delegate('.j-share-moments', 'click', function () {
+            Ajax.get(_url.shareBefore, {}, function (result) {
+                if (result.code == 100) {
+                    window.android.onJsShareConfig('{"param":"' + result.result.param + '"}');
+                    window.android.onJsShareForType("moments");
+                    window.android.bindEvent('share', 'shareCallback');
+                    imgLog.run(_config.tjHost + "/o.jpg?type=" + _config.tjType + "&action=moments");
+                }else{
+
+                }
+            });
+        });
+    })();
+    function shareCallback(shareResult, name) {
+        window.android.unbindEvent('share', name);
+        if (shareResult == 1) {
+            Ajax.get(_url.shareSucc, {}, function (result) {
+
+            });
+        }
+    }
+</script>

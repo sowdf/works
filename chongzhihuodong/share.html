@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="dev/css/style.css">
+</head>
+<script>
+    ! function(a) {
+        function b() {
+            if(a.navigator.appVersion.match(/window/gi) ){
+                m = f.getBoundingClientRect().width > 960 ? 640 : f.getBoundingClientRect().width;
+            }else{
+                m = f.getBoundingClientRect().width;
+            }
+            a.rem = m / 16, f.style.fontSize = a.rem + "px";
+        }
+        var c, d = a.navigator.appVersion.match(/iphone/gi) ? a.devicePixelRatio : 1,
+                e = 1 / d,
+                f = document.documentElement,
+                g = document.createElement("meta");
+        if (a.dpr = d, a.addEventListener("resize", function() {
+                    clearTimeout(c), c = setTimeout(b, 300)
+                }, !1), a.addEventListener("pageshow", function(a) {
+                    a.persisted && (clearTimeout(c), c = setTimeout(b, 300))
+                }, !1), f.setAttribute("data-dpr", d), g.setAttribute("name", "viewport"), g.setAttribute("content", "initial-scale=" + e + ", maximum-scale=" + e + ", minimum-scale=" + e + ", user-scalable=no"), f.firstElementChild) f.firstElementChild.appendChild(g);
+        else {
+            var h = document.createElement("div");
+            h.appendChild(g), document.write(h.innerHTML)
+        }
+        b()
+    }(window);
+</script>
+<body>
+<section class="m_wrapper">
+    <section class="m_banner_2">
+        <a href="" class="f_foley"></a>
+    </section>
+    <section class="m_content">
+        <section class="m_logo">
+            <i></i>
+            <div>
+                盒币免费领，兑换Q币、游币、话费！ <br>
+                来4399游戏盒玩游戏、交朋友、赚零花！
+            </div>
+        </section>
+        <section class="m_dh">
+            <h4 class="title">
+                可以兑换哪些？
+            </h4>
+            <div class="row_1">
+                <div>
+                    <i class="pic_1"></i>
+                    <span>20Q币</span>
+                </div>
+                <div>
+                    <i class="pic_2"></i>
+                    <span>10游币</span>
+                </div>
+                <div>
+                    <i class="pic_3"></i>
+                    <span>20元话费</span>
+                </div>
+            </div>
+            <div class="row_2">
+                <div>
+                    <i class="pic_4"></i>
+                    <span>蓝色豆娃玩偶</span>
+                </div>
+                <div>
+                    <i class="pic_5"></i>
+                    <span>粉色豆娃玩偶</span>
+                </div>
+            </div>
+            <a class="m_go">
+                到4399游戏盒查看全部商品
+            </a>
+        </section>
+
+    </section>
+    <footer>
+        <p>
+            本活动最终解释权归4399官方所有 <br>
+            ©2004-2016四三九九网络股份有限公司
+        </p>
+    </footer>
+</section>
+</body>
+</html>

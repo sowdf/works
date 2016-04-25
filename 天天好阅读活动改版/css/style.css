@@ -52,7 +52,7 @@ body {
   -o-text-size-adjust: none;
   user-select: none;
   text-size-adjust: none;
-  font-family: "微软雅黑",Arial,Helvetica,sans-serif;
+  font: 0.6rem "微软雅黑",Arial,Helvetica,sans-serif;
   min-height: 100%;
 }
 
@@ -89,33 +89,45 @@ a {
 
 /*  end reset */
 body {
+  position: absolute;
   background: url(../images/bg.png) repeat;
   background-position: 0.71111rem 0.35556rem;
 }
 
 #banner {
-  width: 16rem;
+  position: relative;
+  width: 100%;
   height: 6.66667rem;
 }
 #banner img {
-  width: 16rem;
+  width: 100%;
   height: 6.66667rem;
+}
+#banner a {
+  position: absolute;
+  top: 0;
+  left: 0.35556rem;
+  width: 1.77778rem;
+  height: 1.77778rem;
 }
 
 #content {
-  padding: 0 0.26667rem;
+  margin: 0 0.26667rem;
 }
 
 .i_tab ul {
-  border-top: solid 0.08889rem #1c1b1a;
+  border: solid 0.08889rem #1c1b1a;
+  border-bottom: none;
   border-radius: 0.22222rem 0.22222rem 0 0;
+  overflow: hidden;
+  background: #dcdfe6;
 }
 .i_tab ul li {
   height: 2.62222rem;
   text-align: center;
   border-bottom: solid 0.08889rem #1c1b1a;
   float: left;
-  width: 3.08889rem;
+  width: 3.04444rem;
   box-sizing: border-box;
 }
 .i_tab ul li div {
@@ -126,7 +138,7 @@ body {
 .i_tab ul li i {
   display: inline-block;
   background: url(../images/sprites.png) no-repeat;
-  background-size: 7rem 5rem;
+  background-size: 9rem 5rem;
   vertical-align: bottom;
 }
 .i_tab ul li p {
@@ -138,34 +150,35 @@ body {
   font-family: "方正粗倩简体";
 }
 .i_tab ul li:nth-of-type(1) {
-  border-left: solid 0.08889rem #1c1b1a;
+  border-left: none;
 }
 .i_tab ul li:nth-last-of-type(1) {
-  border-right: solid 0.08889rem #1c1b1a;
+  border-right: none;
+  width: 3.11111rem;
 }
 
 .i_tab .new {
-  width: 1.26667rem;
+  width: 1.31111rem;
   height: 1.15556rem;
   background-position: 0 0;
 }
 .i_tab .amuse {
-  width: 1.02222rem;
+  width: 1.06667rem;
   height: 1.28889rem;
   background-position: -1.51111rem 0;
 }
 .i_tab .test {
-  width: 1.28889rem;
+  width: 1.33333rem;
   height: 1.2rem;
   background-position: -2.75556rem 0;
 }
 .i_tab .gout {
-  width: 1.06667rem;
+  width: 1.11111rem;
   height: 1.24444rem;
   background-position: -4.24444rem 0;
 }
 .i_tab .horse {
-  width: 1.31111rem;
+  width: 1.35556rem;
   height: 1.08889rem;
   background-position: -5.51111rem 0;
 }
@@ -177,27 +190,27 @@ body {
   border-bottom: none;
 }
 .i_tab .active .new {
-  width: 1.26667rem;
+  width: 1.31111rem;
   height: 1.15556rem;
   background-position: 0 -1.51111rem;
 }
 .i_tab .active .amuse {
-  width: 1.02222rem;
+  width: 1.06667rem;
   height: 1.28889rem;
   background-position: -1.51111rem -1.51111rem;
 }
 .i_tab .active .test {
-  width: 1.28889rem;
+  width: 1.33333rem;
   height: 1.2rem;
   background-position: -2.75556rem -1.51111rem;
 }
 .i_tab .active .gout {
-  width: 1.06667rem;
+  width: 1.11111rem;
   height: 1.24444rem;
   background-position: -4.24444rem -1.51111rem;
 }
 .i_tab .active .horse {
-  width: 1.31111rem;
+  width: 1.35556rem;
   height: 1.08889rem;
   background-position: -5.51111rem -1.51111rem;
 }
@@ -232,6 +245,12 @@ body {
   display: inline-block;
   width: 1.88889rem;
   height: 1.88889rem;
+  border-radius: 50%;
+  border: 0.04444rem solid #1c1b1a;
+}
+.i_nav li:nth-of-type(1) img {
+  border-radius: 0;
+  border: none;
 }
 .i_nav i {
   position: absolute;
@@ -240,7 +259,7 @@ body {
   width: 0.86667rem;
   height: 0.86667rem;
   background: url(../images/sprites.png) no-repeat;
-  background-size: 7rem 5rem;
+  background-size: 9rem 5rem;
   background-position: -3.11111rem -3.02222rem;
 }
 .i_nav .title img {
@@ -258,13 +277,20 @@ body {
   display: inline-block;
 }
 .i_tips span strong {
+  height: 1.42222rem;
+  display: inline-block;
+  max-width: 2.97778rem;
   color: #3377ff;
   font-weight: normal;
+  overflow: hidden;
+  vertical-align: middle;
 }
 .i_tips span i {
+  max-width: 1.66667rem;
+  overflow: hidden;
   display: inline-block;
   height: 0.71111rem;
-  border-radius: 40%;
+  border-radius: 24%;
   line-height: 0.71111rem;
   padding: 0 0.22222rem;
   background: #3377ff;
@@ -272,6 +298,7 @@ body {
   font-style: normal;
   text-align: center;
   border: solid 0.04444rem #000;
+  vertical-align: middle;
 }
 .i_tips span:nth-of-type(1) {
   margin-left: 0.26667rem;
@@ -279,25 +306,23 @@ body {
 .i_tips a {
   display: inline-block;
   margin-left: 0.44444rem;
-  width: 0.71111rem;
-  height: 0.68889rem;
+  width: 0.75556rem;
+  height: 0.73333rem;
   background: url(../images/sprites.png) no-repeat;
-  background-size: 7rem 5rem;
+  background-size: 9rem 5rem;
   background-position: -3.11111rem -4.28889rem;
   vertical-align: middle;
 }
 
 .i_listBox {
   position: relative;
-  overflow: hidden;
-  height: 13.84444rem;
 }
 
 .i_list li {
   display: block;
   margin-bottom: 0.33333rem;
   height: 3.11111rem;
-  border: solid 0.04444rem #000;
+  border: solid 2px #000;
   border-radius: 0.22222rem;
   overflow: hidden;
 }
@@ -309,10 +334,10 @@ body {
   width: 1.33333rem;
   height: 1.33333rem;
   background: url(../images/sprites.png) no-repeat;
-  background-size: 7rem 5rem;
+  background-size: 9rem 5rem;
 }
 .i_list .pic_box .hot {
-  background-position: -1.51111rem -3.02222rem;
+  background-position: -1.55556rem -3.06667rem;
 }
 .i_list .pic_box .null {
   background-position: 0 3.02222rem;
@@ -326,10 +351,14 @@ body {
   padding: 0.22222rem 0.37778rem 0 0;
 }
 .i_list .text h3 {
+  width: 100%;
+  height: 1.77778rem;
+  display: table-cell;
+  vertical-align: middle;
   font-size: 0.66667rem;
   font-weight: normal;
 }
-.i_list .text h3 a {
+.i_list .text h3 span {
   color: #333333;
 }
 .i_list .text .info {
@@ -346,7 +375,7 @@ body {
   width: 0.62222rem;
   height: 0.48889rem;
   background: url(../images/sprites.png) no-repeat;
-  background-size: 7rem 5rem;
+  background-size: 9rem 5rem;
   background-position: -1.51111rem -4.48889rem;
 }
 .i_list .text .hebi i {
@@ -362,12 +391,12 @@ body {
 }
 .i_loading i {
   display: inline-block;
-  width: 0.48889rem;
+  width: 0.53333rem;
   height: 0.53333rem;
   background: url(../images/sprites.png) no-repeat;
-  background-size: 7rem 5rem;
-  background-position: 0 -4.46667rem;
-  margin-right: 0.26667rem;
+  background-size: 9rem 5rem;
+  background-position: -0.02222rem -4.48889rem;
+  margin-left: 0.26667rem;
 }
 
 .i_zg {
@@ -399,10 +428,10 @@ body {
 }
 .i_zg a i {
   display: inline-block;
-  width: 2.33333rem;
-  height: 1.66667rem;
+  width: 2.37778rem;
+  height: 1.71111rem;
   background: url(../images/sprites.png) no-repeat;
-  background-size: 7rem 5rem;
+  background-size: 9rem 5rem;
   background-position: -4.24444rem -3.02222rem;
 }
 .i_zg a p {
@@ -414,11 +443,33 @@ body {
 }
 .i_zg a b {
   display: inline-block;
-  width: 0.48889rem;
-  height: 0.48889rem;
+  width: 0.53333rem;
+  height: 0.53333rem;
   background: url(../images/sprites.png) no-repeat;
-  background-size: 7rem 5rem;
+  background-size: 9rem 5rem;
   background-position: -0.75556rem -4.51111rem;
+}
+
+.i_backTop {
+  display: none;
+  z-index: 2;
+  position: fixed;
+  right: 0.77778rem;
+  bottom: 4.44444rem;
+  width: 2.77778rem;
+  height: 2.77778rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.i_backTop a {
+  margin-top: 0.62222rem;
+  display: inline-block;
+  width: 1.02222rem;
+  height: 1.51111rem;
+  background: url(../images/sprites.png) no-repeat;
+  background-size: 9rem 5rem;
+  background-position: -7.11111rem 0;
 }
 
 /*  strategy */
@@ -510,7 +561,7 @@ body {
 .v_content {
   padding: 0 0.44444rem;
   background: #fff;
-  margin: 0 0.26667rem;
+  margin: 0 0.4rem;
   border: solid 0.08889rem #000;
   border-radius: 0 0 0.22222rem 0.22222rem;
   border-top: none;
@@ -558,6 +609,8 @@ body {
 
 .v_ad {
   padding: 0.66667rem 0;
+  width: 14.44444rem;
+  overflow: hidden;
 }
 .v_ad li {
   float: left;
@@ -630,26 +683,26 @@ body {
 }
 .v_share dd a {
   display: block;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.64444rem;
+  height: 1.64444rem;
   background: url(../images/sprites_2.png) no-repeat;
   background-size: 8rem 4rem;
 }
 .v_share .pyq {
   background-position: 0 0;
-  margin-left: 0.44444rem;
+  margin-right: 0.44444rem;
 }
 .v_share .wxq {
   background-position: -1.82222rem 0;
-  margin-left: 1.44444rem;
+  margin-right: 1.44444rem;
 }
 .v_share .zfb {
   background-position: -3.64444rem 0;
-  margin-right: 0.44444rem;
+  margin-left: 1.44444rem;
 }
 .v_share .qq {
   background-position: -5.46667rem 0;
-  margin-right: 1.44444rem;
+  margin-left: 0.44444rem;
 }
 .v_share .v_sharebtn {
   position: absolute;
@@ -668,9 +721,9 @@ body {
 }
 
 .g_popup {
-  position: absolute;
-  left: 0px;
-  top: 6.66667rem;
+  z-index: 3;
+  display: none;
+  position: fixed;
   background: #fff;
   border-radius: 0.22222rem;
   box-sizing: border-box;
@@ -889,4 +942,25 @@ footer dt {
 }
 footer dd {
   font-size: 0.44444rem;
+}
+
+.g_showTips {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+  text-align: center;
+}
+.g_showTips p {
+  position: relative;
+  display: inline-block;
+  border: solid 0.08889rem #ccc;
+  background: #fff;
+  height: 0.66667rem;
+  line-height: 0.66667rem;
+  padding: 0.44444rem 0.88889rem;
+  border-radius: 0.22222rem;
 }

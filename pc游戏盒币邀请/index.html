@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <!--[if IE 6]>
+    <script src="http://www.4399dmw.com/js/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script type="text/javascript">DD_belatedPNG.fix('.png_img');</script>
+    <![endif]-->
+</head>
+<body>
+<div class="m_fullpage">
+    <div class="m_wrapper">
+        <div class="f_box">
+
+            <a href="#" class="s_blue fr">注册</a>
+
+            <a href="#" class="s_orange fr">登录</a>
+            <a href="#" class="s_green fr">盒币商城</a>
+            <div class="m_logout j-logout">
+                <div><span>Username</span> <i class="png_img"></i></div>
+                <ul class="j-drop">
+                    <li>
+                        盒币：<i>2980</i>
+                    </li>
+                    <li class="dh">
+                        <a href="">已兑换商品</a>
+                    </li>
+                    <li>
+                        <a href="">有奖邀请好友</a>
+                    </li>
+                    <li class="quit">
+                        <a href="">退出</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="m_banner">
+
+        </div>
+       <div class="m_content j-content">
+            <div class="m_yqm">
+                <div class="m_section">
+                    <h3 class="m_title" id="j-float1">
+                        <div class="g_fl png_img"></div>
+                        <div class="g_fr png_img"></div>
+                        <i class="png_img"></i>
+                        已经有 <span>5075347</span>  人加入到收割盒币行动中
+                    </h3>
+                    <div class="clearfix">
+                        <div class="u_dw fl png_img"></div>
+                        <div class="m_hbintro fr">
+                            <p>你知道吗？盒币可是个好东西！<span>它可以当钱花，还可以换好多礼包和游币~</span> <br>
+                                But 有很多人并不知道这个好消息，我作为4399一员，有责任要告诉更多的小伙伴，我是4399盒币大使！<br> 快来跟我一起赚盒币，玩4399游戏盒吧！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="m_wrap clearfix">
+                    <div class="m_section fl">
+                        <div class="m_text">
+                            <h3 class="png_img">快发给小伙伴吧~</h3>
+                            <p><input type="text"  id="copyconv" readonly="readonly" value="这里是分享文案，包含了专属邀请码链接http://invite.4399.cn/code322121"></p>
+                            <a href="javascript:;" class="j-ref"><i class="png_img"></i>换一个邀请内容</a>
+                            <div class="m_shadow">
+
+                            </div>
+                        </div>
+                        <div class="m_shadow_box" >
+                            <a href="javascript:;" id="copycon" class="f_copy fl">复制邀请内容</a>
+                            <div class="f_share clearfix" id="j-shareto">
+                                <a href="javascript:;" data-type="tieba" class="bd png_img"></a>
+                                <a href="javascript:;" data-type="sinawb" class="xl png_img"></a>
+                                <a href="javascript:;" data-type="qqwb" class="qqw png_img"></a>
+                                <a href="javascript:;" data-type="qzone" class="qqz png_img"></a>
+                                <a href="javascript:;" data-type="qq" class="qq png_img"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fr">
+                        <div class="clearfix m_count">
+                            <div class="m_box fl">
+                                <strong>0</strong>
+                                <span>已邀请人数</span>
+                            </div>
+                            <div class="m_box fr">
+                                <strong>0</strong>
+                                <span>获得盒币数</span>
+                            </div>
+                        </div>
+                        <div class="m_copycode">
+                            <p>我的专属邀请码</p>
+                            <div id="j-copybox" class="clearfix">
+                                <input class="fl" id="url_input" readonly="readonly" value="Code322121">
+                                <p class="m_logout fl">
+                                    <a href="#">登录</a>后查看
+                                </p>
+                                <a href="#" class="fr z_copy" id="copy_btn">复制</a>
+                            </div>
+                            <dl>
+                                <dt>邀请码使用提示：</dt>
+                                <dd>
+                                    只要复制上方专属邀请码给你好友，让好友直接 <br> 在游戏盒上面粘贴邀请码，双方都可以获得盒币 <br> 奖励哦！
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="m_rank">
+                <div class="m_section">
+                    <h3 class="m_title" id="j-float2">
+                        <div class="g_fl png_img"></div>
+                        <div class="g_fr png_img"></div>
+                        <i class="png_img"></i>邀请好友榜
+                    </h3>
+                    <div class="m_wrap clearfix">
+                        <div class="m_top fl">
+                            <div class="m_hd">
+                                <h4>周排行榜</h4>
+                                <p>每周日揭榜，前10名都可以额外获得 <span>500盒币</span>  哦~</p>
+                            </div>
+                            <div class="m_table">
+                                <div class="h_row clearfix">
+                                    <div class="col_1">排名</div>
+                                    <div class="col_2">昵称</div>
+                                    <div class="col_3">邀请人数</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1"><i class="fir">1</i></div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1"><i>2</i></div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1"><i>3</i></div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1">4</div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1">5</div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1">6</div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1">7</div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1">8</div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1">9</div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1">10</div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m_top fr">
+                            <div class="m_hd">
+                                <h4>月排行榜</h4>
+                                <p>每月最后一天揭榜，前10名都可以额外获得 <span>1000盒币</span>  哦~</p>
+                            </div>
+                            <div class="m_table">
+                                <div class="h_row clearfix">
+                                    <div class="col_1">排名</div>
+                                    <div class="col_2">昵称</div>
+                                    <div class="col_3">邀请人数</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1"><i class="fir">1</i></div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1"><i>2</i></div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1"><i>3</i></div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1">4</div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1">5</div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1">6</div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1">7</div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1">8</div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1">9</div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                                <div class="t_row clearfix">
+                                    <div class="col_1">10</div>
+                                    <div class="col_2"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1612752285,3409216082&fm=116&gp=0.jpg" alt=""> <div>希大天才</div> </div>
+                                    <div class="col_3">9999</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="m_flow">
+               <div class="m_section g_top">
+                   <h3 class="m_title" id="j-float3">
+                       <div class="g_fl png_img"></div>
+                       <div class="g_fr png_img"></div>
+                       <i class="png_img"></i>如何邀请好友
+                   </h3>
+                   <div class="m_wrap clearfix">
+                       <div class="m_tag png_img">
+
+                       </div>
+                       <i class="g_point_1 png_img"></i>
+                       <i class="g_point_2 png_img"></i>
+                       <i class="g_point_3 png_img"></i>
+                       <div class="m_box fl">
+                           <p class="img_1">
+
+                           </p>
+                           <div class="m_step">
+                               <strong class="g_fl">01.</strong>
+                               <span class="fr">进入盒币商城</span>
+                           </div>
+                       </div>
+                       <div class="m_box fr">
+                           <p class="img_2">
+
+                           </p>
+                           <div class="m_step">
+                               <strong class="g_fr">02.</strong>
+                               <span class="fl">查看我的邀请信息</span>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="clearfix m_wrap zIndex">
+                       <div class="m_box fl">
+                           <p class="img_4">
+
+                           </p>
+                           <div class="m_step">
+                               <strong class="g_fl">04.</strong>
+                               <span class="fr">进入页面复制邀请内容</span>
+                           </div>
+                       </div>
+                       <div class="m_box fr">
+                           <p class="img_3">
+
+                           </p>
+                           <div class="m_step">
+                               <strong class="g_fr">03.</strong>
+                               <span class="fl">查看我的邀请信息</span>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="m_section g_bottom">
+                   <div class="m_wrap clearfix">
+                       <div class="m_tag png_img">
+
+                       </div>
+                       <i class="g_point_1 png_img"></i>
+                       <i class="g_point_2 png_img"></i>
+                       <i class="g_point_3 png_img"></i>
+                       <div class="m_box fl">
+                           <p class="img_5">
+
+                           </p>
+                           <div class="m_step">
+                               <strong class="g_fl">01.</strong>
+                               <span class="fr">进入盒币商城</span>
+                           </div>
+                       </div>
+                       <div class="m_box fr">
+                           <p class="img_6">
+
+                           </p>
+                           <div class="m_step">
+                               <strong class="g_fr">02.</strong>
+                               <span class="fl">查看我的邀请信息</span>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="m_wrap clearfix zIndex">
+                       <div class="m_box fl">
+                           <p class="img_8">
+
+                           </p>
+                           <div class="m_step">
+                               <strong class="g_fl">04.</strong>
+                               <span class="fr">进入页面复制邀请内容</span>
+                           </div>
+                       </div>
+                       <div class="m_box fr">
+                           <p class="img_7">
+
+                           </p>
+                           <div class="m_step">
+                               <strong class="g_fr">03.</strong>
+                               <span class="fl">查看我的邀请信息</span>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+            <div class="m_rule">
+                <div class="m_section">
+                    <h3 class="m_title" id="j-float4">
+                        <div class="g_fl png_img"></div>
+                        <div class="g_fr png_img"></div>
+                        <i class="png_img"></i>规则说明
+                    </h3>
+                    <ul>
+                        <li>1、电脑用户可在本页面获取个人邀请信息，通过你的专属链接成功邀请一个好友安装并使用邀请码，双方各赚30盒币，好友使用手机号注册，<br>双方再赚10盒币；</li>
+                        <li>2、手机用户直接进入最新版游戏盒成功邀请一个好友安装并使用你的码，双方各赚30盒币。好友使用手机号注册，双方再赚10盒币；</li>
+                        <li>3、该邀请仅针对通过上述方式下载安装的游戏盒；</li>
+                        <li>4、该邀请仅针对新用户，已注册的账号使用邀请码无效；</li>
+                        <li>5、该邀请仅针对从未安装过游戏盒的手机，已安装过游戏盒的手机使用邀请码无效。</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="m_side_nav j-sideNav">
+        <i class="png_img"></i>
+        <div>
+            <a href="javascript:;"  class="on j-gotpos fir" data-pos="j-float1">我的邀请码</a>
+            <a href="javascript:;" data-pos="j-float2" class="j-gotpos" >邀请好友榜</a>
+            <a href="javascript:;" data-pos="j-float3" class="j-gotpos">如何邀请</a>
+            <a href="javascript:;" data-pos="j-float4" class="j-gotpos">规则说明</a>
+            <span  class="backTop j-backTop last">返回顶部</span>
+
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="content">
+
+    </div>
+</div>
+</body>
+</html>
+<script src="js/ks.gototop.js"></script>
+<script src="js/ks.ZeroClipboard.js"></script>
+<script src="js/ks.copy.js"></script>
+<script src="js/ks.share.js"></script>
+<script>
+    $(function(){
+        /* 登录 下拉*/
+        (function(){
+            var $logout = $('.j-logout');
+            var $drop = $('.j-drop');
+            var $li = $('.j-drop li')
+            var timer = null;
+            $logout.on('mouseover',function(){
+                clearTimeout(timer);
+                $drop.show();
+            });
+            $logout.on('mouseout',function(){
+                clearTimeout(timer);
+                timer = setTimeout(function(){
+                    $drop.hide();
+                },500);
+            });
+            $drop.on('mouseover',function(){
+                clearTimeout(timer);
+            });
+            $li.on('mouseover',function(){
+                $li.removeClass('on');
+                $(this).addClass('on');
+            })
+        })();
+        function isIE(num) {
+            var dom = document.createElement("b");
+
+            dom.innerHTML = "<!--[if IE " + num + "]><i></i><![endif]-->";
+
+            return dom.getElementsByTagName("i").length;
+        }
+
+        /* 复制 */
+        ue.copy({
+            btnId : "copy_btn",
+            txtId : 'url_input',
+            container : $('#j-copybox')[0],
+            success : function(){
+                alert("已复制到剪切板，可通过ctrl+v粘贴");
+            }
+        });
+        /* 复制 */
+        ue.copy({
+            btnId : "copycon",
+            txtId : 'copyconv',
+            container : $('.m_shadow_box')[0],
+            success : function(){
+                alert("已复制到剪切板，可通过ctrl+v粘贴");
+            }
+        });
+        /* 随机换内容 */
+        (function(){
+            var arr = ['这里是分享文，包含了专属邀请码链接http://invite.4399.cn/code322121','这里是分享文案，请查看包含了专属邀请码链接http://invite.4399.cn/code322121','这里是分享文案，包含了专属邀请码链接http://invite.4399.cn'];
+            $('.j-ref').on('click',function(){
+                var num = Math.floor(Math.random() * arr.length + 1) - 1;
+                $('#copyconv').val(arr[num]);
+            })
+        })()
+
+
+        ue.gototop({
+            relative: $(".m_wrapper"),
+            target: $(".j-sideNav"),
+            bottom: 100,
+            left: 30,
+            fade: false,
+            hide: false,
+            mini: "mini_fixed_menu",
+            btn: $(".j-sideNav .j-backTop")
+        });
+        $('input[type=button]').on('click',function(){
+            var couponResult = window.clipboardData.setData("text",
+                    $(this).attr('data-clipboard-target'));
+            if (couponResult) {
+                alert("拷贝成功！");
+            } else {
+                alert("拷贝失败！");
+            }
+        });
+        var fixArr = [];
+        var fixRight = $('.j-gotpos');
+        for (var i = 0; i < fixRight.size(); i++) {
+            var id = '#' + fixRight.eq(i).attr('data-pos');
+            var offobj = $(id).offset();
+            fixArr[i] = offobj ? offobj.top: 0;
+        }
+        fixRight.click(function() {
+            var ind = fixRight.index(this);
+            var id = '#' + $(this).attr('data-pos');
+            var topVal = $(id).offset().top || 0;
+            $('body,html').animate({
+                        scrollTop: topVal
+                    },
+                    1000,
+                    function() {
+                        $(this).addClass('cur2').siblings().removeClass('cur2');
+                    });
+        });
+        $(window).scroll(scrolls);
+        scrolls();
+        function scrolls() {
+            var sTop = $(window).scrollTop();
+            $.each(fixArr,
+                    function(index, value) {
+                        if (sTop >= value - 300) {
+                            fixRight.eq(index).addClass('on').siblings().removeClass('on');
+                        };
+                    });
+        };
+    });
+    /* 分享 */
+    ue.shareTo({
+        "desc": "邀请好友送盒币",//描述
+        "pic": 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1698945203,1066999821&fm=111&gp=0.jpg&https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1698945203,1066999821&fm=111&gp=0.jpg',
+        "href": "http://dev.4399.cn/yx/wdsj.html",
+        "gameId": '1916',
+        "summary":"一次尝试",//内容摘要
+        "title":"我的分享"// 分享标题(可选)
+    })
+</script>
