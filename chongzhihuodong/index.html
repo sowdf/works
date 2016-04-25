@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="dev/css/style.css">
+    <script>
+        ! function(a) {
+            function b() {
+                a.rem = f.getBoundingClientRect().width / 16, f.style.fontSize = a.rem + "px"
+            }
+            var c, d = a.navigator.appVersion.match(/iphone/gi) ? a.devicePixelRatio : 1,
+                    e = 1 / d,
+                    f = document.documentElement,
+                    g = document.createElement("meta");
+            if (a.dpr = d, a.addEventListener("resize", function() {
+                        clearTimeout(c), c = setTimeout(b, 300)
+                    }, !1), a.addEventListener("pageshow", function(a) {
+                        a.persisted && (clearTimeout(c), c = setTimeout(b, 300))
+                    }, !1), f.setAttribute("data-dpr", d), g.setAttribute("name", "viewport"), g.setAttribute("content", "initial-scale=" + e + ", maximum-scale=" + e + ", minimum-scale=" + e + ", user-scalable=no"), f.firstElementChild) f.firstElementChild.appendChild(g);
+            else {
+                var h = document.createElement("div");
+                h.appendChild(g), document.write(h.innerHTML)
+            }
+            b()
+        }(window);
+    </script>
+</head>
+<body>
+   <section class="m_banner">
+       <div class="m_tips">
+           已有 <span>2099</span> 人参与
+       </div>
+       <p>欢迎你，蓝蓝路</p>
+   </section>
+
+    <section class="m_content">
+        <section class="m_point">
+            想要限量版头套，商城兑换又发现盒币不够！<br>
+            这里都能解决~往下看！<i></i>
+        </section>
+        <section class="m_one">
+            <div class="f_btn">
+                <a class="fl f_dole">领取</a>
+                <a class="fr f_rcgone">充值1元</a>
+            </div>
+            <div class="m_prize">
+                <div class="m_ttbox">
+                    <div>
+                        <i></i>
+                    </div>
+                    <p>好运来头套</p>
+                </div>
+                <div class="m_decs">
+                    1元钱就送好运来专属头套 <span>（价值：60盒币）</span>哦~<span>商城不出售呢！</span>
+                </div>
+            </div>
+            <div class="m_share">
+                好福利要和好朋友共享哦~ <a class="f_share"> 去分享</a>
+            </div>
+        </section>
+        <section class="m_more">
+            <div class="m_tips">
+                <span class="fl">更多充值福利</span>
+                <i class="fr">共计充值：<em> 2354</em>元</i>
+            </div>
+            <div class="m_prize">
+                <div class="m_ttbox">
+                    <div>
+                        <i class="z_10"></i>
+                    </div>
+                    <p>桃花来头套</p>
+                </div>
+                <div class="f_btn">
+                    <a class="f_dole s_not">领取</a>
+                    <span>已累计8/10元</span>
+                    <a class="f_recharge">充值</a>
+                </div>
+                <div class="m_decs">
+                    累计10元钱送桃花来限量版头套 <span>（价值100盒币）
+                商城不出售呢！</span>
+                </div>
+            </div>
+            <div class="m_prize">
+                <div class="m_ttbox">
+                    <div>
+                        <i class="z_50"></i>
+                    </div>
+                    <p>逢考必过头套</p>
+                </div>
+                <div class="f_btn">
+                    <a class="f_dole">领取</a>
+                    <span>已累计8/50元</span>
+                    <a class="f_recharge">充值</a>
+                </div>
+                <div class="m_decs">
+                    累计50元钱送逢考必过限量版头套 <span>价值200盒币）
+商城不出售呢！</span>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <p>
+            本活动最终解释权归4399官方所有 <br>
+            ©2004-2016四三九九网络股份有限公司
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,483 @@
+@charset "UTF-8";
+/*  reset */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, figure {
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+del, ins {
+  text-decoration: none;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+button, input, select, textarea {
+  font-family: "Microsoft Yahei",Arial,Helvetica,sans-serif;
+}
+
+input, select, img {
+  vertical-align: middle;
+}
+
+input, select {
+  outline: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+body {
+  -ms-text-size-adjust: none;
+  -o-user-select: none;
+  -o-text-size-adjust: none;
+  user-select: none;
+  text-size-adjust: none;
+  font: 0.6rem "微软雅黑",Arial,Helvetica,sans-serif;
+  min-height: 100%;
+}
+
+a {
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+
+.clearfix:after {
+  content: "";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clear {
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*  end reset */
+body {
+  background: #4b56b5;
+}
+
+.m_banner {
+  width: 16rem;
+  height: 3.55rem;
+  padding-top: 4.5rem;
+  text-align: center;
+  background: url(../images/banner_1.jpg) no-repeat;
+  background-size: 16rem 8.05rem;
+}
+.m_banner .m_tips {
+  width: 6rem;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  color: #fff;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  background: #41458c;
+}
+.m_banner .m_tips span {
+  color: #ffd700;
+}
+.m_banner p {
+  height: 1.1rem;
+  line-height: 1.1rem;
+  color: #2e3257;
+  font-size: 0.6rem;
+}
+
+footer {
+  padding-top: 0.6rem;
+  width: 16rem;
+  height: 2.9rem;
+}
+footer p {
+  text-align: center;
+  font-size: 0.6rem;
+  color: #7a82c9;
+}
+
+.f_btn a {
+  width: 6.2rem;
+  height: 2.1rem;
+  background: url(../images/btn.png) no-repeat;
+  background-size: 6.25rem 19.55rem;
+  text-indent: -33rem;
+}
+.f_btn .f_dole {
+  background-position: 0 0;
+}
+.f_btn .z_dole {
+  background-position: 0 -2.225rem;
+}
+.f_btn .f_recharge {
+  background-position: 0 -6.675rem;
+}
+.f_btn .z_recharge {
+  background-position: 0 -8.9rem;
+}
+.f_btn .f_rcgone {
+  background-position: 0 -11.175rem;
+}
+.f_btn .z_rcgone {
+  background-position: 0 -13.4rem;
+}
+.f_btn .s_not {
+  background-position: 0 -4.45rem;
+}
+
+.m_prize {
+  position: relative;
+}
+
+.m_ttbox {
+  position: absolute;
+  left: 0.75rem;
+  width: 5.85rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  overflow: hidden;
+}
+.m_ttbox div {
+  background: #7a82c9;
+  height: 4.175rem;
+}
+.m_ttbox i {
+  display: inline-block;
+  background: url(../images/prize.png) no-repeat;
+  background-size: 4.25rem 7.8rem;
+}
+.m_ttbox p {
+  line-height: 0.975rem;
+  height: 0.975rem;
+  font-size: 0.6rem;
+  color: #fff;
+  background: #474fa5;
+}
+
+.m_content {
+  margin: 0 0.8rem;
+}
+.m_content section {
+  border-radius: 0.25rem;
+  background: #5963bb;
+}
+.m_content .m_point {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.m_point {
+  margin-top: -1.125rem;
+  padding-top: 0.25rem;
+  height: 2.15rem;
+  position: relative;
+  text-align: center;
+  line-height: 0.9rem;
+  font-size: 0.6rem;
+  color: #fff;
+  margin-bottom: 0.525rem;
+}
+.m_point i {
+  position: absolute;
+  top: 1.15rem;
+  right: 2.7rem;
+  width: 0.95rem;
+  height: 1.3rem;
+  background: url(../images/btn.png) no-repeat;
+  background-size: 6.25rem 19.55rem;
+  background-position: -5.3rem -15.625rem;
+}
+
+.m_one {
+  padding-top: 0.45rem;
+  margin-bottom: 0.5rem;
+}
+.m_one .f_btn {
+  overflow: hidden;
+}
+.m_one .f_btn a:nth-of-type(1) {
+  margin-left: 0.6rem;
+}
+.m_one .f_btn a:nth-of-type(2) {
+  margin-right: 0.6rem;
+}
+.m_one .m_prize {
+  height: 6.025rem;
+  border-bottom: dashed 0.05rem #6a73c2;
+}
+.m_one .m_prize .m_decs {
+  width: 6.7rem;
+  margin-left: 7.125rem;
+  padding-top: 1.5rem;
+  font-size: 0.6rem;
+  line-height: 0.9rem;
+  color: #2e3257;
+}
+.m_one .m_prize .m_decs span {
+  color: #f7c140;
+}
+.m_one .m_prize .m_ttbox {
+  top: 0.525rem;
+}
+.m_one .m_prize .m_ttbox i {
+  margin-top: 1.3rem;
+  width: 4.25rem;
+  height: 1.875rem;
+  background-position: 0 0;
+}
+.m_one .m_share {
+  position: relative;
+  text-indent: 0.75rem;
+  color: #fff;
+  height: 2.575rem;
+  line-height: 2.575rem;
+  font-size: 0.6rem;
+}
+.m_one .m_share .f_share {
+  position: absolute;
+  right: 0.725rem;
+  bottom: 0.35rem;
+  width: 4.35rem;
+  height: 1.9rem;
+  text-indent: -33rem;
+  background: url(../images/btn.png) no-repeat;
+  background-size: 6.25rem 19.55rem;
+  background-position: 0 -15.625rem;
+}
+.m_one .m_share .z_share {
+  background-position: 0 -17.65rem;
+}
+
+.m_more .m_tips {
+  padding: 0 0.75rem;
+  line-height: 2.4rem;
+  height: 2.4rem;
+  background: #363d7a;
+}
+.m_more .m_tips span {
+  font-size: 0.75rem;
+  color: #ffd700;
+}
+.m_more .m_tips em {
+  display: inline-block;
+  vertical-align: middle;
+  list-style: none;
+  max-width: 3.6rem;
+  height: 2.4rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.m_more .m_tips i {
+  font-style: normal;
+  color: #fff;
+  font-size: 0.6rem;
+}
+.m_more .m_prize {
+  padding-top: 0.75rem;
+  height: 8.075rem;
+  border-bottom: dashed 0.05rem #6a73c2;
+}
+.m_more .m_ttbox {
+  top: 0.75rem;
+}
+.m_more .z_10 {
+  margin-top: 0.2rem;
+  width: 4.2rem;
+  height: 3.725rem;
+  background-position: 0 -2rem;
+}
+.m_more .z_50 {
+  margin-top: 1.2rem;
+  width: 4.25rem;
+  height: 1.925rem;
+  background-position: 0 -5.85rem;
+}
+.m_more .f_btn {
+  text-align: center;
+  width: 6.2rem;
+  margin-left: 7.675rem;
+}
+.m_more .f_btn a {
+  display: block;
+}
+.m_more .f_btn span {
+  line-height: 1.075rem;
+  color: #2e3257;
+  font-size: 0.6rem;
+}
+.m_more .m_decs {
+  text-align: center;
+  padding: 0.6rem 0.75rem 0;
+  height: 2.325rem;
+  line-height: 0.9rem;
+  font-size: 0.6rem;
+}
+.m_more .m_decs span {
+  color: #f7c140;
+}
+
+.m_banner_2 {
+  position: relative;
+  width: 16rem;
+  height: 10.075rem;
+  background: url(../images/banner_2.jpg) no-repeat;
+  background-size: 16rem auto;
+}
+.m_banner_2 .f_foley {
+  position: absolute;
+  left: 4.4rem;
+  top: 7.575rem;
+  width: 7.2rem;
+  height: 2.1rem;
+  background: url(../images/btn_2.png) no-repeat;
+  background-size: 9.85rem 6.4rem;
+  background-position: 0 0;
+}
+.m_banner_2 .z_foley {
+  background-position: 0 -2.225rem;
+}
+
+.m_logo {
+  height: 2.4rem;
+  position: relative;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+.m_logo i {
+  position: absolute;
+  left: 0.775rem;
+  top: 0.35rem;
+  background: url(../images/btn_2.png) no-repeat;
+  background-size: 9.85rem 6.4rem;
+  background-position: -8.2rem 0;
+  width: 1.65rem;
+  height: 1.675rem;
+}
+.m_logo div {
+  margin-left: 2.95rem;
+  padding-top: 0.25rem;
+  line-height: 0.9rem;
+  font-size: 0.6rem;
+}
+
+.m_prize:nth-last-of-type(1) {
+  border: none;
+}
+
+.m_dh {
+  padding-bottom: 0.45rem;
+  overflow: hidden;
+  color: #fff;
+  font-size: 0.65rem;
+}
+.m_dh .title {
+  text-indent: 0.75rem;
+  color: #ffd700;
+  font-size: 0.75rem;
+  background: #363d7a;
+  height: 2.425rem;
+  line-height: 2.425rem;
+  margin-bottom: 1rem;
+}
+.m_dh span {
+  display: inline-block;
+  margin: 0.325rem auto 0;
+  height: 1.175rem;
+  line-height: 1.175rem;
+  padding: 0 0.625rem;
+  border-raDIus: 0.25rem;
+  background: #5159b3;
+}
+.m_dh i {
+  display: block;
+  margin: 0 auto;
+  background: url(../images/dh.png) no-repeat;
+  background-size: 19.25rem 4.575rem;
+}
+.m_dh .pic_1 {
+  background-position: 0 0;
+}
+.m_dh .pic_2 {
+  background-position: -3.325rem 0;
+}
+.m_dh .pic_3 {
+  background-position: -6.65rem 0;
+}
+.m_dh .row_1 {
+  overflow: hidden;
+  margin-bottom: 1.325rem;
+}
+.m_dh .row_1 div {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+}
+.m_dh .row_1 i {
+  width: 3.2rem;
+  height: 3.275rem;
+}
+.m_dh .row_2 {
+  overflow: hidden;
+  padding-bottom: 0.75rem;
+  border-bottom: dashed 0.05rem #6a73c2;
+}
+.m_dh .row_2 div {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.m_dh .row_2 i {
+  width: 4.575rem;
+  height: 4.575rem;
+}
+.m_dh .pic_4 {
+  background-position: -9.975rem 0;
+}
+.m_dh .pic_5 {
+  background-position: -14.675rem 0;
+}
+
+.m_go {
+  text-indent: -99rem;
+  margin: 0.475rem auto 0;
+  display: block;
+  width: 9.85rem;
+  height: 1.9rem;
+  background: url(../images/btn_2.png) no-repeat;
+  background-size: 9.85rem 6.4rem;
+  background-position: 0 -4.5rem;
+}
