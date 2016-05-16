@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-2.2.3.min.js"></script>
+</head>
+<script>
+    $(function(){
+        var droppable = {
+            init : function(){
+                this.drag();
+            },
+            drag : function(){
+                var That = this;
+                this.disX = 0;
+                this.disY = 0;
+                this.fnDown();
+
+            },
+            createElem : function(obj){
+                if(this.$nullElem){
+                    this.$nullElem.remove();
+                }
+                this.$nullElem = $('<li class="on null"></li>');
+                this.$nullElem.css(this.getSize(obj));
+                obj.after(this.$nullElem);
+
+            },
+            getSize : function(obj){
+                var size = {}
+                size.width = obj.width();
+                size.height = obj.height();
+                return size;
+            },
+            fnDown : function(){
+                var This = this;
+                /* 鼠标按下 */
+                $(document).on('mousedown','li',function(ev){
+                    /* 标记当前拖拽的元素 */
+                    $(this).css('position','absolute').addClass('on');
+                    /* 创建空白元素站位 */
+                    This.createElem($(this));
+                    var That = $(this);
+                    This.disX = ev.pageX - $(this).offset().left;
+                    This.disY = ev.pageY - $(this).offset().top;
+                    This.fnMove(That);
+                    This.fnUp(That);
+                    return false;
+                })
+            },
+            fnMove : function(obj){
+                var This = this;
+                $(document).on('mousemove.drag',function(ev){
+                    obj.css({'left':ev.pageX - This.disX,'top':ev.pageY - This.disY}); /* 移动 */
+                    $('li').each(function(i,elem){
+                        if(!$(elem).hasClass('on')){
+                            if(!This.boom(obj,$(elem))){
+                                This.createElem($(elem));
+                                /* 存储碰撞元素 */
+                                This.$pzElem = $(elem);
+                                console.log('碰了');
+                            };
+                        }
+                    })
+
+                });
+            },
+            fnUp : function(obj){
+                var This = this;
+                $(document).on('mouseup.drag',function(){
+                    This.endPos = {};
+                    /* 移除 站位元素 */
+                    This.$nullElem.remove();
+                    if(This.$pzElem){
+                        This.$pzElem.after(obj);
+                    }
+                    This.endPos.left = obj.offset().left;
+                    This.endPos.top = obj.offset().top;
+                    obj.removeClass('on').removeAttr('style');
+                    $(this).off('.drag');
+                });
+            },
+            boom : function(obj1,obj2){
+                var T1 = obj1.offset().top;
+                var R1 = obj1.offset().left + obj1.innerWidth();
+                var B1 = obj1.offset().top + obj1.innerHeight();
+                var L1 = obj1.offset().left;
+                var T2 = obj2.offset().top;
+                var R2 = obj2.offset().left + obj2.innerWidth();
+                var B2 = obj2.offset().top + obj2.innerHeight();
+                var L2 = obj2.offset().left;
+                if( B1 < T2 || R2 < L1 || B2 < T1 || L2 > R1){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+        };
+        droppable.init();
+    });
+
+
+</script>
+<style>
+    ul { width:200px; margin:20px; padding:0; float:left; }
+    li { list-style: none; width:200px; height:100px; margin:20px 0;font-size:30px; color:#fff; text-align:center; line-height:100px; }
+    ul:nth-last-of-type(1) li { background:red; }
+    ul:nth-last-of-type(2) li { background:green; }
+    ul:nth-last-of-type(3) li { background:pink; }
+    ul .null { background:#ccc !important; }
+    .on { z-index:999; }
+</style>
+<body>
+    <ul>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+
+</body>
+</html>

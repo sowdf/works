@@ -312,6 +312,73 @@ body {
   }
 }
 
+@mixin common(){
+  background:url(../images/common.png) no-repeat;
+  background-size:278rem/$base 269rem/$base;
+}
+.m_common {
+  background:#f1f1f1;
+  .hint {
+    position:relative;
+    height:300rem/$base;
+    background:#fff;
+    margin-bottom:16rem/$base;
+    .face {
+      position:absolute;
+      left:57rem/$base;
+      top:45rem/$base;
+      width:133rem/$base;
+      height:194rem/$base;
+      @include common();
+      background-position:0 0;
+    }
+    dl {
+      padding-top:76rem/$base;
+      margin-left:248rem/$base;
+    }
+    dt {
+      height:47rem/$base;
+      font-size:30rem/$base;
+      color:#000000;
+    }
+    dd {
+      font-size:24rem/$base;
+      color:#9a9a9a;
+      line-height:36rem/$base;
+    }
+    .red {
+      color:#ff5692;
+    }
+  }
+  .tips {
+    background:#fff;
+    height:250rem/$base;
+    i {
+      margin:24rem/$base auto 36rem/$base;
+      display:block;
+      width: 278rem $base;
+      height:70rem/$base;
+      @include common();
+      background-position:0 179rem/$base;
+    }
+    p {
+      text-align:center;
+      color:#000000;
+      font-size:28rem/$base;
+      line-height:41rem/$base;
+    }
+  }
+  .footer{
+    padding-top:45rem/$base;
+    height:130rem/$base;
+    p {
+      font-size:29rem/$base;
+      color:#919191;
+      text-align:center;
+      line-height:30rem/$base;
+    }
+  }
+}
 
 
 footer {
