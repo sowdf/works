@@ -24,7 +24,7 @@
                 }
                 this.$nullElem = $('<li class="on null"></li>');
                 this.$nullElem.css(this.getSize(obj));
-                obj.after(this.$nullElem);
+                obj.before(this.$nullElem);
 
             },
             getSize : function(obj){
@@ -38,12 +38,18 @@
                 /* 鼠标按下 */
                 $(document).on('mousedown','li',function(ev){
                     /* 标记当前拖拽的元素 */
-                    $(this).css('position','absolute').addClass('on');
+                    This.pos = {
+                        left :　$(this).offset().left,
+                        top : $(this).offset().top
+                    }
+                    $(this).addClass('on');
                     /* 创建空白元素站位 */
-                    This.createElem($(this));
                     var That = $(this);
                     This.disX = ev.pageX - $(this).offset().left;
                     This.disY = ev.pageY - $(this).offset().top;
+                    console.log('page:' + ev.pageY + 'offset ' + $(this).offset().top );
+                    console.log(This.disY );
+                    This.createElem($(this));
                     This.fnMove(That);
                     This.fnUp(That);
                     return false;
@@ -52,7 +58,7 @@
             fnMove : function(obj){
                 var This = this;
                 $(document).on('mousemove.drag',function(ev){
-                    obj.css({'left':ev.pageX - This.disX,'top':ev.pageY - This.disY}); /* 移动 */
+                    obj.css({position:'absolute','left':(ev.pageX - This.disX),'top':(ev.pageY - This.disY)}); /* 移动 */
                     $('li').each(function(i,elem){
                         if(!$(elem).hasClass('on')){
                             if(!This.boom(obj,$(elem))){
@@ -103,7 +109,8 @@
 
 </script>
 <style>
-    ul { width:200px; margin:20px; padding:0; float:left; }
+    body { margin:0; }
+    ul { width:200px; margin:20px; padding:0; float:left; border:solid 1px blue; }
     li { list-style: none; width:200px; height:100px; margin:20px 0;font-size:30px; color:#fff; text-align:center; line-height:100px; }
     ul:nth-last-of-type(1) li { background:red; }
     ul:nth-last-of-type(2) li { background:green; }

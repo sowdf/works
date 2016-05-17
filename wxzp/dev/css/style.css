@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/*  reset */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, figure {
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+del, ins {
+  text-decoration: none;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+button, input, select, textarea {
+  font-family: "Microsoft Yahei",Arial,Helvetica,sans-serif;
+}
+
+input, select, img {
+  vertical-align: middle;
+}
+
+input, select {
+  outline: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+body {
+  -ms-text-size-adjust: none;
+  -o-user-select: none;
+  -o-text-size-adjust: none;
+  user-select: none;
+  text-size-adjust: none;
+  font: 0.6rem "微软雅黑",Arial,Helvetica,sans-serif;
+  min-height: 100%;
+}
+
+a {
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+
+.clearfix:after {
+  content: "";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clear {
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*  end reset */
+.advice {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #f1f2f3;
+}
+.advice .content {
+  position: absolute;
+  top: 0;
+  bottom: 2.525rem;
+  width: 16rem;
+  background: #f1f2f3;
+  overflow: hidden;
+}
+.advice li {
+  padding: 0 0.35rem;
+  overflow: hidden;
+}
+.advice li .talk {
+  position: relative;
+  max-width: 10.325rem;
+  padding: 0.6rem 0.55rem;
+  font-size: 0.75rem;
+  line-height: 1.05rem;
+}
+.advice li i {
+  width: 2rem;
+  height: 2rem;
+}
+.advice li em {
+  position: absolute;
+  top: 0.85rem;
+  width: 0;
+  height: 0;
+}
+.advice .hr .talk {
+  float: left;
+  margin-left: 0.75rem;
+  background: #fff;
+}
+.advice .hr i {
+  float: left;
+  background: #ff6600;
+  color: #ffffff;
+  line-height: 2rem;
+  text-align: center;
+  font-style: normal;
+}
+.advice .hr em {
+  left: -0.3rem;
+  border-right: solid 0.325rem #fff;
+  border-top: solid 0.225rem transparent;
+  border-bottom: solid 0.225rem transparent;
+}
+.advice .other .talk {
+  float: right;
+  background: #44c0fc;
+  color: #fff;
+  margin-right: 0.75rem;
+}
+.advice .other i {
+  float: right;
+}
+.advice .other img {
+  width: 2rem;
+  height: 2rem;
+}
+.advice .other em {
+  right: -0.3rem;
+  border-left: solid 0.325rem #44c0fc;
+  border-top: solid 0.225rem transparent;
+  border-bottom: solid 0.225rem transparent;
+}
+.advice .time {
+  height: 1.025rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+.advice .time span {
+  background: #d0d0d0;
+  line-height: 1.025rem;
+  padding: 0 0.5rem;
+  border-radius: 0.125rem;
+  color: #fff;
+  font-size: 0.6rem;
+}
+.advice .input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 14.9rem;
+  padding: 0.475rem 0.75rem 0 0.35rem;
+  height: 2.025rem;
+  border-top: solid 0.025rem #d9dadb;
+  background: #fff;
+}
+.advice input {
+  width: 11.175rem;
+  height: 1.575rem;
+  line-height: 1.575rem;
+  font-size: 0.55rem;
+  text-indent: 0.25rem;
+  border: solid 1px #d9dadb;
+  border-radius: 0.125rem;
+  background: #eeeeee;
+}
+.advice a {
+  width: 3rem;
+  height: 1.625rem;
+  line-height: 1.625rem;
+  border-radius: 0.125rem;
+  font-size: 0.85rem;
+  text-align: center;
+  background: #28b8fd;
+  color: #fff;
+}

@@ -1,0 +1,147 @@
+/*  reset */
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,figure{padding:0;margin:0;}
+table{border-collapse:collapse;border-spacing:0;}
+del,ins{text-decoration:none}
+fieldset,img{border:0;}
+button,input,select,textarea{font-family:"Microsoft Yahei",Arial,Helvetica,sans-serif;}
+input,select,img{vertical-align:middle}
+input,select{outline:none}
+ul,ol{list-style:none}
+label{cursor:pointer}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+address,cite,dfn,em,var{font-style:normal;}
+body{-ms-text-size-adjust:none;-o-user-select:none;-o-text-size-adjust:none;user-select:none;text-size-adjust:none;font:0.6rem "微软雅黑",Arial,Helvetica,sans-serif;min-height:100%;}
+a{-webkit-user-select:none;-webkit-user-drag:none;-webkit-tap-highlight-color:rgba(0,0,0,0);text-decoration: none;}
+.clearfix:after{content:"";height:0;visibility:hidden;display:block;clear:both;}
+.clearfix{zoom:1;}
+.clear{clear:both}
+.fl{float:left;}
+.fr{float:right;}
+/*  end reset */
+$base:40;
+@mixin bk1 {
+  background:url(../images/sprites.png) no-repeat;
+  background-size:610rem/$base 224rem/$base;
+}
+.advice {
+  position:absolute;
+  top:0;
+  bottom:0;
+  background:#f1f2f3;
+  .content {
+    position:absolute;
+    top:0;
+    bottom:101rem/$base;
+    width:16rem;
+    background:#f1f2f3;
+    overflow:hidden;
+  }
+  li {
+    padding:0 14rem/$base;
+    overflow:hidden;
+    .talk {
+      position:relative;
+      max-width:413rem/$base;
+      padding:24rem/$base 22rem/$base;
+      font-size:30rem/$base;
+      line-height:42rem/$base;
+    }
+    i {
+      width:80rem/$base;
+      height:80rem/$base;
+    }
+    em {
+      position:absolute;
+      top:34rem/$base;
+      width:0;
+      height:0;
+    }
+  }
+  .hr {
+    .talk {
+      float:left;
+      margin-left:30rem/$base;
+      background:#fff;
+    }
+    i {
+      float:left;
+      background:#ff6600;
+      color:#ffffff;
+      line-height:80rem/$base;
+      text-align:center;
+      font-style: normal;
+    }
+    em {
+      left:-12rem/$base;
+      border-right:solid 13rem/$base #fff;
+      border-top:solid 9rem/$base transparent;
+      border-bottom:solid 9rem/$base transparent;
+    }
+  }
+  .other {
+    .talk {
+      float:right;
+      background:#44c0fc;
+      color:#fff;
+      margin-right:30rem/$base;
+    }
+    i {
+      float:right;
+    }
+    img {
+      width:80rem/$base;
+      height:80rem/$base;
+    }
+    em {
+      right:-12rem/$base;
+      border-left:solid 13rem/$base #44c0fc;
+      border-top:solid 9rem/$base transparent;
+      border-bottom:solid 9rem/$base transparent;
+    }
+  }
+  .time {
+    height:41rem/$base;
+    margin:40rem/$base 0;
+    text-align:center;
+    span {
+      background:#d0d0d0;
+      line-height:41rem/$base;
+      padding:0 20rem/$base;
+      border-radius:5rem/$base;
+      color:#fff;
+      font-size:24rem/$base;
+    }
+  }
+
+
+  .input {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:14.9rem;
+    padding:19rem/$base 30rem/$base 0 14rem/$base;
+    height:81rem/$base;
+    border-top:solid 1rem/$base #d9dadb ;
+    background:#fff;
+  }
+  input {
+    width:447rem/$base;
+    height:63rem/$base;
+    line-height:63rem/$base;
+    font-size:22rem/$base;
+    text-indent:10rem/$base;
+    border:solid 1px #d9dadb;
+    border-radius:5rem/$base;
+    background:#eeeeee;
+  }
+  a {
+    width:120rem/$base;
+    height:65rem/$base;
+    line-height:65rem/$base;
+    border-radius:5rem/$base;
+    font-size:34rem/$base;
+    text-align:center;
+    background:#28b8fd;
+    color:#fff;
+  }
+}

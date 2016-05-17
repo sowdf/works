@@ -352,14 +352,15 @@ body {
   }
   .tips {
     background:#fff;
-    height:250rem/$base;
+    height:226rem/$base;
+    padding-top:24rem/$base;
     i {
-      margin:24rem/$base auto 36rem/$base;
+      margin:0 auto 36rem/$base;
       display:block;
-      width: 278rem $base;
+      width: 278rem/$base;
       height:70rem/$base;
       @include common();
-      background-position:0 179rem/$base;
+      background-position:0 -199rem/$base;
     }
     p {
       text-align:center;
