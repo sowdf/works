@@ -1,0 +1,285 @@
+/*  reset */
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,figure{padding:0;margin:0;}
+table{border-collapse:collapse;border-spacing:0;}
+del,ins{text-decoration:none}
+fieldset,img{border:0;}
+button,input,select,textarea{font-family:"Microsoft Yahei",Arial,Helvetica,sans-serif;}
+input,select,img{vertical-align:middle}
+input,select{outline:none}
+ul,ol{list-style:none}
+label{cursor:pointer}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+address,cite,dfn,em,var{font-style:normal;}
+body{-ms-text-size-adjust:none;-o-user-select:none;-o-text-size-adjust:none;user-select:none;text-size-adjust:none;font:0.6rem "微软雅黑",Arial,Helvetica,sans-serif;min-height:100%;}
+a{-webkit-user-select:none;-webkit-user-drag:none;-webkit-tap-highlight-color:rgba(0,0,0,0);text-decoration: none;}
+.clearfix:after{content:"";height:0;visibility:hidden;display:block;clear:both;}
+.clearfix{zoom:1;}
+.clear{clear:both}
+.fl{float:left;}
+.fr{float:right;}
+/*  end reset */
+$base:40;
+@mixin btn_1(){
+  background:url(../images/btn_1.png) no-repeat;
+  background-size:246rem/$base 329rem/$base;
+}
+@mixin btn_2(){
+  background:url(../images/btn_2.png) no-repeat;
+  background-size:350rem/$base 355rem/$base;
+}
+.m_banner {
+  position:relative;
+  height:415rem/$base;
+
+  a{
+    position:absolute;
+    left:222rem/$base;
+    top:262rem/$base;
+    width:206rem/$base;
+    height:76rem/$base;
+    @include btn_1();
+    background-position:0 0;
+    text-indent:-111rem;
+  }
+  a:active {
+    background-position:0 -81rem/$base;
+  }
+  span {
+    position:absolute;
+    left:24rem/$base;
+    top:345rem/$base;
+    font-size:16rem/$base;
+    color:#fff;
+    vertical-align: bottom;
+    i {
+      color:#ffedba;
+      font-style:normal;
+      font-size:24rem/$base;
+      vertical-align: bottom;
+      font-weight:bold;
+    }
+  }
+  p {
+    position:absolute;
+    right:38rem/$base;
+    top:348rem/$base;
+    color:#fff;
+    font-size:16rem/$base;
+  }
+  em {
+    position:absolute;
+    right:48rem/$base;
+    bottom:-40rem/$base;
+    width:169rem/$base;
+    height:107rem/$base;
+    @include btn_2();
+    background-position:-213rem/$base -237rem/$base;
+  }
+}
+.m_b1{
+  background:url(../images/banner.jpg) no-repeat;
+  background-size:16rem auto;
+}
+
+.m_b2 {
+  background:url(../images/banner_2.jpg) no-repeat;
+  background-size:16rem auto;
+}
+.m_content {
+  background:-webkit-linear-gradient(top, #fff6d8 , #feeebb);
+  background:linear-gradient(top, #fff6d8 , #feeebb);
+  section {
+    position:relative;
+  }
+
+}
+.m_1 {
+  height:400rem/$base;
+  background:url(../images/img1.jpg) no-repeat;
+  background-size:16rem auto;
+  a {
+    position:absolute;
+    left:202rem/$base;
+    top:188rem/$base;
+    width:246rem/$base;
+    height:76rem/$base;
+    text-indent:-111rem;
+    @include btn_1();
+    background-position:0 -162rem/$base;
+  }
+  a:active {
+    background-position:0 -243rem/$base;
+  }
+}
+.m_2 {
+  height:508rem/$base;
+  background:url(../images/img2.jpg) no-repeat;
+  background-size:16rem auto;
+}
+.m_3 {
+  height:506rem/$base;
+  background:url(../images/img3.jpg) no-repeat;
+  background-size:16rem auto;
+}
+.m_4 {
+  height:272rem/$base;
+  background:url(../images/img4.jpg) no-repeat;
+  background-size:16rem auto;
+  a {
+    position:absolute;
+    left:150rem/$base;
+    top:158rem/$base;
+    width:350rem/$base;
+    height:94rem/$base;
+    text-indent:-111rem;
+    @include btn_2();
+    background-position:0 0;
+  }
+  a:active{
+    background-position:0 -99rem/$base;
+  }
+}
+.m_5 {
+  height:535rem/$base;
+  background:url(../images/img5.jpg) no-repeat;
+  background-size:16rem auto;
+  ul {
+    position:absolute;
+    left:55rem/$base;
+    top:240rem/$base;
+  }
+  li {
+    float:left;
+    text-align:center;
+    width:178rem/$base;
+    height:163rem/$base;
+  }
+  i,img {
+    width:118rem/$base;
+    height:118rem/$base;
+    border-radius:100%;
+  }
+  p {
+    line-height:46rem/$base;
+    color:#8b5932;
+    font-size:24rem/$base;
+  }
+  em {
+    margin:0 10rem/$base;
+    display:inline-block;
+    width:22rem/$base;
+    height:24rem/$base;
+    @include btn_1();
+    background-position:-226rem/$base 0;
+  }
+}
+.m_subject {
+   padding:12rem/$base 56rem/$base 0;
+  color:#73664e;
+  dl {
+    padding-bottom:52rem/$base;
+  }
+  dt {
+    line-height:38rem/$base;
+    font-size:24rem/$base;
+  }
+  dd {
+    position:relative;
+    font-size:22rem/$base;
+    text-indent:50rem/$base;
+    line-height:46rem/$base;
+  }
+  div {
+    padding-top:20rem/$base;
+    position:relative;
+    span{
+      color:#cf8953;
+      font-size:20rem/$base;
+      position:absolute;
+      right:24rem/$base;
+      bottom:17rem/$base;
+    }
+  }
+  textarea {
+    line-height:38rem/$base;
+    font-size:24rem/$base;
+    color:#cf8953;
+    border:3rem/$base solid #f5daa6;
+    resize:none;
+    width:100%;
+    height:160rem/$base;
+    box-sizing:border-box;
+    border-radius:10rem/$base;
+    background:transparent;
+    text-indent:17rem/$base;
+  }
+  i {
+    position:absolute;
+    left:11rem/$base;
+    top:8rem/$base;
+    width:32rem/$base;
+    height:32rem/$base;
+    box-sizing:border-box;
+    border:solid 2rem/$base #a69371;
+    border-radius:50%;
+  }
+  b {
+    position:absolute;
+    left:7rem/$base;
+    top:7rem/$base;
+    width:16rem/$base;
+    height:16rem/$base;
+    border-radius:50%;
+  }
+  b.active {
+    background:#ff7269;
+  }
+  .fill {
+
+  }
+  input {
+    color:#73664e;
+    background:transparent;
+    border:none;
+    border-bottom:solid 1rem/$base #73664e;
+    width:176rem/$base;
+  }
+  .other {
+    text-indent:0;
+  }
+  p {
+
+  }
+  span {
+
+  }
+}
+.m_submit {
+  height:187rem/$base;
+  background:url(../images/img6.jpg) no-repeat center bottom;
+  background-size:16rem auto;
+  a {
+    display: block;
+    margin:0 auto;
+    width:206rem/$base;
+    height:76rem/$base;
+    @include btn_2();
+    background-position:0 -200rem/$base ;
+  }
+  a:active {
+    background-position:0 -280rem/$base;
+  }
+}
+footer{
+  background:#f5daa6;
+  height:77rem/$base;
+  p {
+    padding-top:10rem/$base;
+    text-align:center;
+    color:#8b5932;
+    font-size:18rem/$base;
+    line-height:26rem/$base;
+  }
+}
+
+

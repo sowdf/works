@@ -1,0 +1,349 @@
+@charset "UTF-8";
+/*  reset */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, figure {
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+del, ins {
+  text-decoration: none;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+button, input, select, textarea {
+  font-family: "Microsoft Yahei",Arial,Helvetica,sans-serif;
+}
+
+input, select, img {
+  vertical-align: middle;
+}
+
+input, select {
+  outline: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+body {
+  -ms-text-size-adjust: none;
+  -o-user-select: none;
+  -o-text-size-adjust: none;
+  user-select: none;
+  text-size-adjust: none;
+  font: 0.6rem "微软雅黑",Arial,Helvetica,sans-serif;
+  min-height: 100%;
+}
+
+a {
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+
+.clearfix:after {
+  content: "";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clear {
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*  end reset */
+.m_banner {
+  position: relative;
+  height: 10.375rem;
+}
+.m_banner a {
+  position: absolute;
+  left: 5.55rem;
+  top: 6.55rem;
+  width: 5.15rem;
+  height: 1.9rem;
+  background: url(../images/btn_1.png) no-repeat;
+  background-size: 6.15rem 8.225rem;
+  background-position: 0 0;
+  text-indent: -111rem;
+}
+.m_banner a:active {
+  background-position: 0 -2.025rem;
+}
+.m_banner span {
+  position: absolute;
+  left: 0.6rem;
+  top: 8.625rem;
+  font-size: 0.4rem;
+  color: #fff;
+  vertical-align: bottom;
+}
+.m_banner span i {
+  color: #ffedba;
+  font-style: normal;
+  font-size: 0.6rem;
+  vertical-align: bottom;
+  font-weight: bold;
+}
+.m_banner p {
+  position: absolute;
+  right: 0.95rem;
+  top: 8.7rem;
+  color: #fff;
+  font-size: 0.4rem;
+}
+.m_banner em {
+  position: absolute;
+  right: 1.2rem;
+  bottom: -1rem;
+  width: 4.225rem;
+  height: 2.675rem;
+  background: url(../images/btn_2.png) no-repeat;
+  background-size: 8.75rem 8.875rem;
+  background-position: -5.325rem -5.925rem;
+}
+
+.m_b1 {
+  background: url(../images/banner.jpg) no-repeat;
+  background-size: 16rem auto;
+}
+
+.m_b2 {
+  background: url(../images/banner_2.jpg) no-repeat;
+  background-size: 16rem auto;
+}
+
+.m_content {
+  background: -webkit-linear-gradient(top, #fff6d8, #feeebb);
+  background: linear-gradient(top, #fff6d8, #feeebb);
+}
+.m_content section {
+  position: relative;
+}
+
+.m_1 {
+  height: 10rem;
+  background: url(../images/img1.jpg) no-repeat;
+  background-size: 16rem auto;
+}
+.m_1 a {
+  position: absolute;
+  left: 5.05rem;
+  top: 4.7rem;
+  width: 6.15rem;
+  height: 1.9rem;
+  text-indent: -111rem;
+  background: url(../images/btn_1.png) no-repeat;
+  background-size: 6.15rem 8.225rem;
+  background-position: 0 -4.05rem;
+}
+.m_1 a:active {
+  background-position: 0 -6.075rem;
+}
+
+.m_2 {
+  height: 12.7rem;
+  background: url(../images/img2.jpg) no-repeat;
+  background-size: 16rem auto;
+}
+
+.m_3 {
+  height: 12.65rem;
+  background: url(../images/img3.jpg) no-repeat;
+  background-size: 16rem auto;
+}
+
+.m_4 {
+  height: 6.8rem;
+  background: url(../images/img4.jpg) no-repeat;
+  background-size: 16rem auto;
+}
+.m_4 a {
+  position: absolute;
+  left: 3.75rem;
+  top: 3.95rem;
+  width: 8.75rem;
+  height: 2.35rem;
+  text-indent: -111rem;
+  background: url(../images/btn_2.png) no-repeat;
+  background-size: 8.75rem 8.875rem;
+  background-position: 0 0;
+}
+.m_4 a:active {
+  background-position: 0 -2.475rem;
+}
+
+.m_5 {
+  height: 13.375rem;
+  background: url(../images/img5.jpg) no-repeat;
+  background-size: 16rem auto;
+}
+.m_5 ul {
+  position: absolute;
+  left: 1.375rem;
+  top: 6rem;
+}
+.m_5 li {
+  float: left;
+  text-align: center;
+  width: 4.45rem;
+  height: 4.075rem;
+}
+.m_5 i, .m_5 img {
+  width: 2.95rem;
+  height: 2.95rem;
+  border-radius: 100%;
+}
+.m_5 p {
+  line-height: 1.15rem;
+  color: #8b5932;
+  font-size: 0.6rem;
+}
+.m_5 em {
+  margin: 0 0.25rem;
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.6rem;
+  background: url(../images/btn_1.png) no-repeat;
+  background-size: 6.15rem 8.225rem;
+  background-position: -5.65rem 0;
+}
+
+.m_subject {
+  padding: 0.3rem 1.4rem 0;
+  color: #73664e;
+}
+.m_subject dl {
+  padding-bottom: 1.3rem;
+}
+.m_subject dt {
+  line-height: 0.95rem;
+  font-size: 0.6rem;
+}
+.m_subject dd {
+  position: relative;
+  font-size: 0.55rem;
+  text-indent: 1.25rem;
+  line-height: 1.15rem;
+}
+.m_subject div {
+  padding-top: 0.5rem;
+  position: relative;
+}
+.m_subject div span {
+  color: #cf8953;
+  font-size: 0.5rem;
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.425rem;
+}
+.m_subject textarea {
+  line-height: 0.95rem;
+  font-size: 0.6rem;
+  color: #cf8953;
+  border: 0.075rem solid #f5daa6;
+  resize: none;
+  width: 100%;
+  height: 4rem;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  background: transparent;
+  text-indent: 0.425rem;
+}
+.m_subject i {
+  position: absolute;
+  left: 0.275rem;
+  top: 0.2rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  box-sizing: border-box;
+  border: solid 0.05rem #a69371;
+  border-radius: 50%;
+}
+.m_subject b {
+  position: absolute;
+  left: 0.175rem;
+  top: 0.175rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+}
+.m_subject b.active {
+  background: #ff7269;
+}
+.m_subject input {
+  color: #73664e;
+  background: transparent;
+  border: none;
+  border-bottom: solid 0.025rem #73664e;
+  width: 4.4rem;
+}
+.m_subject .other {
+  text-indent: 0;
+}
+
+.m_submit {
+  height: 4.675rem;
+  background: url(../images/img6.jpg) no-repeat center bottom;
+  background-size: 16rem auto;
+}
+.m_submit a {
+  display: block;
+  margin: 0 auto;
+  width: 5.15rem;
+  height: 1.9rem;
+  background: url(../images/btn_2.png) no-repeat;
+  background-size: 8.75rem 8.875rem;
+  background-position: 0 -5rem;
+}
+.m_submit a:active {
+  background-position: 0 -7rem;
+}
+
+footer {
+  background: #f5daa6;
+  height: 1.925rem;
+}
+footer p {
+  padding-top: 0.25rem;
+  text-align: center;
+  color: #8b5932;
+  font-size: 0.45rem;
+  line-height: 0.65rem;
+}

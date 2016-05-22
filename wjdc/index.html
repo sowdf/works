@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="dev/css/style.css">
+    <script>
+        ! function(a) {
+            function b() {
+                a.rem = f.getBoundingClientRect().width / 16, f.style.fontSize = a.rem + "px"
+            }
+            var c, d = a.navigator.appVersion.match(/iphone/gi) ? a.devicePixelRatio : 1,
+                    e = 1 / d,
+                    f = document.documentElement,
+                    g = document.createElement("meta");
+            if (a.dpr = d, a.addEventListener("resize", function() {
+                        clearTimeout(c), c = setTimeout(b, 300)
+                    }, !1), a.addEventListener("pageshow", function(a) {
+                        a.persisted && (clearTimeout(c), c = setTimeout(b, 300))
+                    }, !1), f.setAttribute("data-dpr", d), g.setAttribute("name", "viewport"), g.setAttribute("content", "initial-scale=" + e + ", maximum-scale=" + e + ", minimum-scale=" + e + ", user-scalable=no"), f.firstElementChild) f.firstElementChild.appendChild(g);
+            else {
+                var h = document.createElement("div");
+                h.appendChild(g), document.write(h.innerHTML)
+            }
+            b()
+        }(window);
+    </script>
+</head>
+<body>
+    <section class="m_banner m_b1">
+        <a>登录</a>
+        <span>已有<i>1254823</i>人参与</span>
+        <p>欢迎你，昵称6个字符...</p>
+    </section>
+   <section class="m_content">
+       <section class="m_1">
+           <a href="">进入答题</a>
+       </section>
+       <section class="m_2">
+       </section>
+       <section class="m_3">
+       </section>
+       <section class="m_4">
+           <a href="">点击进入答题</a>
+       </section>
+       <section class="m_5">
+           <ul>
+               <li>
+                   <i>
+                       <img src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/image/h%3D200/sign=c898bddf19950a7b6a3549c43ad0625c/14ce36d3d539b600be63e95eed50352ac75cb7ae.jpg" alt="">
+                   </i>
+                   <p><em></em>虚位以待</p>
+               </li>
+               <li>
+                   <i>
+                       <img src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/image/h%3D200/sign=c898bddf19950a7b6a3549c43ad0625c/14ce36d3d539b600be63e95eed50352ac75cb7ae.jpg" alt="">
+                   </i>
+                   <p><em></em>虚位以待</p>
+               </li>
+               <li>
+                   <i>
+                       <img src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/image/h%3D200/sign=c898bddf19950a7b6a3549c43ad0625c/14ce36d3d539b600be63e95eed50352ac75cb7ae.jpg" alt="">
+                   </i>
+                   <p><em></em>虚位以待</p>
+               </li>
+           </ul>
+       </section>
+   </section>
+    <footer>
+        <p>
+            本活动最终解释权归4399所有 <br>
+            ©2004-2016四三九九网络股份有限公司
+        </p>
+    </footer>
+</body>
+</html>

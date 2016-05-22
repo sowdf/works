@@ -6,7 +6,8 @@
     <script src="js/jquery-2.2.3.min.js"></script>
 </head>
 <script>
-    $(function(){
+    (function($){
+        var $parent = null;
         var droppable = {
             init : function(callback){
                 this.drag();
@@ -23,9 +24,10 @@
             fnDown : function(){
                 var This = this;
                 /* 鼠标按下 */
-                $(document).on('mousedown','li',function(ev){
+                $(document).on('mousedown',settings.tag,function(ev){
                     This.$dragObj = $(this); /* 拖拽对象赋值 */
-                        /* 标记当前拖拽的元素 */
+                    /* 标记当前拖拽的元素 */
+                    This.$margin = This.$dragObj.css('margin');
                     This.pos = {
                         left :　$(this).offset().left,
                         top : $(this).offset().top
@@ -35,8 +37,8 @@
                     var That = $(this);
                     This.disX = ev.pageX - $(this).offset().left;
                     This.disY = ev.pageY - $(this).offset().top;
-                    $(this).css({margin:0,zIndex:9999,position:'absolute','left':(ev.pageX - This.disX),'top':(ev.pageY - This.disY) + $(document).scrollTop()}); /* 移动 */
                     This.createElem($(this));
+                    $(this).css({margin:0,zIndex:9999,position:'absolute','left':(ev.pageX - This.disX),'top':(ev.pageY - This.disY)}); /* 移动 */
                     This.fnMove(That);
                     This.fnUp(That);
                     return false;
@@ -62,10 +64,9 @@
                 var This = this;
                 $(document).on('mouseup.drag',function(){
                     /* 移除 站位元素 */
+                    This.createLastElem();
                     This.upInsert();
-                    This.$nullElem.remove();
-                    obj.removeClass('on').removeAttr('style');
-                    This.callback && This.callback();
+                    This.callback && This.callback(This.$dragObj);
                     $(this).off('.drag');
                 });
             },
@@ -73,12 +74,24 @@
                 if(this.$nullElem){
                     this.$nullElem.remove();
                 }
-                this.$nullElem = $('<li class="on null"></li>');
-                this.$nullElem.css(this.getSize(this.$dragObj));
+                var size = this.getSize(this.$dragObj);
+                this.$nullElem = $('<li class="on"></li>');
+                this.$nullElem.css({width:size.width,heihgt:size.height,background:settings.color});
                 if(obj){
                     obj.after(this.$nullElem); /* 正常创建  */
                 }else{
                     this.pzInsert(); /* 发生碰撞的时候创建 */
+                }
+            },
+            createLastElem : function(){
+                var num = this.$dragObj.parent().children().length;
+                var $opacityObj = $('<'+settings.tag+' class="null" style=" height:1px;background:rgba(0,0,0,0)">1</'+settings.tag+'>')
+                if(num <= 1){
+                    this.$dragObj.parent().append($opacityObj);
+                }else{
+                    if(this.$pzElem.hasClass('null')){
+                        this.$pzElem.remove();
+                    }
                 }
             },
             pzInsert : function(){
@@ -104,8 +117,9 @@
                 return size;
             },
             upInsert : function(){ /* 插入元素 */
-                this.$nullElem.css('margin','20px 0')
                 this.$nullElem.after(this.$dragObj);
+                this.$nullElem.remove();
+                this.$dragObj.removeClass('on').css({position:'static',margin:this.$margin});
             },
             boom : function(obj1,obj2){
                 var T1 = obj1.offset().top;
@@ -123,12 +137,55 @@
                 }
             }
         };
-        droppable.init(function(){
-            console.log('拖拽成功');
+        /* 函数继承操作 */
+        var settings = {
+
+        };
+        var defaults = {
+            tag : 'li',
+            color : '#ccc',
+            animate : true
+        }
+
+        function drag(options){
+            $parent = this;
+            if($.isFunction(options)){ /* 判断传入的是否是函数是的话 直接使用默认配置 */
+                settings = $.extend(settings,defaults);
+                droppable.init(options);
+            }else{
+                settings = $.extend(settings,defaults,options);
+                droppable.init(settings.callback);
+            }
+        }
+        $.extend({
+            drag : drag
+        })
+    })(jQuery);
+
+    $(function(){
+        /*
+        * 接受一个回调函数
+        * 函数内返回拖拽对象
+        *
+        * 如果是li标签可直接写回调函数
+        *
+        *
+        *
+        * */
+        /* 第一种写法 */
+        $.drag({
+            tag : 'li', /* 拖拽的标签 */
+            color : 'blue',  /* 拖拽时的阴影颜色*/
+            callback : function(a){
+                console.log('你拖拽的是第'+ a.html() + '模块');
+            }
         });
-    });
 
-
+        /* 第二种写法 */
+        /*$.drag(function(a){
+            console.log('你拖拽的是第'+ a.html() + '模块');
+        });*/
+    })
 </script>
 <style>
     body { margin:0; }
@@ -137,37 +194,36 @@
     ul:nth-last-of-type(1) li { background:red; }
     ul:nth-last-of-type(2) li { background:green; }
     ul:nth-last-of-type(3) li { background:pink; }
-    ul .null { background:#ccc !important; }
     .on { z-index:999; }
 </style>
 <body>
-    <ul>
-        <li class="active">1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-    </ul>
-    <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-    </ul>
-    <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-    </ul>
+<ul id="ul">
+    <li class="active">1</li>
+    <li style="height:200px;">2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+</ul>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+</ul>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+</ul>
 
 </body>
 </html>
