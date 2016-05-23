@@ -34,14 +34,14 @@
     </section>
    <section class="m_content">
        <section class="m_1">
-           <a href="">进入答题</a>
+           <a class="j-skip">进入答题</a>
        </section>
        <section class="m_2">
        </section>
        <section class="m_3">
        </section>
        <section class="m_4">
-           <a href="">点击进入答题</a>
+           <a class="j-into">点击进入答题</a>
        </section>
        <section class="m_5">
            <ul>
@@ -74,3 +74,41 @@
     </footer>
 </body>
 </html>
+<script src="../base/js/jquery-1.11.1.js"></script>
+<script>
+    function scrollTo(pos){
+        var iTimer = null;
+        var b = 0;
+        window.onscroll = function(){
+            if( b != 1){/* 当滚动条触发时停止定时器 */
+                clearInterval(iTimer);
+            }
+            b = 2;
+        };
+        clearInterval(iTimer);
+        var iCur = iSpeed = 0;
+        iTimer = setInterval(function(){
+            iCur =  document.documentElement.scrollTop || document.body.scrollTop;;
+            iSpeed = Math.floor(( pos - iCur ) / 8);/* 对速度进行取整操作 */
+            if(iCur == pos){
+                clearInterval(iTimer);
+            }else{
+                document.documentElement.scrollTop = document.body.scrollTop = iCur + iSpeed;
+            }
+            b = 1;
+        },30);
+    }
+    $(function(){
+        $skip = $('.j-skip');
+        $into = $('.j-into');
+        $skip.on('click',function(){
+            var $posY = $into.offset().top;
+            var $wHeight = $(window).height(); /* 获取window的高 */
+            var $objH = $into.height();
+            var disY =  ($wHeight) / 2 + $objH;
+            var $scrollTop = $posY - $wHeight + disY;
+            scrollTo($scrollTop);
+        })
+    })
+
+</script>
