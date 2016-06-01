@@ -223,25 +223,25 @@
             }
 
             if(length == 0){ /* 如果长度为零 就标示一下 */
-                this.result[this.$id].select = 0 ; /* 0 表示没有数据 */
+                this.result[this.$id].isAnswer = false ; /* fasle 表示没有数据 */
             }else{
                 this.result[this.$id].select = this.arr; /* 储存选择结果 */
+                this.result[this.$id].isAnswer = true ;
 
             }
 
             this.arr = null;
-            console.log(this.result);
         },
         getInput : function(){
             if(!this.result[this.$id]){
                 this.result[this.$id] = {};
             }
             if(this.$input == '' && this.$type == 3){ /* 如果内容为空 就标示一下 */
-                delete this.result[this.$id].input; /* 删除这个字段  */
+                this.result[this.$id].isAnswer = false ; /* fasle 表示没有数据 */
             }else {
                 this.result[this.$id].input = this.$input; /* 储存选择结果 */
+                this.result[this.$id].isAnswer = true ;
             }
-            console.log(this.result);
         },
         submit : function(){ /* 提交数据结果 */
             var This = this;
@@ -250,9 +250,8 @@
                 var length = 0;
 
                 for(var json in This.result){/* 获取JSON长度 */
-                    if(!(This.result[json].select == 0  || (!This.result[json].select && !This.result[json].input))){ /* 判断选项是否存在 不存在说明是自填提 存在说明是已选择的 */
+                    if(This.result[json].isAnswer == true){ /* 判断选项是否存在 不存在说明是自填提 存在说明是已选择的 */
                         length++;
-
                     }
                 }
 
