@@ -481,3 +481,39 @@ body {
   padding: 0 12px;
   font-style: normal;
 }
+
+.m_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.m_popup .filter {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+.m_popup .title {
+  position: relative;
+  height: 47px;
+  line-height: 47px;
+  text-indent: 20px;
+  background: #fbfbfb;
+  border-bottom: solid 1px #ececec;
+  font-size: 14px;
+}
+.m_popup .title i {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  right: 19px;
+  top: 17px;
+  background: url(../images/sprites.png) no-repeat;
+  background-position: 0 -60px;
+}

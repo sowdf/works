@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-ruby-sass');
 var compass = require('gulp-compass');
 var minifycss = require('gulp-minify-css');
 
