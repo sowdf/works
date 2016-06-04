@@ -233,6 +233,13 @@ body {
   background: url(../images/sprites.png) no-repeat;
   background-position: -111px -49px;
 }
+.m_content .m_time .m_date {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 500px;
+  display: block;
+}
 .m_content .m_tb_1 th, .m_content .m_tb_2 th {
   font-size: 12px;
   color: #888888;
@@ -499,6 +506,9 @@ body {
   opacity: 0.3;
   filter: alpha(opacity=30);
 }
+.m_popup .box {
+  position: absolute;
+}
 .m_popup .title {
   position: relative;
   height: 47px;
@@ -516,4 +526,72 @@ body {
   top: 17px;
   background: url(../images/sprites.png) no-repeat;
   background-position: 0 -60px;
+  cursor: pointer;
+}
+.m_popup .content {
+  position: relative;
+  background: #fff;
+}
+.m_popup .warn {
+  padding: 24px 0 0 20px;
+  height: 128px;
+}
+.m_popup .warn p {
+  line-height: 27px;
+  color: #333333;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+.m_popup .warn p em {
+  color: #50a100;
+  font-style: normal;
+}
+.m_popup .warn span {
+  font-size: 14px;
+  color: #f96116;
+}
+.m_popup .ad table {
+  width: 100%;
+}
+.m_popup .ad th, .m_popup .ad td {
+  width: 191px;
+  padding-left: 26px;
+  border-bottom: solid 1px #f4f4f4;
+}
+.m_popup .ad th {
+  height: 34px;
+  text-align: left;
+  background: #fbfbfb;
+  color: #9b9b9b;
+}
+.m_popup .ad th a {
+  color: #35a1ee;
+}
+.m_popup .ad td {
+  font-size: 12px;
+  height: 33px;
+  color: #4f4f4f;
+}
+.m_popup .handle {
+  height: 139px;
+  text-align: center;
+}
+.m_popup .handle p {
+  height: 70px;
+  line-height: 70px;
+  font-size: 18px;
+}
+.m_popup .handle a {
+  display: inline-block;
+  width: 78px;
+  height: 38px;
+  line-height: 38px;
+  margin: 0 5px;
+  border: solid 1px #ececec;
+  color: #454545;
+  font-size: 14px;
+}
+.m_popup .handle .btn1 {
+  background: #6bc413;
+  color: #fff;
 }

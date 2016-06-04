@@ -174,6 +174,13 @@ body {
       @include sprites();
       background-position:-111px -49px;
     }
+    .m_date {
+      position:absolute;
+      left:0;
+      top:40px;
+      width:500px;
+      display: block;
+    }
   }
 
   .m_time {
@@ -476,6 +483,9 @@ body {
     opacity:0.3;
     filter: alpha(opacity=30);
   }
+  .box {
+    position:absolute;
+  }
   .title {
     position:relative;
     height:47px;
@@ -492,9 +502,76 @@ body {
       top:17px;
       @include sprites();
       background-position:0 -60px;
+      cursor: pointer;
     }
   }
   .content {
-
+    position:relative;
+    background:#fff;
+  }
+  .warn {
+    padding:24px 0 0 20px;
+    height:128px;
+    p {
+      line-height:27px;
+      color:#333333;
+      font-size:16px;
+      margin-bottom:18px;
+      em {
+        color:#50a100;
+        font-style: normal;
+      }
+    }
+    span {
+      font-size:14px;
+      color:#f96116;
+    }
+  }
+  .ad {
+    table {
+      width:100%;
+    }
+    th,td {
+      width:191px;
+      padding-left:26px;
+      border-bottom:solid 1px #f4f4f4;
+    }
+    th {
+      height:34px;
+      text-align:left;
+      background:#fbfbfb;
+      color:#9b9b9b;
+      a {
+        color:#35a1ee;
+      }
+    }
+    td {
+      font-size:12px;
+      height:33px;
+      color:#4f4f4f;
+    }
+  }
+  .handle {
+    height:139px;
+    text-align: center;
+    p {
+      height:70px;
+      line-height:70px;
+      font-size:18px;
+    }
+    a {
+      display: inline-block;
+      width:78px;
+      height:38px;
+      line-height:38px;
+      margin:0 5px;
+      border:solid 1px #ececec;
+      color:#454545;
+      font-size:14px;
+    }
+    .btn1 {
+      background:#6bc413;
+      color:#fff;
+    }
   }
 }

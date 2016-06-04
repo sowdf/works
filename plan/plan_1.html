@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="dev/css/style.css">
+    <link rel="stylesheet" href="dev/css/doubleDate.css">
 </head>
 <body>
 <div class="m_header">
@@ -36,11 +37,14 @@
             <a href="" class="f_rechnge">充值/提现</a>
             <a href="" class="f_add"><i></i>添加计划</a>
         </div>
-        <div class="m_time fr">
+        <div class="m_time fr j-time">
             查询时间 <i></i>
+            <div class="m_date j-date clearfix">
+                <input type="text" readonly="readonly" class="doubledate ipticon"></input>
+            </div>
         </div>
     </div>
-    <table class="m_tb_1">
+    <table class="m_tb_1 j-table">
         <tr>
             <th width="160" class="ti_21">
                 广告名称
@@ -175,19 +179,244 @@
         Copyright©2004 - 2015 4399.com All Rights Reserved.   四三九九网络股份有限公司 版权所有
     </p>
 </div>
-<div class="m_popup">
+
+<!--<div class="m_popup">
     <div class="filter"></div>
-    <div class="title">
-        <span>温馨提示</span>
-        <i class="j-close"></i>
+    <div class="j-box">
+        <div class="title">
+            <span>温馨提示</span>
+            <i class="j-close"></i>
+        </div>
+        <div class="content">
+            <div class="warn">
+                <p>充值、提现，请先联系我司客服，根据客服提示的流程操作。 <br>
+                            客服联系方式： <em>QQ 2853302555</em></p>
+                <span class="tips">
+                    (*) 目前充值/提现需要人工处理，涉及到财产操作，请一定核实信息，谨慎操作!
+                </span>
+            </div>
+
+        </div>
     </div>
-    <div class="content">
-        <p>充值、提现，请先联系我司客服，根据客服提示的流程操作。
-            客服联系方式： <span>QQ 2853302555</span></p>
-        <span class="tips">
-            (*) 目前充值/提现需要人工处理，涉及到财产操作，请一定核实信息，谨慎操作!
-        </span>
+</div>-->
+
+<!--<div class="m_popup">
+    <div class="filter"></div>
+    <div class="j-box">
+        <div class="title">
+            <span>温馨提示</span>
+            <i class="j-close"></i>
+        </div>
+        <div class="content">
+            <div class="ad">
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>广告位（<a href="#">介绍</a>）</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            排行-总版
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            排行-总版
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            排行-总版
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            排行-总版
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
-</div>
+</div>-->
+
+<!--<div class="m_popup">
+    <div class="filter"></div>
+    <div class="j-box">
+        <div class="title">
+            <span>温馨提示</span>
+            <i class="j-close"></i>
+        </div>
+        <div class="content">
+            <div class="handle">
+                <p>是否开启广告计划</p>
+                <a href="" class="btn1">开启</a>
+                <a href="" class="btn2">取消</a>
+            </div>
+        </div>
+    </div>
+</div>-->
+
 </body>
 </html>
+<script src="javascript/jquery-1.4.2.min.js"></script>
+<script src="javascript/doubleDate2.0.js"></script>
+<script>
+    /* 时间控件 */
+    $('.doubledate').kuiDate({
+        className:'doubledate',
+        isDisabled: "0"  // isDisabled为可选参数，“0”表示今日之前不可选，“1”标志今日之前可选
+    });
+    var datePicker =  {
+        init : function(){
+            this.date();
+            this.elem();
+            this.show();
+        },
+        elem : function(){
+            this.$time = $('.j-time');
+        },
+        show : function(){
+            var This = this;
+        },
+        date : function(){
+
+        }
+    }
+
+    datePicker.init();
+
+
+
+
+
+    function Dialog(){
+        this.$dialog = null;
+        this.settings = {
+            w : 600,
+            h : 200,
+            dir : 'center',
+            title : '',
+            type : 'warn',
+            handle : {
+                btnText : '',
+                btn1Fn : function(){}
+            }
+
+
+        }
+    }
+
+    Dialog.prototype.init = function(opt){
+        $.extend(this.settings,opt);
+        this.content = {
+            warn : '<div class="warn"><p>充值、提现，请先联系我司客服，根据客服提示的流程操作。 <br>客服联系方式： <em>QQ 2853302555</em></p><span class="tips">(*) 目前充值/提现需要人工处理，涉及到财产操作，请一定核实信息，谨慎操作!</span></div>',
+            ad : '<div class="ad"> <table> <tr> <th>ID</th> <th>广告位（<a href="#">介绍</a>）</th></tr><tr><td>1</td><td>排行-总版</td></tr><tr><td>1</td><td>排行-总版</td></tr><tr><td>1</td><td>排行-总版</td></tr><tr><td>1</td><td>排行-总版</td></tr></table></div>',
+            handle : '<div class="handle"><p>'+this.settings.handle.context+'</p><a href="javascript:;" class="btn1 j-click">'+this.settings.handle.btnText+'</a><a href="javascript:;" class="btn2 j-click">取消</a></div>'
+        }
+
+        this.create();
+        this.fnClose();
+    };
+
+
+
+    Dialog.prototype.create = function(){
+        this.$dialog = $('<div class="m_popup"></div>');
+
+        this.$dialog.append('<div class="filter"></div>\
+                <div class="box j-box">\
+                <div class="title">\
+                <span>'+ this.settings.title +'</span>\
+                <i class="j-close"></i>\
+                </div>\
+                <div class="content j-content">\
+        </div>\
+        </div>');
+
+        $(document.body).append(this.$dialog);
+
+        this.setDate();
+
+        this.btnClick();
+    };
+
+    Dialog.prototype.setDate = function(){
+        this.$box = this.$dialog.find('.j-box');
+        this.$content = this.$dialog.find('.j-content');
+        var $top= ($(window).height() - this.settings.h)/2;
+        var $left = ($(window).width() - this.settings.w)/2;
+
+        this.$box.css({
+            width : this.settings.w,
+            height : this.settings.h,
+            top : $top,
+            left　: $left
+        });
+
+        this.$content.html(this.content[this.settings.type]);
+
+    };
+
+    Dialog.prototype.fnClose = function(){
+        var $close = this.$dialog.find('.j-close');
+        var This = this;
+
+        $close.on('click',function(){
+            This.$dialog.remove();
+        });
+    }
+
+    Dialog.prototype.btnClick = function(){
+        var $btn = this.$dialog.find('.j-click');
+        var This = this;
+
+        $btn.on('click',function(){
+            var html = $(this).html();
+
+            if(html !== '取消'){ /* 如果不等于取消就执行回调操作 */
+                This.settings.handle.btn1Fn && This.settings.handle.btn1Fn();
+            }else{
+                This.$dialog.remove();
+            }
+        });
+    }
+
+  /*  var d1 = new Dialog();
+    d1.init({
+        w : 600,
+        h : 200,
+        dir : 'center',
+        title : '广告',
+        type : 'handle',
+        handle : {
+            btnText : '开启',
+            context : '是否开启广告计划？',
+            btn1Fn : function(){
+                alert(1);
+            }
+        }
+    })*/
+
+    /* 列表鼠标移动 效果 */
+    $('.j-table').delegate('tr','mouseover',function(){
+        $(this).addClass('active');
+    });
+    $('.j-table').delegate('tr','mouseout',function(){
+        $(this).removeClass('active');
+    });
+</script>
+
+

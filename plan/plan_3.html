@@ -56,17 +56,17 @@
                     </div>
                     <div class="fr count">
                         <span>预算(￥)：</span> <br>
-                        <input type="text" placeholder="此次计划投放的总预算">
+                        <input type="text" class="j-budget" value="此次计划投放的总预算">
                     </div>
                 </li>
                 <li>
                     <span>竞价(￥)：</span> <br>
-                    <input type="text" placeholder="游戏每次被下载的费用（区间0.5-50元）">
+                    <input type="text" class="j-bidding" value="游戏每次被下载的费用（区间0.5-50元）">
                 </li>
             </ul>
             <div class="f_date fr">
                 <span>推广时段（24小时）：</span> <br>
-                <table>
+                <table class="j-table">
                     <tr>
                         <th width="46">
                         </th>
@@ -357,3 +357,59 @@
 </div>
 </body>
 </html>
+<script src="javascript/jquery-1.11.1.js"></script>
+<script>
+    var addPlan = {
+        init : function(){
+            this.result = {};
+            this.elem();
+            this.inputDefault();
+            this.tableSelect();
+        },
+        elem : function(){
+            this.$budget = $('.j-budget'),
+            this.$bidding  = $('.j-bidding ');
+            this.$table = $('.j-table');
+            this.$td = this.$table.find('td');
+        },
+        tableSelect : function(){ /* 表格的选择操作 */
+            var This = this ;
+            this.$td.on('click',function(){
+                $(this).toggleClass('active');
+
+                if($(this).hasClass('active')){
+                    var _index = $(this).index('td');
+                    This.convert(_index);
+                    console.log(This.result);
+                }
+            });
+        },
+        convert : function(num){
+            var hour = num % 24;
+            var weekday = Math.floor(num / 24);
+
+            if(this.result[weekday]){
+                this.result[weekday] = [];
+            }else {
+                this.result[weekday].push(hour);
+            }
+
+        },
+        inputDefault : function(){
+            var objArr = [ this.$budget, this.$bidding];
+            var text = ['此次计划投放的总预算','游戏每次被下载的费用（区间0.5-50元）'];
+
+            for(var i = 0,len = objArr.length; i<len; i++ ){
+                this.setInpDefault(objArr[i],text[i]);
+            }
+        },
+        setInpDefault : function(obj,text){  /* 设置默认值 */
+            obj.focus(function(){$(this).val('')}).blur(function(){
+                var $this = $(this);
+                ($this.val() === '')? $this.val(text) : null;
+            });
+        }
+    }
+    addPlan.init();
+
+</script>
