@@ -144,7 +144,7 @@
                         </th>
                     </tr>
                     <tr>
-                        <td class="col">周一</td>
+                        <td class="col j-weekday">周一</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -171,7 +171,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td class="col">周二</td>
+                        <td class="col j-weekday">周二</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -198,7 +198,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td class="col">周三</td>
+                        <td class="col j-weekday">周三</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -225,7 +225,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td class="col">周四</td>
+                        <td class="col j-weekday">周四</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -252,7 +252,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td class="col">周五</td>
+                        <td class="col j-weekday">周五</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -279,7 +279,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td class="col">周六</td>
+                        <td class="col j-weekday">周六</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -306,8 +306,8 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td class="col">周日</td>
-                        <td class="active"></td>
+                        <td class="col j-weekday">周日</td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -336,11 +336,11 @@
                 <div class="f_select">
                     <span>tips：可以通过点击标题选择整行或整列</span>
                     <span><i></i>表示已选中时段</span>
-                    <div>
-                        <a href="#">重置</a>
-                        <a href="#">周末</a>
-                        <a href="#">工作日</a>
-                        <a href="#">全选</a>
+                    <div class="j-handle">
+                        <a href="javascript:;" data-handle="reset">重置</a>
+                        <a href="javascript:;" data-handle="weekend">周末</a>
+                        <a href="javascript:;" data-handle="workday">工作日</a>
+                        <a href="javascript:;" data-handle="allselect">全选</a>
                     </div>
                 </div>
             </div>
@@ -371,28 +371,77 @@
             this.$bidding  = $('.j-bidding ');
             this.$table = $('.j-table');
             this.$td = this.$table.find('td');
+            this.$handle = $('.j-handle').find('a');
         },
         tableSelect : function(){ /* 表格的选择操作 */
+            this.clickSel();
+            this.selectHandle();
+        },
+        selectHandle : function(){
+            var This = this;
+
+            this.$handle.on('click',function(){
+               var type = $(this).data('handle');
+                console.log(type)
+                switch (type){
+                    case 'allselect':
+                        allSelect();
+                        break;
+
+
+                }
+
+
+            });
+
+            function allSelect(){
+                This.$td.each(function(i,elem){
+                    if(!$(elem).hasClass('j-weekday')){
+                        This.getResult(i);
+                        $(elem).addClass('active');
+                    }
+                });
+                console.log(This.result);
+            }
+
+        },
+        clickSel : function(){
             var This = this ;
             this.$td.on('click',function(){
-                $(this).toggleClass('active');
+                if($(this).hasClass('j-weekday')){ /*有这个class表示是 周一周二。。*/
+                    return false;
+                }
 
+                $(this).toggleClass('active');
                 if($(this).hasClass('active')){
                     var _index = $(this).index('td');
-                    This.convert(_index);
+                    This.getResult(_index);
+                    console.log(This.result);
+                }else{
                     console.log(This.result);
                 }
             });
         },
-        convert : function(num){
-            var hour = num % 24;
-            var weekday = Math.floor(num / 24);
+        getResult : function(num){
 
-            if(this.result[weekday]){
+
+            if(!this.result[weekday]){
                 this.result[weekday] = [];
+                this.result[weekday].push(hour)
             }else {
                 this.result[weekday].push(hour);
             }
+
+        },
+        convert : function(num){
+            var length = this.$td.length;
+            var line = Math.floor(num / (length / 7) ) + 1; /*计算 行号*/
+            var index = num - line;
+            var hour = index % 24;
+            var weekday = line;
+            return {}
+        },
+        delectResult : function(num){
 
         },
         inputDefault : function(){
