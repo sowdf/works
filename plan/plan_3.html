@@ -387,43 +387,82 @@
                     case 'allselect':
                         allSelect();
                         break;
-
-
+                    case 'workday':
+                        workday();
+                        break;
+                    case 'weekend':
+                        weekend();
+                        break;
+                    default :
+                        reset();
                 }
-
-
             });
 
             function allSelect(){
+                reset();
                 This.$td.each(function(i,elem){
                     if(!$(elem).hasClass('j-weekday')){
                         This.getResult(i);
                         $(elem).addClass('active');
                     }
                 });
-                console.log(This.result);
+            }
+
+            function workday(){
+                reset();
+                var count = 24 * 5 + 5; /* 5天的长度 */
+                This.$td.each(function(i,elem){
+                    if(i > count){
+                        return;
+                    }
+                    if(!$(elem).hasClass('j-weekday')){
+                        This.getResult(i);
+                        $(elem).addClass('active');
+                    }
+                });
+            }
+
+            function weekend(){
+                reset();
+                var count = 24 * 5 + 5; /* 5天的长度 */
+                This.$td.each(function(i,elem){
+                    if(i < count){
+                        return;
+                    }
+                    if(!$(elem).hasClass('j-weekday')){
+                        This.getResult(i);
+                        $(elem).addClass('active');
+                    }
+                });
+            }
+
+            function reset(){
+                This.result = {};
+                This.$td.removeClass('active');
             }
 
         },
         clickSel : function(){
             var This = this ;
             this.$td.on('click',function(){
+                var _index = $(this).index('td');
+
                 if($(this).hasClass('j-weekday')){ /*有这个class表示是 周一周二。。*/
                     return false;
                 }
 
                 $(this).toggleClass('active');
                 if($(this).hasClass('active')){
-                    var _index = $(this).index('td');
                     This.getResult(_index);
-                    console.log(This.result);
                 }else{
-                    console.log(This.result);
+                    This.delectResult(_index);
                 }
             });
         },
         getResult : function(num){
-
+            var result = this.convert(num);
+            var weekday = result.weekday;
+            var hour = result.hour;
 
             if(!this.result[weekday]){
                 this.result[weekday] = [];
@@ -439,10 +478,17 @@
             var index = num - line;
             var hour = index % 24;
             var weekday = line;
-            return {}
+            return {weekday:weekday,hour:hour};
         },
         delectResult : function(num){
+            var result = this.convert(num);
+            var weekday = result.weekday;
+            var hour = result.hour;
 
+            this.result[weekday].remove(hour);
+            if(this.result[weekday].length == 0){
+                delete this.result[weekday];
+            }
         },
         inputDefault : function(){
             var objArr = [ this.$budget, this.$bidding];
@@ -460,5 +506,16 @@
         }
     }
     addPlan.init();
-
+    Array.prototype.indexOf = function(val) {
+        for (var i = 0; i < this.length; i++) {
+            if (this[i] == val) return i;
+        }
+        return -1;
+    };
+    Array.prototype.remove = function(val) {
+        var index = this.indexOf(val);
+        if (index > -1) {
+            this.splice(index, 1);
+        }
+    };
 </script>

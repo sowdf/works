@@ -38,7 +38,9 @@
             <a href="" class="f_add"><i></i>添加计划</a>
         </div>
         <div class="m_time fr j-time">
-            查询时间 <i></i>
+            <div>
+                查询时间 <i></i>
+            </div>
             <div class="m_date j-date clearfix">
                 <input type="text" readonly="readonly" class="doubledate ipticon"></input>
             </div>
@@ -164,11 +166,9 @@
         </tr>
     </table>
     <div class="m_page">
-        <a href="" class="f_up">«</a>
-        <a href="" class="f_prev">‹</a>
-        <a href="" class="active">1</a>
-        <a href="" class="f_next">›</a>
-        <a href=""class="f_down">»</a>
+        <div id="j-pages">
+
+        </div>
         <span>共6条 10条/页 共1页</span>
     </div>
 </div>
@@ -273,7 +273,21 @@
 </html>
 <script src="javascript/jquery-1.4.2.min.js"></script>
 <script src="javascript/doubleDate2.0.js"></script>
+<script src="javascript/page.js"></script>
 <script>
+    page({
+
+        id : 'j-pages',
+        nowNum : 7,
+        allNum : 10,
+        callBack : function(now,all){
+
+            console.log('当前页:' + now +',总共页:'+all);
+
+        }
+
+    });
+
     /* 时间控件 */
     $('.doubledate').kuiDate({
         className:'doubledate',
