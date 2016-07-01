@@ -174,7 +174,9 @@ body {
       @include sprites();
       background-position:-111px -49px;
     }
+
     .m_date {
+      display: none;
       position:absolute;
       left:0;
       top:40px;
@@ -198,6 +200,7 @@ body {
     line-height:48px;
   }
   .m_tb_1 td,.m_tb_2 td {
+    cursor: pointer;
     font-size:12px;
     color:#333;
     border-bottom:1px solid #f5f5f5;
@@ -221,6 +224,25 @@ body {
     a:hover {
       text-decoration: underline;
     }
+    .z_valid {
+      color:#64bf0a;
+    }
+    .z_lack {
+      color:#ff2828;
+    }
+    .z_pause {
+      color:#888888;
+    }
+    .i_qus {
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left:5px;
+      width:16px;
+      height:16px;
+      @include sprites();
+      background-position:-90px -49px;
+    }
   }
   .m_tb_2 {
     tr {
@@ -240,15 +262,7 @@ body {
   .ti_23 {
     text-indent:23px;
   }
-  .z_valid {
-    color:#64bf0a;
-  }
-  .z_lack {
-    color:#ff2828;
-  }
-  .z_pause {
-    color:#888888;
-  }
+
   .i_pull {
     vertical-align: middle;
     display:inline-block;

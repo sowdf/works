@@ -41,9 +41,9 @@
             <div>
                 查询时间 <i></i>
             </div>
-            <div class="m_date j-date clearfix">
+<!--            <div class="m_date j-date clearfix">
                 <input type="text" readonly="readonly" class="doubledate ipticon"></input>
-            </div>
+            </div>-->
         </div>
     </div>
     <table class="m_tb_1 j-table">
@@ -64,7 +64,17 @@
                 已花费(￥)
             </th>
             <th width="123">
-                广告状态 <i class="i_qus"></i>
+                广告状态
+                <i class="i_qus">
+                    <div class="ad_tips">
+                        <h4>广告状态说明</h4>
+                        <p>生效：广告投放生效，已开始计费 <br>
+                            暂停：暂停广告推广<br>
+                            暂停时段：处于非广告投放时段<br>
+                            余额不足：因账户余额不足，广告无法推广<br>
+                            预算不足：预算不足以支付广告投放开销</p>
+                    </div>
+                </i>
             </th>
             <th width="110">
                 创建日期
@@ -73,7 +83,7 @@
                 操作
             </th>
         </tr>
-        <tr class="active">
+        <tr>
             <td class="ti_21">自定广告名称</td>
             <td>究极机甲暴龙</td>
             <td>3000.00/不限</td>

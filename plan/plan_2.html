@@ -222,11 +222,13 @@
         </tr>
     </table>
     <div class="m_page">
-        <a href="" class="f_up">«</a>
-        <a href="" class="f_prev">‹</a>
-        <a href="" class="active">1</a>
-        <a href="" class="f_next">›</a>
-        <a href=""class="f_down">»</a>
+        <div id="j-pages">
+            <!--<a href="" class="f_up">«</a>
+            <a href="" class="f_prev">‹</a>
+            <a href="" class="active">1</a>
+            <a href="" class="f_next">›</a>
+            <a href=""class="f_down">»</a>-->
+        </div>
         <span>共6条 10条/页 共1页</span>
     </div>
 </div>
@@ -239,3 +241,20 @@
 </div>
 </body>
 </html>
+<script src="javascript/jquery-1.4.2.min.js"></script>
+<script src="javascript/doubleDate2.0.js"></script>
+<script src="javascript/page.js"></script>
+<script>
+    page({
+
+        id : 'j-pages',
+        nowNum : 7,
+        allNum : 10,
+        callBack : function(now,all){
+
+            console.log('当前页:' + now +',总共页:'+all);
+
+        }
+
+    });
+</script>
