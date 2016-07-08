@@ -19,8 +19,7 @@ a{-webkit-user-select:none;-webkit-user-drag:none;-webkit-tap-highlight-color:rg
 .fr{float:right;}
 /*  end reset */
 $base:40;
-@mixin sprite($x,$y) {
-  background:url(../images/sprites.png )no-repeat;
-  background-size:270rem/$base 61rem/$base;
-  background-position:$x/$base * 1rem $y/$base * 1rem;
+@mixin bk1 {
+  background:url(../images/sprites.png) no-repeat;
+  background-size:610rem/$base 224rem/$base;
 }

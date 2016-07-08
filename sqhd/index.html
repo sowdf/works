@@ -168,20 +168,15 @@
             <i>5</i>本次活动最终解释权归 <span>4399手机游戏网</span> 所有。
         </p>
     </section>
-    <seciton id="j-pop">
-
-    </seciton>
-<!--    <section class="m_pop">
+    <section class="m_pop" id="j-pop">
         <div class="filter"></div>
-        <div class="pop">
+        <div class="pop" id="j-popCentent">
             <i class="close j-close"></i>
-            <div class="success">
-                <h4>入驻成功!</h4>
-                <p>是否去下载游戏？</p>
-                <a href="btn">去下载游戏</a>
+            <div id="popBox">
+
             </div>
         </div>
-    </section>-->
+    </section>
     <div className="myprize">
         <h3></h3>
         <div className="clearfix">
@@ -206,164 +201,134 @@
     </div>
 </body>
 </html>
+<script type="text/html" id="t-getSw">
+    <div class="swprize">
+        <h4>
+            恭喜您抽到 <i><%=data.prizeName%></i>
+        </h4>
+        <p>请正确填写您的奖品收件信息</p>
+        <a href="">填写收件信息</a>
+        <div>
+            活动结束后15个工作日发放。
+        </div>
+    </div>
+</script>
+<script type="text/html" id="t-myPrize">
+    <div class="myprize">
+        <h3>我的奖品</h3>
+        <div class="clearfix">
+            <dl class="fl">
+                <dt>奖品</dt>
+                <dd>5游戏币</dd>
+                <dd>10盒币</dd>
+                <dd>豆娃抱枕</dd>
+                <dd class="code">火线精英复刻礼包码 <br/>
+                    shjhjhjhjsasasasaa</dd>
+            </dl>
+            <dl class="fr">
+                <dt>获得时间</dt>
+                <dd>活动结束后发放
+                </dd>
+                <dd>活动结束后发放
+                </dd>
+                <dd><a href="">收件地址</a></dd>
+                <dd class="code"><a href="javascrpt:;">复制</a></dd>
+            </dl>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="t-tips">
+    <div class="tips">
+        <p>您尚未获得抽奖机会
+            <br/>
+            入驻游戏可获得！</p>
+    </div>
+</script>
+
+<script type="text/html" id="t-vrb">
+    <div class="prize">
+        <h4>
+            恭喜您抽到 <i><%=data.prizeName%></i>
+        </h4>
+        <p>活动结束后7个工作日发放。</p>
+        <a href="javascrpt:;">确定</a>
+    </div>
+</script>
+
+<script type="text/html" id="t-yxlb">
+    <div class="yxlb">
+        <h4>
+            恭喜您抽到 <i><%=data.prizeName%></i>
+        </h4>
+        <p><%=data.code%></p>
+        <a href="javascrpt:;">打开游戏</a>
+    </div>
+</script>
+<script type="text/html" id="t-success">
+    <div class="success">
+        <h4>入驻成功!</h4>
+        <p>是否去下载游戏？</p>
+        <a href="javascrpt:;">去下载游戏</a>
+    </div>
+</script>
+<script src="js/baiduTemplate.js"></script>
 <script src="js/jquery-1.11.1.js"></script>
 <script src="js/react.js"></script>
 <script src="js/react-dom.js"></script>
 <script src="js/browser.min.js"></script>
+
+
+
+
+
+
 <script type="text/babel">
-    var notifyDate =[
-        {
-            name : 1111,
-            count : 11
-        },
-        {
-            name : 222,
-            count : 22
-        },
-        {
-            name : 3333,
-            count : 33
-        },
-        {
-            name : 34444,
-            count : 444
-        },
-        {
-            name : 55555,
-            count : 55
+    var res = {
+        "status": 1,
+        "msg": "抽奖成功！",
+        "data": {
+            "lastTimes": 3,
+            "kind": "3",
+            "lotName": "实物大礼",
+            "prizeName": "蓝牙键盘",
+            "code": null
         }
-    ]
-    var NotifyComponent = React.createClass({
-    render : function(){
-        {
-        }
-        return (
-                <div>
-                    <i></i>
-                    <ul>
-                        {
-                            notifyDate.map(function(index,item){
-                                <NotifyItemComponent key={index} {...item}/>
-                            })
-                        }
-                    </ul>
-                    ，您还剩  <em id="j-time">2次</em>  机会
-                </div>
-        );
     }
-});
-var NotifyItemComponent = React.createClass({
-    render : function(){
-        return (
-                <li>
-                    恭喜 <em> {this.props.name} </em>获得 <em>{this.props.count}盒币</em>
-                </li>
-        );
+    function Popup(){
+        this.$popwrap = $('#j-pop');
+        this.$close = $('.j-close');
+        this.$popBox = $('#popBox');
+        this.$pop = $('#j-popCentent');
+
     }
-});
-ReactDOM.render(
-        <NotifyComponent {...notifyDate}/>,
-        document.getElementById('j-notify')
-);
-    var GetSwComponent = React.createClass({
-        render : function(){
-            return (
-                    <div className="swprize">
-                        <h4>
-                            恭喜您抽到 <i>豆娃抱枕</i>
-                        </h4>
-                        <p>请正确填写您的奖品收件信息</p>
-                        <a href="">填写收件信息</a>
-                        <div>
-                            活动结束后15个工作日发放。
-                        </div>
-                    </div>
-            );
-        }
-    });
-    var MyPrizeComponent = React.createClass({
-        render : function(){
-            return (
-                    <div className="myprize">
-                        <h3>我的奖品</h3>
-                        <div className="clearfix">
-                            <dl className="fl">
-                                <dt>奖品</dt>
-                                <dd>5游戏币</dd>
-                                <dd>10盒币</dd>
-                                <dd>豆娃抱枕</dd>
-                                <dd className="code">火线精英复刻礼包码 <br/>
-                                    shjhjhjhjsasasasaa</dd>
-                            </dl>
-                            <dl className="fr">
-                                <dt>获得时间</dt>
-                                <dd>活动结束后发放
-                                </dd>
-                                <dd>活动结束后发放
-                                </dd>
-                                <dd><a href="">收件地址</a></dd>
-                                <dd className="code"><a href="">复制</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-            );
-        }
-    });
-    var TipsComponent = React.createClass({
-        render : function(){
-            return (
-                    <div className="tips">
-                        <p>您尚未获得抽奖机会
-                            <br/>
-                            入驻游戏可获得！</p>
-                    </div>
+    Popup.prototype.init = function(opt){
+        this.createPop(opt);
+        this.bindClose();
+    }
+    Popup.prototype.createPop = function(opt){
+        template(opt.type,this.$popBox,opt.data);
+        var $top = ($(window).height() - this.$popBox.height()) / 2;
+        this.$pop.css('top',$top);
+    }
 
-            );
-        }
-    });
-    var PopComponent = React.createClass({
-        handleClose : function(){
-            $('#j-popBox').remove();
-        },
-        render: function(){
-
-            return (
-                    <section className="m_pop" id="j-popBox">
-                        <div className="filter"></div>
-                        <div className="pop">
-                            <i className="close j-close" onClick={this.handleClose}></i>
-                            <GetSwComponent />
-                        </div>
-                    </section>
-            );
-        }
-    });
-    var PrizeVrbComponent = React.createClass({
-        render : function(){
-            return (
-                    <div className="prize">
-                        <h4>
-                            恭喜您抽到 <i>50盒币</i>
-                        </h4>
-                        <p>活动结束后7个工作日发放。</p>
-                        <a href="">确定</a>
-                    </div>
-            )
-        }
-    });
-    var　SuccesComponent = React.createClass({
-        render : function(){
-            return (
-                    <div className="success">
-                        <h4>入驻成功!</h4>
-                        <p>是否去下载游戏？</p>
-                        <a href="btn">去下载游戏</a>
-                    </div>
-            );
-        }
+    Popup.prototype.bindClose = function(){
+        var This = this;
+        $('.j-close').on('click',function(){
+            This.close();
+        });
+    }
+    Popup.prototype.close = function(){
+        this.$popwrap.hide();
+    }
+    var p1 = new Popup();
+    p1.init({
+        type : 't-swprize',
+        data : res
     });
     var lottery = {
         init : function(){ /* 初始化*/
+            this.onOff = true;
             this.elem();
             this.bindClick();
         },
@@ -372,26 +337,53 @@ ReactDOM.render(
             this.$btn = $('#j-lotteryBtn');
         },
         run : function(){  /* 跑起来 */
+            alert(this.onOff);
             var timer = null;
             var This = this;
             var i = 0;
             var num = 1;
             var length = this.$li.length;
+            var s = 100;
+            function inc(){
+                This.onOff = false;
+                s+=20 * 0.8;
+                i = i > length - 1 ? 0 : i;
+                This.$li.removeClass('active');
+                    This.$li.eq(i).addClass('active');
 
-            timer = setInterval(function(){
+                    if(num > length * 2){  /* 走两圈之后去判断 */
+                        if(i == 4){
+                            console.log(s);
+                            alert(333);
+                            This.onOff = true;
+                        }else {
+                            setTimeout(inc,s);
+                        }
+                    }else {
+                        setTimeout(inc,s);
+                    }
+                    num++;
+                    i++;
+            }
+            if(this.onOff){
+                setTimeout(inc,s);
+            }
+
+          /*  timer = setInterval(function(){
                 i = i > length - 1 ? 0 : i;
                 This.$li.removeClass('active');
                 This.$li.eq(i).addClass('active');
 
-                if(num > length * 2){  /* 走两圈之后去判断 */
-                    if(i == 4){
+                if(num > length * 2){  /!* 走两圈之后去判断 *!/
+                    if(s == 0){
                         clearInterval(timer);
                         This.popRender();
                     }
                 };
                 num++;
                 i++;
-            },300);
+                s-=1000;
+            },s);*/
         },
         bindClick : function(){
             var This = this;
@@ -408,5 +400,11 @@ ReactDOM.render(
     }
     lottery.init();
 
-
+    /* 模板调 */
+    function template (temp, oPar , data){
+        oPar.empty();
+        var bt = baidu.template;
+        var html = bt(temp,data);
+        oPar.append(html);
+    }
 </script>

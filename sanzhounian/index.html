@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="dev/css/style.css">
+    <script>
+        ! function(a) {
+            function b() {
+                a.rem = f.getBoundingClientRect().width / 16, f.style.fontSize = a.rem + "px";
+                var j = parseFloat(a.getComputedStyle(f,null).fontSize);
+                if(a.rem != j){
+                    a.rem = a.rem * a.rem / j;
+                    f.style.fontSize = a.rem + "px"
+                }
+            }
+            var c, d = a.navigator.appVersion.match(/iphone/gi) ? a.devicePixelRatio : 1,
+                    e = 1 / d,
+                    f = document.documentElement,
+                    g = document.createElement("meta");
+            if (a.dpr = d, a.addEventListener("resize", function() {
+                        clearTimeout(c), c = setTimeout(b, 300)
+                    }, !1), a.addEventListener("pageshow", function(a) {
+                        a.persisted && (clearTimeout(c), c = setTimeout(b, 300))
+                    }, !1), f.setAttribute("data-dpr", d), g.setAttribute("name", "viewport"), g.setAttribute("content", "initial-scale=" + e + ", maximum-scale=" + e + ", minimum-scale=" + e + ", user-scalable=no"), f.firstElementChild) f.firstElementChild.appendChild(g);
+            else {
+                var h = document.createElement("div");
+                h.appendChild(g), document.write(h.innerHTML)
+            }
+            b()
+        }(window);
+    </script>
+</head>
+<body>
+   <section class="g_banner">
+       <div class="b1"></div>
+       <div class="b2"></div>
+   </section>
+    <section class="g_content">
+        <div class="m_actInfo">
+            <span class="fl">已有<i>89458</i>人参加</span>
+            <span class="fr">欢迎您，<a href="">Douwa233</a></span>
+        </div>
+        <div class="m_zan">
+            4399游戏盒三周年   共集<span>1234567890</span>赞
+        </div>
+    </section>
+</body>
+</html>
