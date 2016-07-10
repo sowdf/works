@@ -234,6 +234,7 @@ body {
   background-position: -111px -49px;
 }
 .m_content .m_time .m_date {
+  display: none;
   position: absolute;
   left: 0;
   top: 40px;
@@ -250,6 +251,7 @@ body {
   line-height: 48px;
 }
 .m_content .m_tb_1 td, .m_content .m_tb_2 td {
+  cursor: pointer;
   font-size: 12px;
   color: #333;
   border-bottom: 1px solid #f5f5f5;
@@ -269,6 +271,25 @@ body {
 .m_content .m_tb_1 a:hover {
   text-decoration: underline;
 }
+.m_content .m_tb_1 .z_valid {
+  color: #64bf0a;
+}
+.m_content .m_tb_1 .z_lack {
+  color: #ff2828;
+}
+.m_content .m_tb_1 .z_pause {
+  color: #888888;
+}
+.m_content .m_tb_1 .i_qus {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  width: 16px;
+  height: 16px;
+  background: url(../images/sprites.png) no-repeat;
+  background-position: -90px -49px;
+}
 .m_content .m_tb_2 td {
   height: 52px;
   line-height: 52px;
@@ -281,15 +302,6 @@ body {
 }
 .m_content .ti_23 {
   text-indent: 23px;
-}
-.m_content .z_valid {
-  color: #64bf0a;
-}
-.m_content .z_lack {
-  color: #ff2828;
-}
-.m_content .z_pause {
-  color: #888888;
 }
 .m_content .i_pull {
   vertical-align: middle;
