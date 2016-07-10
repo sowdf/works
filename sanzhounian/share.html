@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="dev/css/style.css">
+</head>
+<script>
+    ! function(a) {
+        function b() {
+            if(a.navigator.appVersion.match(/window/gi) ){
+                m = f.getBoundingClientRect().width > 960 ? 640 : f.getBoundingClientRect().width;
+            }else{
+                m = f.getBoundingClientRect().width;
+            }
+            a.rem = m / 16, f.style.fontSize = a.rem + "px";
+        }
+        var c, d = a.navigator.appVersion.match(/iphone/gi) ? a.devicePixelRatio : 1,
+                e = 1 / d,
+                f = document.documentElement,
+                g = document.createElement("meta");
+        if (a.dpr = d, a.addEventListener("resize", function() {
+                    clearTimeout(c), c = setTimeout(b, 300)
+                }, !1), a.addEventListener("pageshow", function(a) {
+                    a.persisted && (clearTimeout(c), c = setTimeout(b, 300))
+                }, !1), f.setAttribute("data-dpr", d), g.setAttribute("name", "viewport"), g.setAttribute("content", "initial-scale=" + e + ", maximum-scale=" + e + ", minimum-scale=" + e + ", user-scalable=no"), f.firstElementChild) f.firstElementChild.appendChild(g);
+        else {
+            var h = document.createElement("div");
+            h.appendChild(g), document.write(h.innerHTML)
+        }
+        b()
+    }(window);
+</script>
+<body>
+<section class="g_banner">
+    <div class="b1">
+
+    </div>
+</section>
+<section class="g_content">
+    <div class="m_hint">
+        <em>卖萌小喵喵...</em>    <span>2016年2月</span> 成为游戏盒盒饭
+    </div>
+    <div class="m_jzan">
+        <div class="img">
+            <img src="" alt="">
+        </div>
+        <div class="btn">
+            <a href="">到游戏盒为我集赞</a>
+            <p>
+                4399游戏盒，玩游戏、交友、赚零花
+                盒币可兑换游币、Q币、奥币
+            </p>
+        </div>
+
+    </div>
+    <div class="m_hint">
+        游戏盒三周年——福利活动多多
+    </div>
+    <div class="m_fl">
+        <ul>
+            <li class="fl">
+                <h5>三周年召唤老盒饭</h5>
+                    <span>
+                        2016年7月20日开启
+                    </span>
+            </li>
+            <li class="fr">
+                <h5>三周年红包大战</h5>
+                    <span>
+                        2016年7月26日开启
+                    </span>
+            </li>
+            <li class="fl">
+                <h5>游戏盒新老用户大狂欢</h5>
+                    <span>
+                        2016年8月1日开启
+                    </span>
+            </li>
+            <li class="fr">
+                <h5>游戏盒玩家见面会报名</h5>
+                    <span>
+                        2016年8月10日开启
+                    </span>
+            </li>
+        </ul>
+    </div>
+</section>
+<footer>
+    <dl>
+        <dt></dt>
+        <dd>本活动最终解释权归4399官方所有 <br>
+            ©2004-2016四三九九网络股份有限公司</dd>
+    </dl>
+</footer>
+</body>
+</html>
