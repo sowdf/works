@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>游戏盒三周年</title>
+    <link rel="stylesheet" href="dev/css/preheat_pc.css">
+    <link rel="stylesheet" href="dev/css/animate.css">
+</head>
+<body>
+<div class="m_banner">
+    <div class="b2">
+        <div class="b1"></div>
+        <img src="dev/images/fz.png" alt="" id="img">
+    </div>
+</div>
+<div class="m_active">
+    <h4>如何参与</h4>
+    <div class="img">
+        <div></div>
+    </div>
+</div>
+<div class="m_comment">
+    <h4>热门评论</h4>
+    <div class="plus">
+
+    </div>
+</div>
+<div class="m_pop" id="j-pop" style="display: none">
+
+    <div class="filter">
+
+    </div>
+    <div class="box" id="j-popBox">
+        <div class="bg">
+
+        </div>
+        <i class="close"></i>
+        <div class="content">
+            <h3>
+                游戏盒三周年 <br>
+                视频
+            </h3>
+            <div class="vedio">
+
+            </div>
+            <div class="text">
+                <p>活动时间：2016年8月10日开启</p>
+                <span>活动内容：</span>
+                <span class="txt">
+                    想来4399总部吗？ <br>
+                    想和4399游戏盒小编们互动们？<br>
+                    想拿实物大奖吗？快来报名吧！<br>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="js/jquery-1.11.1.js"></script>
+<script>
+    var oImg = document.getElementById('img');
+    oImg.onclick = function(){
+        var This = this;
+        this.className = 'bounce animated';
+        setTimeout(function(){
+            This.className = '';
+        },1000);
+    }
+
+</script>

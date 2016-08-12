@@ -1,0 +1,99 @@
+1<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="dev/css/style.css">
+    <script>
+        ! function(a) {
+            function b() {
+                a.rem = f.getBoundingClientRect().width / 16, f.style.fontSize = a.rem + "px";
+                var j = parseFloat(a.getComputedStyle(f,null).fontSize);
+                if(a.rem != j){
+                    a.rem = a.rem * a.rem / j;
+                    f.style.fontSize = a.rem + "px"
+                }
+            }
+            var c, d = a.navigator.appVersion.match(/iphone/gi) ? a.devicePixelRatio : 1,
+                    e = 1 / d,
+                    f = document.documentElement,
+                    g = document.createElement("meta");
+            if (a.dpr = d, a.addEventListener("resize", function() {
+                        clearTimeout(c), c = setTimeout(b, 300)
+                    }, !1), a.addEventListener("pageshow", function(a) {
+                        a.persisted && (clearTimeout(c), c = setTimeout(b, 300))
+                    }, !1), f.setAttribute("data-dpr", d), g.setAttribute("name", "viewport"), g.setAttribute("content", "initial-scale=" + e + ", maximum-scale=" + e + ", minimum-scale=" + e + ", user-scalable=no"), f.firstElementChild) f.firstElementChild.appendChild(g);
+            else {
+                var h = document.createElement("div");
+                h.appendChild(g), document.write(h.innerHTML)
+            }
+            b()
+        }(window);
+    </script>
+</head>
+<body>
+<section class="m_banner">
+    <span class="num">已有4399人参与</span> <br>
+</section>
+<section class="m_game g_box">
+    <div class="title">游戏区</div>
+    <div class="box">
+        <div class="active m_radius">
+            <div class="quan">
+                <i class="fl"></i>
+                <em class="vs"></em>
+                <i class="fr"></i>
+            </div>
+            <div class="m_go">
+                <a href="">到4399游戏和玩</a>
+                <p>
+                    4399游戏盒 玩游戏 交友 赚零花 <br>
+                    赚Q币、游币、话费
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="m_active g_box">
+    <div class="title">如何参与</div>
+    <div class="box">
+        <i>第一步</i>
+        <p>
+            下载安装游戏盒，或者扫描<span>二维码下载</span>
+        </p>
+        <div class="img1">
+
+        </div>
+        <i>第二步</i>
+        <p>
+            点击底部标签 <span>【广场】</span> 的<span>【全部活动】</span>
+        </p>
+        <div class="img2">
+
+        </div>
+        <i>第三步</i>
+        <p>
+            在活动列表找到 <br>
+            <span>【暑期游园会，奖励欢乐兑】</span> <br>
+            参与活动吧~
+        </p>
+        <div class="img3">
+
+        </div>
+    </div>
+
+</section>
+<footer>
+    <i class="i_1"></i>
+    <i class="i_2"></i>
+    <dl>
+        <dt>
+        </dt>
+        <dd>
+            本活动最终解释权归4399官方所有 <br>
+            @2004-2015四三九九网络股份有限公司
+        </dd>
+    </dl>
+</footer>
+</body>
+</html>

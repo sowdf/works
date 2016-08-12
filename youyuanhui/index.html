@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="dev/css/style.css">
+    <script>
+        ! function(a) {
+            function b() {
+                a.rem = f.getBoundingClientRect().width / 16, f.style.fontSize = a.rem + "px";
+                var j = parseFloat(a.getComputedStyle(f,null).fontSize);
+                if(a.rem != j){
+                    a.rem = a.rem * a.rem / j;
+                    f.style.fontSize = a.rem + "px"
+                }
+            }
+            var c, d = a.navigator.appVersion.match(/iphone/gi) ? a.devicePixelRatio : 1,
+                    e = 1 / d,
+                    f = document.documentElement,
+                    g = document.createElement("meta");
+            if (a.dpr = d, a.addEventListener("resize", function() {
+                        clearTimeout(c), c = setTimeout(b, 300)
+                    }, !1), a.addEventListener("pageshow", function(a) {
+                        a.persisted && (clearTimeout(c), c = setTimeout(b, 300))
+                    }, !1), f.setAttribute("data-dpr", d), g.setAttribute("name", "viewport"), g.setAttribute("content", "initial-scale=" + e + ", maximum-scale=" + e + ", minimum-scale=" + e + ", user-scalable=no"), f.firstElementChild) f.firstElementChild.appendChild(g);
+            else {
+                var h = document.createElement("div");
+                h.appendChild(g), document.write(h.innerHTML)
+            }
+            b()
+        }(window);
+    </script>
+</head>
+<body>
+   <section class="m_banner">
+       <span class="num">已有4399人参与</span> <br>
+       <span class="name">欢迎你，我是一直咸鱼</span>
+   </section>
+    <section class="m_game g_box">
+        <div class="title">游戏区</div>
+        <div class="box">
+            <div class="active">
+                <div class="quan">
+                    <div class="hanl_l run_l">
+                        <strong class="s_l" id="j-left"></strong>
+                    </div>
+                    <div class="hanl_r run_r">
+                        <strong class="s_r" id="j-right"></strong>
+                    </div>
+                    <i class="fl"></i>
+                    <em class="vs"></em>
+                    <i class="fr"></i>
+                </div>
+                <div class="dz">
+                    <div class="dw">
+                        <div class="pic">
+                            <img src="" alt="">
+                        </div>
+                        <span>豆娃</span>
+                    </div>
+                    <div class="btn">
+                        <a href="javascript:;">免费玩</a>
+                        <span class="tips">每日免费一次哦~</span>
+                    </div>
+                    <div class="wj">
+                        <div class="pic">
+                            <img src="" alt="">
+                        </div>
+                        <span>我是一只咸鱼</span>
+                    </div>
+                </div>
+            </div>
+            <dl class="rule">
+                <dt>活动规则</dt>
+                <dd>
+                    1.每日登录可免费玩一次，赢的玩家可以获得10积分； <br>
+                    2.使用2盒币可以玩一次，每日上限20次; <br>
+                    3.游戏礼包、实物奖品以及盒币需要使用玩游戏获得
+                    积分兑换；
+                </dd>
+            </dl>
+        </div>
+    </section>
+    <section class="g_box m_rank">
+        <div class="title">
+            今日长生将军
+        </div>
+        <div class="box ">
+            <a href="javascript:;">
+                <div class="pic">
+                    <img src="" alt="">
+                </div>
+                <span>虚位以待</span>
+            </a>
+            <a href="javascript:;">
+                <div class="pic">
+                    <img src="" alt="">
+                </div>
+                <span>虚位以待</span>
+            </a>
+            <a href="javascript:;">
+                <div class="pic">
+                    <img src="" alt="">
+                </div>
+                <span>虚位以待</span>
+            </a>
+        </div>
+    </section>
+    <section class="m_exchange">
+        <div class="wd">
+            <a href="javascript:;">查询积分</a>
+        </div>
+        <div class="content">
+            <div class="lb">
+                <h5>礼包专区</h5>
+                <ul>
+                    <li>
+                        <div class="item">
+                            <img src="" alt="">
+                            <span class="name">口袋妖怪复刻</span>
+                            <span class="jf">100积分</span>
+                            <a href="javascript:;" class="dh">兑换</a>
+                        </div>
+                        <div class="item">
+                            <img src="" alt="">
+                            <span class="name">口袋妖怪复刻</span>
+                            <span class="jf">100积分</span>
+                            <a href="javascript:;" class="dh">兑换</a>
+                        </div>
+                        <div class="item">
+                            <img src="" alt="">
+                            <span class="name">口袋妖怪复刻</span>
+                            <span class="jf">100积分</span>
+                            <a href="javascript:;" class="dh">兑换</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <img src="" alt="">
+                            <span class="name">口袋妖怪复刻</span>
+                            <span class="jf">100积分</span>
+                            <a href="javascript:;" class="dh">兑换</a>
+                        </div>
+                        <div class="item">
+                            <img src="" alt="">
+                            <span class="name">口袋妖怪复刻</span>
+                            <span class="jf">100积分</span>
+                            <a href="javascript:;" class="dh">兑换</a>
+                        </div>
+                        <div class="item">
+                            <img src="" alt="">
+                            <span class="name">口袋妖怪复刻</span>
+                            <span class="jf">100积分</span>
+                            <a href="javascript:;" class="dh">兑换</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="javascript:;" class="more">点击更多</a>
+            </div>
+            <div class="cw">
+                <h5>实物专区</h5>
+                <p class="tips">先到先得，兑完为止~ </p>
+                <ul>
+                    <li>
+                        <div class="item">
+                            <div class="pic">
+                                <img src="http://f1.img4399.com/ma~330_20160812113610_57ad442a9b6f1.png?t=1470972970" alt="">
+                                <p>限量100本</p>
+                            </div>
+                            <span class="name">铁艺涂鸦本</span>
+                            <span class="jf">500积分</span>
+                            <a href="javascript:;" class="dh">兑换</a>
+                        </div>
+                        <div class="item">
+                            <div class="pic">
+                                <img src="http://f1.img4399.com/ma~330_20160812113626_57ad443a4be0b.png?t=1470972986" alt="">
+                                <p>限量50件</p>
+                            </div>
+                            <span class="name">豆娃挂件</span>
+                            <span class="jf">1100积分</span>
+                            <a href="javascript:;" class="dh">兑换</a>
+                        </div>
+                        <div class="item">
+                            <div class="pic">
+                                <img src="http://f1.img4399.com/ma~330_20160812113405_57ad43ad7059d.png?t=1470972845" alt="">
+                                <p>限量10个</p>
+                            </div>
+                            <span class="name">抱枕</span>
+                            <span class="jf">1000积分</span>
+                            <a href="javascript:;" class="dh">兑换</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="pic">
+                                <img src="http://f1.img4399.com/ma~330_20160812113733_57ad447dc02d6.png?t=1470973053" alt="">
+                                <p>限量4件</p>
+                            </div>
+                            <span class="name">T恤</span>
+                            <span class="jf">1100积分</span>
+                            <a href="javascript:;" class="dh">兑换</a>
+                        </div>
+                        <div class="item">
+                            <div class="pic">
+                                <img src="http://f1.img4399.com/ma~330_20160812113714_57ad446a10491.png?t=1470973034" alt="">
+                                <p>限量10件</p>
+                            </div>
+                            <span class="name">玩偶</span>
+                            <span class="jf">1100积分</span>
+                            <a href="javascript:;" class="dh">兑换</a>
+                        </div>
+                        <div class="item">
+                            <div class="pic">
+                                <img src="http://f1.img4399.com/ma~330_20160812113652_57ad4454a67ef.png?t=1470973017" alt="">
+                                <p>限量4把</p>
+                            </div>
+                            <span class="name">枪模</span>
+                            <span class="jf">1000积分</span>
+                            <a href="javascript:;" class="dh">兑换</a>
+                        </div>
+                    </li>
+                </ul>
+                <p class="hint">备注：实物奖励将在活动结束后，7个工作日内寄出！</p>
+            </div>
+            <div class="hb">
+                <h5>盒币专区</h5>
+                <p class="tips">
+                    每日12:00补充，先到先得，兑完为止~
+                </p>
+                <ul>
+                    <li>
+                        <div class="item">
+                            <div class="pic">
+                                <img src="http://f1.img4399.com/ma~330_20160812135120_57ad63d80274e.png?t=1470981080" alt="">
+                                <p>每日800个</p>
+                            </div>
+                            <span class="name">10盒币</span>
+                            <span class="jf">100积分</span>
+                            <a href="javascript:;" class="dh">兑换</a>
+                        </div>
+                        <div class="item">
+                            <div class="pic">
+                                <img src="http://f1.img4399.com/ma~330_20160812135139_57ad63eb91da3.png?t=1470981099" alt="">
+                                <p>每日500个</p>
+                            </div>
+                            <span class="name">15盒币</span>
+                            <span class="jf">150积分</span>
+                            <a href="javascript:;" class="dh">兑换</a>
+                        </div>
+                        <div class="item">
+                            <div class="pic">
+                                <img src="http://f1.img4399.com/ma~330_20160812135152_57ad63f89bfd8.png?t=1470981112" alt="">
+                                <p>每日500个</p>
+                            </div>
+                            <span class="name">30盒币</span>
+                            <span class="jf">300积分</span>
+                            <a href="javascript:;" class="dh">兑换</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <i class="i_1"></i>
+        <i class="i_2"></i>
+        <dl>
+            <dt>
+            </dt>
+            <dd>
+                本活动最终解释权归4399官方所有 <br>
+                @2004-2015四三九九网络股份有限公司
+            </dd>
+        </dl>
+    </footer>
+   <!-- <section class="m_pop g_pop">
+        <div class="filter">
+
+        </div>
+        <div class="g_popBox">
+            <i class="close"></i>
+            <div class="content">
+&lt;!&ndash;                <div class="confirm g_dh">
+                    <span class="tips">您是否要兑换</span><br>
+                    <span class="name">铁艺涂鸦本</span>
+                    <div class="pic">
+                        <img src="" alt="">
+                    </div>
+                    <div class="btn">
+                        <a href="javascript:;" class="fl s_red">
+                            确认
+                        </a>
+                        <a href="javascript:;" class="fr">取消</a>
+                    </div>
+                </div>&ndash;&gt;
+                &lt;!&ndash;<div class="success_xn g_dh">
+                    <span class="tips">恭喜兑换成功</span><br>
+                    <span class="name">10盒币</span>
+                    <div class="pic">
+                        <img src="" alt="">
+                    </div>
+                    <div class="btn">
+                        <a href="javascript:;"  class="s_red">好哒</a>
+                    </div>
+                </div>&ndash;&gt;
+                &lt;!&ndash;<div class="success_sw g_dh">
+                    <span class="tips">恭喜兑换成功</span><br>
+                    <span class="name">铁艺涂鸦本</span>
+                    <div class="pic">
+                        <img src="" alt="">
+                    </div>
+                    <div class="btn">
+                        <a href="javascript:;"  class="s_red">填写收货地址</a>
+                    </div>
+                </div>&ndash;&gt;
+                &lt;!&ndash;<div class="fail g_dh">
+                    <p class="text">
+                        呜，来晚了一步 <br>
+                        此实物已全部兑换完了噢~
+                    </p>
+                    <div class="btn">
+                        <a href="javascript:;" class="s_red">好哒</a>
+                    </div>
+                </div>&ndash;&gt;
+
+                <div class="lb_success g_dh">
+                    <span class="tips">恭喜兑换成功</span><br>
+                    <span class="name">口袋妖怪复刻大礼包</span>
+                    <div class="copy">
+                        <div class="code">
+                            激活码：kailey123
+                        </div>
+                        <a href="" class="copy_btn">
+                            复制
+                        </a>
+                    </div>
+                    <div class="game">
+                        <img src="" alt="">
+                        <div class="info">
+                            <dl>
+                                <dt>口袋复刻大礼包</dt>
+                                <dd>
+                                    <span>金币</span>X<i>6666</i>
+                                </dd>
+                                <dd>
+                                    <span>金币</span>X<i>6666</i>
+                                </dd>
+                                <dd>
+                                    <span>金币</span>X<i>6666</i>
+                                </dd>
+                                <dd>
+                                    <span>金币</span>X<i>6666</i>
+                                </dd>
+                                <dd>
+                                    <span>金币</span>X<i>6666</i>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <a href="javascript:;" class="s_red">下载游戏使用礼包</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+   <!-- <section class="m_popGame g_pop">
+        <div class="filter"></div>
+        <div class="content">
+            <i class="close"></i>
+            <i class="i_1"></i>
+            <i class="i_2"></i>
+            <div class="box">
+                &lt;!&ndash;<div class="win">
+                    <i class="dw"></i>
+                    <span>哇塞！你赢了耶~恭喜获得</span> <br>
+                    <strong>10积分</strong> <br>
+                    <span>积分可兑换奖品哦~</span> <br>
+                </div>&ndash;&gt;
+                &lt;!&ndash;<div class="fail">
+                    <i class="dw">
+
+                    </i>
+                    <p>
+                        哎~去洗手再来一次吧~
+                    </p>
+                </div>&ndash;&gt;
+     &lt;!&ndash;           <div class="ding">
+                    <i class="dw">
+
+                    </i>
+                    <p>
+                        今天玩累了 <br>
+                        请明天再来吧~
+                    </p>
+                </div>&ndash;&gt;
+                <div class="lack">
+                    <i class="dw">
+
+                    </i>
+                    <p>
+                        盒币不够了哦 <br>
+                        快去赚点盒币再来吧
+                    </p>
+                </div>
+            </div>
+            <div class="bar">
+
+            </div>
+            <div class="btn">
+                <a href="javascript:;">好的</a>
+            </div>
+        </div>
+    </section>-->
+  <!--  <div class="popQuan g_pop">
+        <div class="filter">
+
+        </div>
+        <div class="center">
+            <div class="close"></div>
+            <div class="title"></div>
+            <div class="box">
+                <div class="quan">
+                    <a href="javascript:;" class="st"><i></i></a>
+                    <a href="javascript:;" class="bu"><i></i></a>
+                    <a href="javascript:;" class="jd"><i></i></a>
+                </div>
+            </div>
+        </div>
+    </div>-->
+</body>
+</html>
+<script src="js/zepto.min.js"></script>
+<script>
+    var i = 0;
+    var classJson = {
+        left : ['j_l','s_l','b_l'],
+        right : ['s_r','b_r','j_r']
+    };
+    setInterval(function(){
+        i++;
+        var _index = i%3;
+        $('#j-left').attr('class',classJson.left[_index]);
+        $('#j-right').attr('class',classJson.right[_index]);
+    },3000);
+
+</script>
