@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+<img src="images/fz.png" alt="" id="img">
+</body>
+</html>
+<script>
+    var oImg = document.getElementById('img');
+    oImg.onclick = function(){
+        var This = this;
+        this.className = 'bounce animated';
+        setTimeout(function(){
+            This.className = '';
+        },1000);
+    }
+
+</script>

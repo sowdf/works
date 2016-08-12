@@ -87,6 +87,10 @@ a {
   float: right;
 }
 
+body {
+  background: #fff5d7 !important;
+}
+
 /*  end reset */
 .m_banner {
   position: relative;
@@ -139,6 +143,31 @@ a {
   background-position: -5.325rem -5.925rem;
 }
 
+.m_rule {
+  height: 4.65rem;
+}
+.m_rule div {
+  width: 10.75rem;
+  height: 2.625rem;
+  background: url(../images/rule.png) no-repeat;
+  background-size: 100% auto;
+  margin: 0.5rem auto;
+  text-align: center;
+  padding: 0.9rem 0.75rem 0;
+  font-size: 0.5rem;
+}
+.m_rule i {
+  font-style: normal;
+  color: #cf8953;
+}
+.m_rule span {
+  color: #ff7269;
+}
+.m_rule em {
+  font-size: 0.6rem;
+  font-style: normal;
+}
+
 .m_b1 {
   background: url(../images/banner.jpg) no-repeat;
   background-size: 16rem auto;
@@ -149,23 +178,20 @@ a {
   background-size: 16rem auto;
 }
 
-.m_content {
-  background: -webkit-linear-gradient(top, #fff6d8, #feeebb);
-  background: linear-gradient(top, #fff6d8, #feeebb);
-}
 .m_content section {
   position: relative;
 }
 
 .m_1 {
-  height: 10rem;
+  width: 100%;
+  height: 21.2rem;
   background: url(../images/img1.jpg) no-repeat;
-  background-size: 16rem auto;
+  background-size: 100% auto;
 }
 .m_1 a {
   position: absolute;
   left: 5.05rem;
-  top: 4.7rem;
+  top: 0rem;
   width: 6.15rem;
   height: 2rem;
   text-indent: -111rem;
@@ -178,26 +204,15 @@ a {
 }
 
 .m_2 {
-  height: 12.7rem;
-  background: url(../images/img2.jpg) no-repeat;
+  height: 10.625rem;
+  background: url(../images/img2.jpg) no-repeat 0 bottom;
   background-size: 16rem auto;
+  padding-top: 2.85rem;
 }
-
-.m_3 {
-  height: 12.65rem;
-  background: url(../images/img3.jpg) no-repeat;
-  background-size: 16rem auto;
-}
-
-.m_4 {
-  height: 6.8rem;
-  background: url(../images/img4.jpg) no-repeat;
-  background-size: 16rem auto;
-}
-.m_4 a {
+.m_2 a {
   position: absolute;
   left: 3.75rem;
-  top: 3.95rem;
+  top: 0;
   width: 8.75rem;
   height: 2.35rem;
   text-indent: -111rem;
@@ -205,37 +220,31 @@ a {
   background-size: 8.75rem 8.875rem;
   background-position: 0 0;
 }
-.m_4 a:active {
+.m_2 a:active {
   background-position: 0 -2.475rem;
 }
-
-.m_5 {
-  height: 13.375rem;
-  background: url(../images/img5.jpg) no-repeat;
-  background-size: 16rem auto;
-}
-.m_5 ul {
+.m_2 ul {
   position: absolute;
   left: 1.375rem;
-  top: 6rem;
+  top: 8.75rem;
 }
-.m_5 li {
+.m_2 li {
   float: left;
   text-align: center;
   width: 4.45rem;
   height: 4.075rem;
 }
-.m_5 i, .m_5 img {
+.m_2 i, .m_2 img {
   width: 2.95rem;
   height: 2.95rem;
   border-radius: 100%;
 }
-.m_5 p {
+.m_2 p {
   line-height: 1.15rem;
   color: #8b5932;
   font-size: 0.6rem;
 }
-.m_5 em {
+.m_2 em {
   margin: 0 0.25rem;
   display: inline-block;
   width: 0.55rem;
@@ -249,8 +258,18 @@ a {
   padding: 0.3rem 1.4rem 0;
   color: #73664e;
 }
+.m_subject .window {
+  width: 100%;
+  overflow: hidden;
+}
+.m_subject .wrap {
+  transition: all 1s;
+  overflow: hidden;
+}
 .m_subject dl {
   padding-bottom: 1.3rem;
+  float: left;
+  width: 13.2rem;
 }
 .m_subject dt {
   line-height: 0.95rem;
@@ -262,11 +281,11 @@ a {
   text-indent: 1.25rem;
   line-height: 1.15rem;
 }
-.m_subject div {
+.m_subject > div {
   padding-top: 0.5rem;
   position: relative;
 }
-.m_subject div span {
+.m_subject > div span {
   color: #cf8953;
   font-size: 0.5rem;
   position: absolute;
@@ -285,6 +304,7 @@ a {
   border-radius: 0.25rem;
   background: transparent;
   text-indent: 0.425rem;
+  margin-left: -1.25rem;
 }
 .m_subject i {
   position: absolute;
@@ -331,29 +351,74 @@ a {
   background: url(../images/img6.jpg) no-repeat center bottom;
   background-size: 16rem auto;
 }
+.m_submit .next {
+  background: url(../images/btn_3.png) no-repeat;
+  background-size: 5.15rem 4.25rem;
+  background-position: 0 0;
+}
+.m_submit .next:active {
+  background-position: 0 -2.4rem;
+}
 .m_submit a {
   display: block;
-  margin: 0 auto;
   width: 5.15rem;
-  height: 1.9rem;
+  height: 1.85rem;
+  margin: 0.25rem auto;
+}
+.m_submit .submit {
   background: url(../images/btn_2.png) no-repeat;
   background-size: 8.75rem 8.875rem;
   background-position: 0 -5rem;
 }
-.m_submit a:active {
+.m_submit .submit:active {
   background-position: 0 -7rem;
 }
 
+.m_comment {
+  padding: 0 0.7rem 0.5rem;
+  background: #ff9867;
+  margin: 2.05rem 0.5rem 0.65rem;
+  border: solid 0.075rem #ff6d59;
+  border-radius: 0.5rem;
+}
+.m_comment h4 {
+  position: relative;
+  width: 13rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  border-radius: 0.875rem;
+  overflow: hidden;
+  margin: 0 auto;
+  top: -0.85rem;
+  background: #ff725a;
+  color: #fff;
+  text-align: center;
+}
+.m_comment .plug {
+  margin-top: -0.4rem;
+  height: 22.55rem;
+  background: url(../images/pl.png) no-repeat;
+  background-size: 13.525rem auto;
+}
+
 footer {
-  background: #f5daa6;
-  height: 1.925rem;
+  background: #fff5d7;
+  overflow: hidden;
+}
+footer h4 {
+  font-size: 0.6rem;
+  font-weight: normal;
+  color: #cf8953;
+  line-height: 1.65rem;
+  text-align: center;
 }
 footer p {
-  padding-top: 0.25rem;
+  padding: 0.5rem;
   text-align: center;
   color: #8b5932;
   font-size: 0.45rem;
   line-height: 0.65rem;
+  background: #f5daa6;
 }
 
 .m_popup {

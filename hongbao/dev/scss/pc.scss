@@ -1,0 +1,185 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,figure{padding:0;margin:0;}
+table{border-collapse:collapse;border-spacing:0;}
+del,ins{text-decoration:none}
+fieldset,img{border:0;}
+button,input,select,textarea{font:12px/1.125 "Microsoft Yahei",Arial,Helvetica,sans-serif;}
+input,select,img{vertical-align:middle}
+input,select{outline:none}
+ul,ol{list-style:none}
+label{cursor:pointer}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+address,cite,dfn,em,var{font-style:normal;}
+body{-ms-text-size-adjust:none;-o-user-select:none;-o-text-size-adjust:none;user-select:none;text-size-adjust:none;font:12px/1.125 "Microsoft Yahei","SimHei",Arial,Helvetica,sans-serif;min-height:100%;}
+a{-webkit-user-select:none;-webkit-user-drag:none;-webkit-tap-highlight-color:rgba(0,0,0,0);text-decoration: none;}
+.clearfix:after{content:"";height:0;visibility:hidden;display:block;clear:both;}
+.clearfix{zoom:1;}
+.clear{clear:both}
+.fl{float:left;}
+.fr{float:right;}
+
+body {
+  min-width:980px;
+  background:#85d7ff;
+}
+.m_banner {
+  background:url(../images/banner.jpg) no-repeat center;
+  height:840px;
+
+  .b2 {
+    position:relative;
+    width:1280px;
+    margin:0 auto;
+    height:840px;
+    background:url(../images/banner_2.jpg) no-repeat;
+  }
+  .b1 {
+    width:1280px;
+    margin:0 auto;
+    height:439px;
+    background:url(../images/banner_1.jpg) no-repeat ;
+  }
+  i {
+    position:absolute;
+    left:190px;
+    top:440px;
+    width:71px;
+    height:72px;
+    background:url(../images/sprites_pc.png) no-repeat 0 -412px;
+    animation: ghostUpdown 1.5s infinite alternate;
+    -webkit-animation: ghostUpdown 1.5s infinite alternate;
+    -ms-animation: ghostUpdown 1.5s infinite alternate;
+    -moz-animation: ghostUpdown 1.5s infinite alternate;
+  }
+  a {
+    position:absolute;
+    left:360px;
+    top:680px;
+    background:url(../images/sprites_pc.png) no-repeat 0 0;
+    width:560px;
+    height:90px;
+    &:hover {
+      background:url(../images/sprites_pc.png) no-repeat 0 -95px;
+    }
+  }
+
+  @keyframes ghostUpdown {
+    from {
+      margin-top: 100px;
+    }
+    to {
+      margin-top: 70px;
+    }
+  }
+  @-webkit-keyframes ghostUpdown {
+    from {
+      margin-top: 100px;
+    }
+    to {
+      margin-top: 70px;
+    }
+  }
+  @-ms-keyframes ghostUpdown {
+    from {
+      margin-top: 100px;
+    }
+    to {
+      margin-top: 70px;
+    }
+  }
+  @-moz-keyframes ghostUpdown {
+    from {
+      margin-top: 100px;
+    }
+    to {
+      margin-top: 70px;
+    }
+  }
+}
+.m_box {
+  position:relative;
+  width:970px;
+  margin:0 auto;
+  background:#f94c69;
+  border-radius:8px;
+  padding-top:50px;
+  .title {
+    width:210px;
+    height:40px;
+    padding-top:33px;
+    position:absolute;
+    top:-35px;
+    left:375px;
+    background:url(../images/sprites_pc.png) no-repeat 0 -335px;
+    font-size:18px;
+    text-align:center;
+    color:#7f4b1d;
+  }
+}
+.m_rule {
+  padding-bottom:52px;
+  margin-bottom:62px;
+  .r1 {
+    background:url(../images/r1.jpg) no-repeat;
+    height:478px;
+  }
+  .r2 {
+    background:url(../images/r2.jpg) no-repeat;
+    height:870px;
+  }
+}
+.m_active {
+   padding-bottom:30px;
+   .a1 {
+     background:url(../images/a1.jpg) no-repeat;
+     height:437px;
+   }
+   .a2 {
+     background:url(../images/a2.jpg) no-repeat;
+     height:810px;
+   }
+ }
+.m_wrap {
+  background:url(../images/actbg.jpg) no-repeat center bottom;
+  padding-bottom:99px;
+}
+.m_pop {
+  position:relative;
+  width:487px;
+  height:401px;
+  background:url(../images/popbg.png) no-repeat;
+  text-align:center;
+  div {
+    padding-top:62px;
+    img {
+      width:145px;
+      height:145px;
+    }
+  }
+  span {
+    color:#ffd709;
+    font-size:20px;
+    line-height:45px;
+  }
+  .btn {
+    margin-top:29px;
+    display: inline-block;
+    text-indent:-9999px;
+    width:301px;
+    height:67px;
+    background:url(../images/sprites_pc.png) no-repeat 0 -262px;
+    &:hover {
+      background:url(../images/sprites_pc.png) no-repeat 0 -190px;
+    }
+  }
+  .close {
+    position:absolute;
+    right:10px;
+    top:4px;
+    width:37px;
+    height:37px;
+    background:url(../images/sprites_pc.png) no-repeat -153px -411px;
+    &:hover {
+      background:url(../images/sprites_pc.png) no-repeat -101px -412px;
+    }
+  }
+}
