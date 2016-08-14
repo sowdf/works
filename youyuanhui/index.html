@@ -413,12 +413,12 @@
             </div>
         </div>
     </section>-->
-  <!--  <div class="popQuan g_pop">
+    <div class="popQuan g_pop" style="display:none">
         <div class="filter">
 
         </div>
-        <div class="center">
-            <div class="close"></div>
+        <div class="center" id="j-game">
+            <div class="close j-close"></div>
             <div class="title"></div>
             <div class="box">
                 <div class="quan">
@@ -428,21 +428,56 @@
                 </div>
             </div>
         </div>
-    </div>-->
+    </div>
 </body>
 </html>
 <script src="js/zepto.min.js"></script>
+<script src="js/ueApp.scrollLoad.js"></script>
 <script>
-    var i = 0;
-    var classJson = {
-        left : ['j_l','s_l','b_l'],
-        right : ['s_r','b_r','j_r']
+    var game = {};
+    game.init = function(){
+        this.elem();
+        this.run();
     };
-    setInterval(function(){
-        i++;
-        var _index = i%3;
-        $('#j-left').attr('class',classJson.left[_index]);
-        $('#j-right').attr('class',classJson.right[_index]);
-    },3000);
+    game.elem = function(){
+        this.$handL = $('#j-left');
+        this.$handR = $('#j-right');
+    };
+    game.run = function(){
+        var i = 0;
+        var This = this;
+        var classJson = {
+            left : ['j_l','s_l','b_l'],
+            right : ['s_r','b_r','j_r']
+        };
+        setInterval(function(){
+            i++;
+            var _index = i%3;
+            This.$handL.attr('class',classJson.left[_index]);
+            This.$handR.attr('class',classJson.right[_index]);
+        },3000);
+    };
+    game.init();
+
+    /*
+        弹窗方法
+    */
+    var $game = $('#j-game');
+    function pop(obj){
+        var $winW = $(window).height();
+        var $par = obj.parent();
+        $par.show();
+
+        var $objH = obj.height();
+        var posH = ($winW - $objH)/2;
+
+        obj.css('top',posH);
+
+        $(document).on('click','.j-close',function(){
+            $par.hide();
+        });
+    }
+    pop($game);
+
 
 </script>
