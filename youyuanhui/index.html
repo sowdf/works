@@ -41,10 +41,10 @@
         <div class="box">
             <div class="active">
                 <div class="quan">
-                    <div class="hanl_l run_l">
+                    <div class="hanl_l run_l" id="j-l">
                         <strong class="s_l" id="j-left"></strong>
                     </div>
-                    <div class="hanl_r run_r">
+                    <div class="hanl_r run_r" id="j-r">
                         <strong class="s_r" id="j-right"></strong>
                     </div>
                     <i class="fl"></i>
@@ -59,7 +59,7 @@
                         <span>豆娃</span>
                     </div>
                     <div class="btn">
-                        <a href="javascript:;">免费玩</a>
+                        <a href="javascript:;" id="j-play">免费玩</a>
                         <span class="tips">每日免费一次哦~</span>
                     </div>
                     <div class="wj">
@@ -108,7 +108,7 @@
     </section>
     <section class="m_exchange">
         <div class="wd">
-            <a href="javascript:;">查询积分</a>
+            <a href="javascript:;" id="j-look">查询积分</a>
         </div>
         <div class="content">
             <div class="lb">
@@ -273,131 +273,207 @@
             </dd>
         </dl>
     </footer>
-   <!-- <section class="m_pop g_pop">
+    <section class="m_pop g_pop" style="display:none;">
         <div class="filter">
 
         </div>
-        <div class="g_popBox">
-            <i class="close"></i>
-            <div class="content">
-&lt;!&ndash;                <div class="confirm g_dh">
-                    <span class="tips">您是否要兑换</span><br>
-                    <span class="name">铁艺涂鸦本</span>
-                    <div class="pic">
-                        <img src="" alt="">
+        <div class="content g_popBox" id="j-dhTips" style="display:none;">
+            <i class="close j-close"></i>
+            <div class="confirm g_dh" style="display:none;" id="j-confSW">
+                <span class="tips">您是否要兑换</span><br>
+                <span class="name">铁艺涂鸦本</span>
+                <div class="pic">
+                    <img src="" alt="">
+                </div>
+                <div class="btn">
+                    <a href="javascript:;" class="fl s_red">
+                        确认
+                    </a>
+                    <a href="javascript:;" class="fr j-close">取消</a>
+                </div>
+            </div>
+            <div class="confirm g_dh" style="display:none;" id="j-packs">
+                <span class="tips">您是否要兑换</span><br>
+                <span class="name">口袋妖怪复刻大礼包</span>
+                <div class="game">
+                    <img src="" alt="">
+                    <div class="info">
+                        <dl>
+                            <dt>口袋复刻大礼包</dt>
+                            <dd>
+                                <span>金币</span>X<i>6666</i>
+                            </dd>
+                            <dd>
+                                <span>金币</span>X<i>6666</i>
+                            </dd>
+                            <dd>
+                                <span>金币</span>X<i>6666</i>
+                            </dd>
+                            <dd>
+                                <span>金币</span>X<i>6666</i>
+                            </dd>
+                            <dd>
+                                <span>金币</span>X<i>6666</i>
+                            </dd>
+                        </dl>
                     </div>
-                    <div class="btn">
-                        <a href="javascript:;" class="fl s_red">
-                            确认
-                        </a>
-                        <a href="javascript:;" class="fr">取消</a>
-                    </div>
-                </div>&ndash;&gt;
-                &lt;!&ndash;<div class="success_xn g_dh">
-                    <span class="tips">恭喜兑换成功</span><br>
-                    <span class="name">10盒币</span>
-                    <div class="pic">
-                        <img src="" alt="">
-                    </div>
-                    <div class="btn">
-                        <a href="javascript:;"  class="s_red">好哒</a>
-                    </div>
-                </div>&ndash;&gt;
-                &lt;!&ndash;<div class="success_sw g_dh">
-                    <span class="tips">恭喜兑换成功</span><br>
-                    <span class="name">铁艺涂鸦本</span>
-                    <div class="pic">
-                        <img src="" alt="">
-                    </div>
-                    <div class="btn">
-                        <a href="javascript:;"  class="s_red">填写收货地址</a>
-                    </div>
-                </div>&ndash;&gt;
-                &lt;!&ndash;<div class="fail g_dh">
-                    <p class="text">
-                        呜，来晚了一步 <br>
-                        此实物已全部兑换完了噢~
-                    </p>
-                    <div class="btn">
-                        <a href="javascript:;" class="s_red">好哒</a>
-                    </div>
-                </div>&ndash;&gt;
+                </div>
+                <div class="btn">
+                    <a href="javascript:;" class="fl s_red">
+                        确认
+                    </a>
+                    <a href="javascript:;" class="fr j-close">取消</a>
+                </div>
+            </div>
+            <div class="success_xn g_dh" style="display:none;" id="j-success">
+                <span class="tips">恭喜兑换成功</span><br>
+                <span class="name">10盒币</span>
+                <div class="pic">
+                    <img src="" alt="">
+                </div>
+                <div class="btn">
+                    <a href="javascript:;"  class="s_red">好哒</a>
+                </div>
+            </div>
+            <div class="success_sw g_dh" style="display:none;" id="j-successSw">
+                <span class="tips">恭喜兑换成功</span><br>
+                <span class="name">铁艺涂鸦本</span>
+                <div class="pic">
+                    <img src="" alt="">
+                </div>
+                <div class="btn">
+                    <a href="javascript:;"  class="s_red">填写收货地址</a>
+                </div>
+            </div>
+            <div class="fail g_dh" style="display:none;" id="j-dhFail">
+                <p class="text j-text" >
+                    呜，来晚了一步 <br>
+                    此实物已全部兑换完了噢~
+                </p>
+                <div class="btn">
+                    <a href="javascript:;" class="s_red j-close">好哒</a>
+                </div>
+            </div>
+            <div class="jf g_dh" style="display:none;" id="j-jf">
+                <div class="hint">
+                    <span>拥有积分：400积分</span>
+                </div>
+                <dl class="jl">
+                    <dt>兑换奖励</dt>
+                    <dd>
+                        <span>1、口袋妖怪复刻大礼包</span> <a class="dole">已领取</a>
+                    </dd>
+                    <dd>
+                        <span>2、铁艺涂鸦本</span> <a class="adress">填写地址</a>
+                    </dd>
+                </dl>
 
-                <div class="lb_success g_dh">
-                    <span class="tips">恭喜兑换成功</span><br>
-                    <span class="name">口袋妖怪复刻大礼包</span>
-                    <div class="copy">
-                        <div class="code">
-                            激活码：kailey123
-                        </div>
-                        <a href="" class="copy_btn">
-                            复制
-                        </a>
+            </div>
+        </div>
+            <div class="lb_success g_dh" style="display:none;" id="j-swJfLack">
+                <p class="text">
+                    您的积分不足 <br>
+                    快去玩游戏获得积分吧
+                </p>
+
+                <div class="game">
+                    <img src="" alt="">
+                    <div class="info">
+                        <dl>
+                            <dt>口袋复刻大礼包</dt>
+                            <dd>
+                                <span>金币</span>X<i>6666</i>
+                            </dd>
+                            <dd>
+                                <span>金币</span>X<i>6666</i>
+                            </dd>
+                            <dd>
+                                <span>金币</span>X<i>6666</i>
+                            </dd>
+                            <dd>
+                                <span>金币</span>X<i>6666</i>
+                            </dd>
+                            <dd>
+                                <span>金币</span>X<i>6666</i>
+                            </dd>
+                        </dl>
                     </div>
-                    <div class="game">
-                        <img src="" alt="">
-                        <div class="info">
-                            <dl>
-                                <dt>口袋复刻大礼包</dt>
-                                <dd>
-                                    <span>金币</span>X<i>6666</i>
-                                </dd>
-                                <dd>
-                                    <span>金币</span>X<i>6666</i>
-                                </dd>
-                                <dd>
-                                    <span>金币</span>X<i>6666</i>
-                                </dd>
-                                <dd>
-                                    <span>金币</span>X<i>6666</i>
-                                </dd>
-                                <dd>
-                                    <span>金币</span>X<i>6666</i>
-                                </dd>
-                            </dl>
-                        </div>
+                </div>
+                <div class="btn">
+                    <a href="javascript:;" class="s_red">下载游戏</a>
+                </div>
+            </div>
+            <div class="lb_success g_dh" style="display:none;" id="j-successLb">
+                <span class="tips">恭喜兑换成功</span><br>
+                <span class="name">口袋妖怪复刻大礼包</span>
+                <div class="copy">
+                    <div class="code">
+                        激活码：kailey123
                     </div>
-                    <div class="btn">
-                        <a href="javascript:;" class="s_red">下载游戏使用礼包</a>
+                    <a href="" class="copy_btn">
+                        复制
+                    </a>
+                </div>
+                <div class="game">
+                    <img src="" alt="">
+                    <div class="info">
+                        <dl>
+                            <dt>口袋复刻大礼包</dt>
+                            <dd>
+                                <span>金币</span>X<i>6666</i>
+                            </dd>
+                            <dd>
+                                <span>金币</span>X<i>6666</i>
+                            </dd>
+                            <dd>
+                                <span>金币</span>X<i>6666</i>
+                            </dd>
+                            <dd>
+                                <span>金币</span>X<i>6666</i>
+                            </dd>
+                            <dd>
+                                <span>金币</span>X<i>6666</i>
+                            </dd>
+                        </dl>
                     </div>
+                </div>
+                <div class="btn">
+                    <a href="javascript:;" class="s_red">下载游戏使用礼包</a>
                 </div>
             </div>
         </div>
-    </section>-->
+    </section>
 
-   <!-- <section class="m_popGame g_pop">
+    <section class="m_popGame g_pop" style="display:none;">
         <div class="filter"></div>
-        <div class="content">
-            <i class="close"></i>
+        <div class="content" id="j-quanRes">
+            <i class="close j-close"></i>
             <i class="i_1"></i>
             <i class="i_2"></i>
             <div class="box">
-                &lt;!&ndash;<div class="win">
+                <div class="win" style="display:none;" id="j-win">
                     <i class="dw"></i>
                     <span>哇塞！你赢了耶~恭喜获得</span> <br>
                     <strong>10积分</strong> <br>
                     <span>积分可兑换奖品哦~</span> <br>
-                </div>&ndash;&gt;
-                &lt;!&ndash;<div class="fail">
+                </div>
+                <div class="fail" style="display:none;" id="j-fail">
                     <i class="dw">
-
                     </i>
                     <p>
                         哎~去洗手再来一次吧~
                     </p>
-                </div>&ndash;&gt;
-     &lt;!&ndash;           <div class="ding">
+                </div>
+                <div class="ding" style="display:none;" id="j-ding">
                     <i class="dw">
-
                     </i>
                     <p>
                         今天玩累了 <br>
                         请明天再来吧~
                     </p>
-                </div>&ndash;&gt;
-                <div class="lack">
+                </div>
+                <div class="lack" style="display:none;" id="j-lack">
                     <i class="dw">
-
                     </i>
                     <p>
                         盒币不够了哦 <br>
@@ -409,10 +485,10 @@
 
             </div>
             <div class="btn">
-                <a href="javascript:;">好的</a>
+                <a href="javascript:;" class="j-close">好的</a>
             </div>
         </div>
-    </section>-->
+    </section>
     <div class="popQuan g_pop" style="display:none">
         <div class="filter">
 
@@ -421,10 +497,10 @@
             <div class="close j-close"></div>
             <div class="title"></div>
             <div class="box">
-                <div class="quan">
-                    <a href="javascript:;" class="st"><i></i></a>
-                    <a href="javascript:;" class="bu"><i></i></a>
-                    <a href="javascript:;" class="jd"><i></i></a>
+                <div class="quan" id="j-select">
+                    <a href="javascript:;" class="st" data-type="s"><i></i></a>
+                    <a href="javascript:;" class="bu" data-type="b"><i></i></a>
+                    <a href="javascript:;" class="jd" data-type="j"><i></i></a>
                 </div>
             </div>
         </div>
@@ -434,14 +510,28 @@
 <script src="js/zepto.min.js"></script>
 <script src="js/ueApp.scrollLoad.js"></script>
 <script>
+    var tips = {
+        lbOver : '呜，来晚了一步 </br>此礼包已全部兑换完了噢~',
+        hbOver : '呜，来晚了一步 <br/>盒币已全部兑换完了噢~ <br/>明天12点再来吧！',
+        swOver : '呜，来晚了一步 </br>此实物已全部兑换完了噢~',
+        jfLack : '您的积分不足<br/>快去玩游戏获得积分吧~'
+    }
     var game = {};
     game.init = function(){
         this.elem();
         this.run();
+        this.play();
     };
     game.elem = function(){
         this.$handL = $('#j-left');
         this.$handR = $('#j-right');
+        this.$play = $('#j-play');
+        this.$selA = $('#j-select').find('a');
+        this.$res = $('#j-quanRes');
+        this.$win = $('#j-win');
+        this.$fail = $('#j-fail');
+        this.$ding = $('#j-ding');
+        this.$lack = $('#j-lack');
     };
     game.run = function(){
         var i = 0;
@@ -450,24 +540,105 @@
             left : ['j_l','s_l','b_l'],
             right : ['s_r','b_r','j_r']
         };
-        setInterval(function(){
+        clearTimeout(this.timer);
+        this.timer = setInterval(function(){
             i++;
             var _index = i%3;
             This.$handL.attr('class',classJson.left[_index]);
             This.$handR.attr('class',classJson.right[_index]);
         },3000);
     };
+    game.play = function(){
+        var $game = $('#j-game');
+        var This = this;
+        var $runR = $('#j-r');
+        var $runL = $('#j-l');
+        this.$play.on('click',function(){
+            This.run();  /* 重新开始定时器 */
+            $(this).addClass('cost');
+            $runR.css('animation','move_r 3s infinite'); /* 右边手动起来 */
+            $runL.css('animation','move_l 3s infinite'); /* 右边手动起来 */
+
+            pop($game);
+        });
+
+        select();
+        /* 选择出拳 */
+        function select(){
+            This.$selA.on('click',function(){
+                This.type =  $(this).data('type');
+                $game.parent().hide();
+                setTimeout(dwStop,1000);
+            })
+        }
+        function Userstop(){
+            $runR.onOff = true; /* 当选择的时质为true 不让监听事件停止 */
+            $runR.on("animationiteration", function(){ //动画开始时事件
+                console.log(4);
+                if($runR.onOff){
+                    console.log(3);
+                    $(this).find('strong').attr('class',This.type+'_r');
+                    $runR.css('animation','move_r 3s 1');
+                    clearTimeout(This.timer);
+                    $runR.onOff = false;
+                }
+            });
+        }
+        function dwStop(){
+            $runL.onOff = true; /* 当选择的时质为true 不让监听事件停止 */
+            $runL.on("animationiteration", function(){ //动画开始时事件
+                if($runL.onOff){
+                    console.log(2);
+                    $(this).find('strong').attr('class',This.type+'_l');
+                    $runL.css('animation','move_l 3s 1');
+                    clearTimeout(This.timer);
+                    Userstop();
+                    $runL.onOff = false;
+                }
+            });
+        }
+        function stop(obj,dir) {
+            obj.onOff = true; /* 当选择的时质为true 不让监听事件停止 */
+            obj.on("animationiteration", function(){ //动画开始时事件
+                console.log(4);
+                if(obj.onOff){
+                    console.log(3);
+                    $(this).find('strong').attr('class',This.type+'_' + dir);
+                    obj.css('animation','move_r 3s 1');
+                    clearTimeout(This.timer);
+                    obj.onOff = false;
+                }
+            });
+        }
+    };
+    game.success = function(){
+        pop(this.$res);
+        this.$win.show();
+    };
+    game.fail = function(){
+        pop(this.$res);
+        this.$fail.show();
+    };
+    game.ding = function(){
+        pop(this.$res);
+        this.$ding.show();
+    };
+    game.lack = function(){
+        pop(this.$res);
+        this.$lack.show();
+    };
     game.init();
     /*
         弹窗方法
     */
-    var $game = $('#j-game');
     function pop(obj){
         var $winW = $(window).height();
         var $par = obj.parent();
+
         $par.show();
 
         var $objH = obj.height();
+        console.log($objH);
         var posH = ($winW - $objH)/2;
 
         obj.css('top',posH);
@@ -476,7 +647,76 @@
             $par.hide();
         });
     }
-    pop($game);
 
 
+    var exchange = {}
+    exchange.init = function(){
+        this.elem();
+        this.packs();
+        this.look();
+    };
+    exchange.elem = function(){
+        this.$dbBox = $('#j-dhTips');
+        this.$dh = $('.dh');
+        this.$packs = $('#j-packs');
+        this.$text = $('.j-text');
+        this.$fail = $('#j-dhFail');
+        this.$lbSuc = $('#j-successLb');
+        this.$SwSuc = $('#j-successSw');
+        this.$swJfLack = $('#j-swJfLack');
+        this.$look = $('#j-look');
+        this.$jf = $('#j-jf');
+    };
+    exchange.packs = function(){
+        var This = this;
+        this.$dh.on('click',function(){
+            This.jfLack();
+            //This.lack(tips.hbOver);
+            //This.confirm();
+        });
+    };
+    exchange.practicality = function(){
+
+    };
+    exchange.hebi = function(){
+
+    };
+    exchange.confirm = function(){
+        this.pop(this.$packs);
+    };
+    exchange.pop = function(obj){
+        obj.show();
+        this.$dbBox.show();
+        pop(this.$dbBox);
+    };
+    exchange.lack = function(str){
+        this.$text.html(str);
+        this.pop(this.$fail);
+    };
+    exchange.jfLack = function(type){
+        var type = type || false;
+        if(type=='lb'){
+            this.pop(this.$swJfLack);
+        }else {
+            this.lack(tips.jfLack);
+        }
+    };
+    /*
+    * 如果是实物 要穿 lb
+    * */
+    exchange.success = function(type){
+        var type = type || false;
+        if(type=='lb'){
+            this.pop(this.$lbSuc);
+        }else {
+            this.pop(this.$SwSuc);
+        }
+    };
+    exchange.look = function(){
+        var This = this;
+        this.$look.on('click',function(){
+            This.pop(This.$jf);
+        });
+    };
+    exchange.init();
 </script>

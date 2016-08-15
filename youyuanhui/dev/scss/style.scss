@@ -53,6 +53,11 @@ $base:40;
   background-size:654rem/$base 192rem/$base;
   background-position:$x/$base * 1rem $y/$base *1rem;
 }
+@mixin selQuan($x,$y){
+  background:url(../images/selectquan.png) no-repeat;
+  background-size:525rem/$base 112rem/$base;
+  background-position:$x/$base * 1rem $y/$base *1rem;
+}
 .m_banner {
   background:url(../images/banner.jpg) no-repeat;
   width:100%;
@@ -115,42 +120,41 @@ $base:40;
       text-align:center;
     }
     .run_l {
-      animation: move_l 2s infinite;
+      animation: move_l 3s infinite;
       transform-origin:center 90%;
     }
     .run_r {
-      animation: move_r 2s infinite;
+      animation: move_r 3s infinite;
       transform-origin:center 90%;
     }
     .hanl_l {
       left:0;
+      transform:rotate(45deg);
     }
     .hanl_r {
       right:0;
+      transform:rotate(-45deg);
     }
     strong {
       display: inline-block;
+      height:174rem/$base;
       background:url(../images/quan.png) no-repeat;
-      background-size:527rem/$base 177rem/$base;
+      background-size:527rem/$base 174rem/$base;
     }
     .s_l {
       width:86rem/$base;
-      height:159rem/$base;
       background-position:0 0;
     }
     .j_l{
       width:66rem/$base;
-      height:176rem/$base;
       background-position:-91rem/$base 0;
     }
     .b_l{
       width:100rem/$base;
-      height:174rem/$base;
       background-position:-162rem/$base 0;
     }
     .s_r {
       width:86rem/$base;
-      height:159rem/$base;
       background-position:-267rem/$base 0;
     }
     .j_r{
@@ -160,7 +164,6 @@ $base:40;
     }
     .b_r{
       width:100rem/$base;
-      height:174rem/$base;
       background-position:-428rem/$base 0;
     }
     i {
@@ -271,20 +274,19 @@ $base:40;
 @keyframes move_l
 {
   0%   {
-    transform: rotate(0deg);
-
+    transform: rotate(45deg);
   }
+  25%  { transform: rotate(0deg); }
   50%  { transform: rotate(45deg); }
-  100% { transform: rotate(0deg);  }
+  75%  { transform: rotate(0deg); }
+  100% { transform: rotate(45deg);  }
 }
 @keyframes move_r
 {
-  0%   {
-    transform: rotate(0deg);
-
-  }
+  25%  { transform: rotate(0deg); }
   50%  { transform: rotate(-45deg); }
-  100% { transform: rotate(0deg);  }
+  75%  { transform: rotate(0deg); }
+  100% { transform: rotate(-45deg);  }
 }
 .m_rank {
   margin-top:77rem/$base;
@@ -434,6 +436,7 @@ $base:40;
       width:100%;
       text-align:center;
       color:#fff;
+      border-radius:0 0 20rem/$base 20rem/$base;
     }
   }
   img {
@@ -692,16 +695,18 @@ footer {
     }
   }
 }
-.g_popBox {
-  position:relative;
-  margin:100rem/$base 30rem/$base;
-  background:#c1f3ff;
-  border-radius:20rem/$base;
-  padding:11rem/$base;
+.m_pop {
   .content {
-    background:#17bafd;
-    box-shadow: 0 -5rem/$base 0 0 #0897d3;
-    border-radius:10rem/$base;
+    background:#c1f3ff;
+    position:relative;
+    margin:0 30rem/$base;
+    border-radius:20rem/$base;
+    padding:11rem/$base;
+    &>div {
+      background:#17bafd;
+      box-shadow: 0 -5rem/$base 0 0 #0897d3;
+      border-radius:10rem/$base;
+    }
   }
   .close {
     position:absolute;
@@ -979,7 +984,7 @@ footer {
     height:84rem/$base;
     left:174rem/$base;
     top:-27rem/$base;
-    background:#fff;
+    @include selQuan(-290,0);
   }
   .box {
     background:#ffd050;
@@ -1001,7 +1006,6 @@ footer {
       display: block;
       margin:auto;
       position:relative;
-      background:#fff;
     }
     .st {
       position:absolute;
@@ -1011,6 +1015,7 @@ footer {
         width:86rem/$base;
         height:77rem/$base;
         top:31rem/$base;
+        @include selQuan(0,0);
       }
     }
     .bu {
@@ -1022,6 +1027,7 @@ footer {
         width:100rem/$base;
         height:106rem/$base;
         top:15rem/$base;
+        @include selQuan(-98,0);
       }
     }
     .jd {
@@ -1032,6 +1038,7 @@ footer {
         width:66rem/$base;
         height:101rem/$base;
         top:16rem/$base;
+        @include selQuan(-213,0);
       }
     }
   }
